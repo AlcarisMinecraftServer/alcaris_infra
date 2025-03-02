@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: minecraft-apps
+  namespace: argocd
+spec:
+  generators:
+    - git:
+        repoURL: https://github.com/AlcarisMinecraftServer/alcaris_infra
+        revision: main
+        directories:
+          - path: manifests/apps/minecraft/*
+  template:
+    metadata:
+      name: "minecraft-{{path.basenameNormalized}}"
+      namespace: argocd
+    spec:
+      project: minecraft
+      source:
+        repoURL: https://github.com/AlcarisMinecraftServer/alcaris_infra
+        targetRevision: main
+        path: "{{path}}"
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: minecraft
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+          allowEmpty: true
+        syncOptions:
+          - CreateNamespace=true
+        retry:
+          limit: -1
+          backoff:
+            duration: 5s
+            factor: 2
+            maxDuration: 2m

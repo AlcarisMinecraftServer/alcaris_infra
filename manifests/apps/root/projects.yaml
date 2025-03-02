@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: minecraft
+  namespace: argocd
+spec:
+  description: Project for deploying and managing Minecraft servers
+  sourceRepos:
+    - 'https://github.com/AlcarisMinecraftServer/alcaris_infra'
+  destinations:
+    - namespace: minecraft
+      server: https://kubernetes.default.svc
+    - namespace: argocd
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
