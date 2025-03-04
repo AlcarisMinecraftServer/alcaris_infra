@@ -10,9 +10,8 @@ REPOSITORY_RAW_SOURCE_URL="https://raw.githubusercontent.com/AlcarisMinecraftSer
 
 VM_LIST=(
   #vmid #vmname          #cpu #mem #vmsrvip #targetip     #targethost
-  "1000 alcaris-k8s-cp-1 4    8192 192.168.0.11 192.168.0.110 nmkmn-srv-prox01"
+  "1001 alcaris-k8s-cp-1 4    8192 192.168.0.11 192.168.0.110 nmkmn-srv-prox01"
   "1101 alcaris-k8s-wk-1 4    8192 192.168.0.12 192.168.0.110 nmkmn-srv-prox01"
-  "1102 alcaris-k8s-wk-2 4    8192 192.168.0.21 192.168.0.111 nmkmn-srv-prox02"
 )
 
 # region create template
@@ -89,14 +88,14 @@ runcmd:
 EOF
 
     cat > "$SNIPPET_TARGET_PATH"/"$VMNAME"-network.yaml << EOF
-version: 2
+version: 1
 config:
   - type: physical
     name: ens18
     subnets:
     - type: static
       address: '${VMSRVIP}'
-      gateway: '192.168.0.1'
+      gateway: '192.168.0.2'
       netmask: '255.255.255.0'
   - type: nameserver
     address:
