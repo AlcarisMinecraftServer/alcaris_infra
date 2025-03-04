@@ -53,12 +53,25 @@ rm noble-server-cloudimg-amd64.img
 #endregion
 
 echo "Deploying VMs..."
-for VM in "${VM_LIST[@]}"; do
-    read -r VMID VMNAME CPU MEM VMSRVIP TARGET_IP TARGET_HOST <<< "$VM"
+for VM in "${VM_LIST[@]}"
+do
+    echo "${VM}" | while read -r VMID VMNAME CPU MEM VMSRVIP TARGET_IP TARGET_HOST
+    do
+        # clone from template
+        qm clone "${TEMPLATE_VMID}" "${VMID}" --name "${VMNAME}" --full true --target "${TARGET_HOST}"
 
-    echo "Generating Cloud-Init snippet for $VMNAME..."
+        # set compute resources
+        ssh -n "${TARGET_IP}" qm set "${VMID}" --cores "${CPU}" --memory "${MEM}"
 
-    cat > "$SNIPPET_TARGET_PATH"/"$VMNAME"-user.yaml << EOF
+        # move vm-disk to local
+        ssh -n "${targetip}" qm move-disk "${vmid}" scsi0 "${BOOT_IMAGE_TARGET_VOLUME}" --delete true
+
+        # resize disk (Resize after cloning, because it takes time to clone a large disk)
+        ssh -n "${TARGET_IP}" qm resize "${VMID}" scsi0 30G
+
+        # create snippet for cloud-init (user-config)
+cat > "$SNIPPET_TARGET_PATH"/"$VMNAME"-user.yaml << EOF
+#cloud-config
 hostname: ${VMNAME}
 timezone: Asia/Tokyo
 manage_etc_hosts: true
@@ -82,12 +95,12 @@ runcmd:
   - su - cloudinit -c "chmod 600 ~/.ssh/authorized_keys"
   # run install scripts
   - su - cloudinit -c "curl -s ${REPOSITORY_RAW_SOURCE_URL}/scripts/setup_k8s.sh > ~/setup_k8s.sh"
-  - su - cloudinit -c "sudo bash ~/setup_k8s.sh ${VMNAME} ${TARGET_BRANCH}"
+  - su - cloudinit -c "sudo bash ~/setup_k8s.sh ${VMNAME}"
   # change default shell to bash
   - chsh -s \$(which bash) cloudinit
 EOF
 
-    cat > "$SNIPPET_TARGET_PATH"/"$VMNAME"-network.yaml << EOF
+cat > "$SNIPPET_TARGET_PATH"/"$VMNAME"-network.yaml << EOF
 version: 1
 config:
   - type: physical
@@ -105,20 +118,9 @@ config:
     - 'local'
 EOF
 
-    # clone from template
-    qm clone "${TEMPLATE_VMID}" "${VMID}" --name "${VMNAME}" --full true --target "${TARGET_HOST}"
-
-    # set compute resources
-    ssh -n "${TARGET_IP}" qm set "${VMID}" --cores "${CPU}" --memory "${MEM}"
-
-    # move vm-disk to local
-    ssh -n "${TARGET_IP}" qm move-disk "${VMID}" scsi0 "${BOOT_IMAGE_TARGET_VOLUME}" --delete true
-
-    # resize disk (Resize after cloning, because it takes time to clone a large disk)
-    ssh -n "${TARGET_IP}" qm resize "${VMID}" scsi0 30G
-
-    # set snippet to vm
-    ssh -n "${TARGET_IP}" qm set "${VMID}" --cicustom "user=${SNIPPET_TARGET_VOLUME}:snippets/${VMNAME}-user.yaml,network=${SNIPPET_TARGET_VOLUME}:snippets/${VMNAME}-network.yaml"
+        # set snippet to vm
+        ssh -n "${TARGET_IP}" qm set "${VMID}" --cicustom "user=${SNIPPET_TARGET_VOLUME}:snippets/${VMNAME}-user.yaml,network=${SNIPPET_TARGET_VOLUME}:snippets/${VMNAME}-network.yaml"
+    done
 done
 
 echo "Starting VMs..."

@@ -1,67 +1,85 @@
 #!/bin/bash
 
-CONTROL_PLANE_IP="192.168.0.111"
-VM_LIST=()
+set -eu
 
-while [[ "$#" -gt 0 ]]; do
-    case $1 in
-        --vm-list) VM_LIST=($2); shift ;;
-        *) echo "Unknown parameter: $1"; exit 1 ;;
-    esac
-    shift
-done
+HOSTNAME=$1
+CONTROL_PLANE_IP="192.168.0.11"
+REPOSITORY_RAW_SOURCE_URL="https://raw.githubusercontent.com/AlcarisMinecraftServer/alcaris_infra/main"
 
-echo "Setting up Kubernetes Control Plane on $CONTROL_PLANE_IP..."
+# パッケージの共通インストール
+apt update && apt install -y apt-transport-https ca-certificates curl gnupg software-properties-common
 
-ssh root@$CONTROL_PLANE_IP << EOF
-  apt update && apt install -y apt-transport-https ca-certificates curl gnupg
-  curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-  echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
-  apt install -y kubelet kubeadm kubectl
+# Containerd のセットアップ
+cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
+overlay
+br_netfilter
+EOF
+sudo modprobe overlay
+sudo modprobe br_netfilter
 
-  echo "Installing HAProxy and Keepalived..."
+cat <<EOF | sudo tee /etc/sysctl.d/99-kubernetes-cri.conf
+net.bridge.bridge-nf-call-iptables  = 1
+net.ipv4.ip_forward                 = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+EOF
+sudo sysctl --system
+
+# Install Containerd
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+apt update && apt install -y containerd.io
+
+# Configure containerd
+mkdir -p /etc/containerd
+containerd config default | sudo tee /etc/containerd/config.toml > /dev/null
+sed -i -e "s/SystemdCgroup = false/SystemdCgroup = true/g" /etc/containerd/config.toml
+systemctl restart containerd
+
+# Install Kubernetes
+curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
+apt update
+apt install -y kubelet kubeadm kubectl
+apt-mark hold kubelet kubeadm kubectl
+
+# Disable swap
+swapoff -a
+
+# CP / WK の判定
+if [[ "$HOSTNAME" == alcaris-k8s-cp-* ]]; then
+  echo "Setting up Kubernetes Control Plane on $HOSTNAME..."
+
+  # Install HAProxy & Keepalived
   apt install -y haproxy keepalived
 
-  echo "Installing Helm..."
+  # Install Helm
   curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
-  echo "Initializing Kubernetes Cluster..."
-  kubeadm init --pod-network-cidr=192.168.0.0/16
-  mkdir -p \$HOME/.kube
-  cp -i /etc/kubernetes/admin.conf \$HOME/.kube/config
-  chown \$(id -u):\$(id -g) \$HOME/.kube/config
+  # kubeadm init
+  kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=$CONTROL_PLANE_IP
+  mkdir -p $HOME/.kube
+  cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  chown $(id -u):$(id -g) $HOME/.kube/config
 
-  echo "Installing Cilium as CNI..."
+  # Install Cilium
   helm repo add cilium https://helm.cilium.io/
   helm repo update
   helm install cilium cilium/cilium --namespace kube-system
 
-  echo "Installing ArgoCD..."
+  # Install ArgoCD
   helm repo add argo https://argoproj.github.io/argo-helm
   helm repo update
   helm install argocd argo/argo-cd --namespace argocd --create-namespace
 
-  echo "Applying ArgoCD Application and Project Configuration..."
-  kubectl apply -f https://raw.githubusercontent.com/AlcarisMinecraftServer/alcaris_infra/master/manifests/apps/root/apps.yaml
-  kubectl apply -f https://raw.githubusercontent.com/AlcarisMinecraftServer/alcaris_infra/master/manifests/apps/root/projects.yaml
-EOF
+  # Apply ArgoCD Configuration
+  kubectl apply -f ${REPOSITORY_RAW_SOURCE_URL}/manifests/apps/root/apps.yaml
+  kubectl apply -f ${REPOSITORY_RAW_SOURCE_URL}/manifests/apps/root/projects.yaml
 
-JOIN_COMMAND=$(ssh root@$CONTROL_PLANE_IP "kubeadm token create --print-join-command")
+elif [[ "$HOSTNAME" == alcaris-k8s-wk-* ]]; then
+  echo "Joining Kubernetes Worker Node: $HOSTNAME"
+  
+  JOIN_COMMAND=$(ssh root@$CONTROL_PLANE_IP "kubeadm token create --print-join-command")
+  $JOIN_COMMAND
+fi
 
-echo "Joining Worker Nodes..."
-
-for VM in "${VM_LIST[@]}"; do
-    read -r VMID VMNAME CPU MEM VMSRVIP TARGET_IP <<< "$VM"
-    if [[ "$VMNAME" == alcaris-k8s-wk-* ]]; then
-        echo "Joining Worker: $VMNAME ($TARGET_IP)"
-        ssh root@$TARGET_IP << EOF
-          apt update && apt install -y apt-transport-https ca-certificates curl gnupg
-          curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-          echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
-          apt install -y kubelet kubeadm kubectl
-          $JOIN_COMMAND
-EOF
-    fi
-done
-
-echo "ArgoCD and Kubernetes setup complete. Minecraft server will be managed via ArgoCD."
+echo "Kubernetes setup complete for $HOSTNAME"
