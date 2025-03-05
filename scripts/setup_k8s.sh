@@ -3,6 +3,10 @@ set -eu
 
 HOSTNAME="$1"
 NODE_IP="$2"
+
+# Set the control-plane IP (or VIP); adjust this value as needed.
+CP_IP="192.168.0.11"
+
 REPOSITORY_RAW_SOURCE_URL="https://raw.githubusercontent.com/AlcarisMinecraftServer/alcaris_infra/main"
 
 echo "Setting up Kubernetes node: $HOSTNAME ($NODE_IP)..."
@@ -72,10 +76,58 @@ if [[ $NODE_ROLE == "control-plane" ]]; then
 
     kubeadm config images pull
 
-    # Initialize the control plane
-    kubeadm init --pod-network-cidr=192.168.0.0/16 \
-                 --apiserver-advertise-address="${NODE_IP}" \
-                 --control-plane-endpoint="${NODE_IP}:6443"
+    # Generate bootstrap token and use NODE_IP as the local endpoint for this node
+    KUBEADM_BOOTSTRAP_TOKEN=$(openssl rand -hex 3).$(openssl rand -hex 8)
+    KUBEADM_LOCAL_ENDPOINT="${NODE_IP}"
+
+    # Generate init configuration file; note that controlPlaneEndpoint and apiServerEndpoint use CP_IP
+    cat > "$HOME"/init_kubeadm.yaml <<EOF
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: InitConfiguration
+bootstrapTokens:
+- token: "$KUBEADM_BOOTSTRAP_TOKEN"
+  description: "kubeadm bootstrap token"
+  ttl: "24h"
+nodeRegistration:
+  criSocket: "unix:///var/run/containerd/containerd.sock"
+  kubeletExtraArgs:
+    node-ip: "$KUBEADM_LOCAL_ENDPOINT"
+localAPIEndpoint:
+  advertiseAddress: "$KUBEADM_LOCAL_ENDPOINT"
+  bindPort: 6443
+skipPhases:
+  - addon/kube-proxy
+---
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: ClusterConfiguration
+networking:
+  serviceSubnet: "10.96.64.0/18"
+  podSubnet: "10.96.128.0/18"
+etcd:
+  local:
+    extraArgs:
+      listen-metrics-urls: "http://0.0.0.0:2381"
+kubernetesVersion: "v1.32.1"
+controlPlaneEndpoint: "${CP_IP}:6443"
+apiServer:
+  certSANs:
+    - "$CP_IP"
+controllerManager:
+  extraArgs:
+    bind-address: "0.0.0.0"
+scheduler:
+  extraArgs:
+    bind-address: "0.0.0.0"
+clusterName: "alcaris-cluster"
+---
+apiVersion: kubelet.config.k8s.io/v1beta1
+kind: KubeletConfiguration
+cgroupDriver: "systemd"
+protectKernelDefaults: true
+EOF
+
+    # Initialize the control plane using the generated configuration
+    kubeadm init --config "$HOME"/init_kubeadm.yaml --skip-phases=addon/kube-proxy --ignore-preflight-errors=NumCPU,Mem
 
     mkdir -p $HOME/.kube
     cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
@@ -94,7 +146,7 @@ if [[ $NODE_ROLE == "control-plane" ]]; then
     kubectl apply -f ${REPOSITORY_RAW_SOURCE_URL}/manifests/apps/root/apps.yaml
     kubectl apply -f ${REPOSITORY_RAW_SOURCE_URL}/manifests/apps/root/projects.yaml
 
-    # Generate join configuration for worker nodes
+    # Generate join configuration for worker nodes using CP_IP
     cat > /root/join_kubeadm_wk.yaml <<EOF
 apiVersion: kubeadm.k8s.io/v1beta3
 kind: JoinConfiguration
@@ -102,7 +154,7 @@ nodeRegistration:
   criSocket: "unix:///var/run/containerd/containerd.sock"
 discovery:
   bootstrapToken:
-    apiServerEndpoint: "${NODE_IP}:6443"
+    apiServerEndpoint: "${CP_IP}:6443"
     token: "$(kubeadm token create)"
     unsafeSkipCAVerification: true
 EOF
