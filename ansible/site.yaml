@@ -1,0 +1,10 @@
+---
+- name: kubeadm-join-cp
+  hosts: master
+  roles:
+    - k8s_master
+
+- name: kubeadm-join-wk
+  hosts: worker
+  roles:
+    - k8s_worker
