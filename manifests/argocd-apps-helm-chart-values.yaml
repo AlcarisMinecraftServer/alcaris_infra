@@ -1,11 +1,15 @@
 applications:
-  - name: argocd-root-app-of-apps
+  argocd-root-app-of-apps:
     namespace: argocd
     project: argocd-root
     source:
       repoURL: https://github.com/AlcarisMinecraftServer/alcaris_infra
       targetRevision: main
       path: manifests/apps/root
+      directory:
+        recurse: true
+    finalizers:
+      - resources-finalizer.argocd.argoproj.io
     destination:
       server: https://kubernetes.default.svc
       namespace: argocd
@@ -23,8 +27,10 @@ applications:
           factor: 1.5
           maxDuration: 1m
 projects:
-  - name: argocd-root
+  argocd-root:
     namespace: argocd
+    finalizers:
+      - resources-finalizer.argocd.argoproj.io
     description: The top-level project
     sourceRepos:
       - "*"
