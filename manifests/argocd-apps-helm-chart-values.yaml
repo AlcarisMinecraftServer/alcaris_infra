@@ -1,5 +1,5 @@
 applications:
-  - name: argocd-root-app-of-apps
+  argocd-root-app-of-apps:
     namespace: argocd
     project: argocd-root
     source:
@@ -26,9 +26,8 @@ applications:
           duration: 3s
           factor: 1.5
           maxDuration: 1m
-
 projects:
-  - name: argocd-root
+  argocd-root:
     namespace: argocd
     finalizers:
       - resources-finalizer.argocd.argoproj.io
