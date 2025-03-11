@@ -1,42 +1,43 @@
-applications:
-  argocd-root-app-of-apps:
-    namespace: argocd
-    project: argocd-root
-    source:
-      repoURL: https://github.com/AlcarisMinecraftServer/alcaris_infra
-      targetRevision: main
-      path: manifests/apps/root
-      directory:
-        recurse: true
-    finalizers:
-      - resources-finalizer.argocd.argoproj.io
-    destination:
-      server: https://kubernetes.default.svc
+argocd-apps:
+  applications:
+    argocd-root-app-of-apps:
       namespace: argocd
-    syncPolicy:
-      automated:
-        prune: true
-        selfHeal: true
-        allowEmpty: true
-      syncOptions:
-        - CreateNamespace=true
-      retry:
-        limit: -1
-        backoff:
-          duration: 3s
-          factor: 1.5
-          maxDuration: 1m
-projects:
-  argocd-root:
-    namespace: argocd
-    finalizers:
-      - resources-finalizer.argocd.argoproj.io
-    description: The top-level project
-    sourceRepos:
-      - "*"
-    destinations:
-      - namespace: "*"
+      project: argocd-root
+      source:
+        repoURL: https://github.com/AlcarisMinecraftServer/alcaris_infra
+        targetRevision: main
+        path: manifests/apps/root
+        directory:
+          recurse: true
+      finalizers:
+        - resources-finalizer.argocd.argoproj.io
+      destination:
         server: https://kubernetes.default.svc
-    clusterResourceWhitelist:
-      - group: "*"
-        kind: "*"
+        namespace: argocd
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+          allowEmpty: true
+        syncOptions:
+          - CreateNamespace=true
+        retry:
+          limit: -1
+          backoff:
+            duration: 3s
+            factor: 1.5
+            maxDuration: 1m
+  projects:
+    argocd-root:
+      namespace: argocd
+      finalizers:
+        - resources-finalizer.argocd.argoproj.io
+      description: The top-level project
+      sourceRepos:
+        - "*"
+      destinations:
+        - namespace: "*"
+          server: https://kubernetes.default.svc
+      clusterResourceWhitelist:
+        - group: "*"
+          kind: "*"
