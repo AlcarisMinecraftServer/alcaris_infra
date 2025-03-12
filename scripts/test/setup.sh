@@ -146,7 +146,6 @@ helm install argocd argo/argo-cd \
     --values https://raw.githubusercontent.com/AlcarisMinecraftServer/alcaris_infra/main/manifests/argocd-helm-chart-values.yaml
 helm install argocd argo/argocd-apps \
     --version 0.0.1 \
-    --namespace argocd \
     --values https://raw.githubusercontent.com/AlcarisMinecraftServer/alcaris_infra/main/manifests/argocd-apps-helm-chart-values.yaml
 
 # Check the cluster status (nodes and pods)

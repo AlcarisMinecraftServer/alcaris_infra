@@ -43,6 +43,7 @@ spec:
       resources:
         requests:
           storage: 10Gi
+      storageClassName: openebs-hostpath
   - metadata:
       name: minecraft-server-plugins
     spec:
@@ -50,3 +51,4 @@ spec:
       resources:
         requests:
           storage: 10Gi
+      storageClassName: openebs-hostpath
