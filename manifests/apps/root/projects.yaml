@@ -1,6 +1,26 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
+  name: cluster-wide-apps
+  namespace: argocd
+spec:
+  description: The project of applications used by the entire cluster
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: 'cluster-wide-apps'
+      server: https://kubernetes.default.svc
+    - namespace: 'kube-system'
+      server: https://kubernetes.default.svc
+    - namespace: 'metallb-system'
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
   name: minecraft
   namespace: argocd
 spec:
