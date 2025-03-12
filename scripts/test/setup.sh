@@ -136,7 +136,13 @@ helm install cilium cilium/cilium \
     --set k8sServiceHost=192.168.0.11 \
     --set k8sServicePort=6443 \
     --set bgpControlPlane.enabled=true
-  
+
+# Install OpenEBS Helm chart
+helm repo add openebs https://openebs.github.io/charts
+helm install openebs openebs/openebs \
+    --create-namespace \
+    --namespace openebs
+
 # Install ArgoCD Helm chart
 helm repo add argo https://argoproj.github.io/argo-helm
 helm install argocd argo/argo-cd \
@@ -147,6 +153,23 @@ helm install argocd argo/argo-cd \
 helm install argocd argo/argocd-apps \
     --version 0.0.1 \
     --values https://raw.githubusercontent.com/AlcarisMinecraftServer/alcaris_infra/main/manifests/argocd-apps-helm-chart-values.yaml
+
+cat <<EOF | kubectl apply -f -
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cluster-wide-apps
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: external-k8s-endpoint
+  namespace: cluster-wide-apps
+type: Opaque
+stringData:
+  fqdn: "192.168.0.11"
+  port: "6443"
+EOF
 
 # Check the cluster status (nodes and pods)
 kubectl get nodes
