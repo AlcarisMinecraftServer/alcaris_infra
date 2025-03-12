@@ -6,10 +6,6 @@ applications:
       repoURL: https://github.com/AlcarisMinecraftServer/alcaris_infra
       targetRevision: main
       path: manifests/apps/root
-      directory:
-        recurse: true
-    finalizers:
-      - resources-finalizer.argocd.argoproj.io
     destination:
       server: https://kubernetes.default.svc
       namespace: argocd
@@ -23,14 +19,12 @@ applications:
       retry:
         limit: -1
         backoff:
-          duration: 3s
-          factor: 1.5
-          maxDuration: 1m
+          duration: 5s
+          factor: 2
+          maxDuration: 2m
 projects:
   - name: argocd-root
     namespace: argocd
-    finalizers:
-      - resources-finalizer.argocd.argoproj.io
     description: The top-level project
     sourceRepos:
       - "*"
