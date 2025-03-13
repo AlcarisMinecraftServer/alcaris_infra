@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 set -eu
 
 function usage() {
@@ -24,8 +25,6 @@ esac
 
 KUBE_API_SERVER_VIP="192.168.0.11"
 NODE_IP="$2"
-
-apt update && apt install -y apt-transport-https ca-certificates curl gnupg software-properties-common
 
 # Install Containerd
 cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
@@ -86,6 +85,7 @@ sysctl --system
 # Install kubeadm
 curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.32/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.32/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+apt-get update
 apt-get install -y kubeadm=1.32.1-1.1 kubectl=1.32.1-1.1 kubelet=1.32.1-1.1
 apt-mark hold kubelet kubectl
 
@@ -110,10 +110,14 @@ case $1 in
         ;;
 esac
 
+# Pull images first
+kubeadm config images pull
+
+# install k9s
+wget https://github.com/derailed/k9s/releases/download/v0.32.7/k9s_Linux_amd64.tar.gz -O - | tar -zxvf - k9s && sudo mv ./k9s /usr/local/bin/
+
 # Set kubeadm bootstrap token using openssl
 KUBEADM_BOOTSTRAP_TOKEN=$(openssl rand -hex 3).$(openssl rand -hex 8)
-KUBEADM_LOCAL_ENDPOINT=$(ip -4 addr show ens18 | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | awk 'NR==1{print $1}')
-
 
 # Set init configuration for the first control plane
 cat > "$HOME"/init_kubeadm.yaml <<EOF
@@ -126,7 +130,7 @@ bootstrapTokens:
 nodeRegistration:
     criSocket: "unix:///var/run/containerd/containerd.sock"
     kubeletExtraArgs:
-    node-ip: "$NODE_IP"
+      node-ip: "$NODE_IP"
 localAPIEndpoint:
     advertiseAddress: "$NODE_IP"
     bindPort: 6443
@@ -142,7 +146,7 @@ etcd:
     local:
     extraArgs:
 kubernetesVersion: "v1.32.1"
-controlPlaneEndpoint: "${KUBE_API_SERVER_VIP}:8443"
+controlPlaneEndpoint: "${KUBE_API_SERVER_VIP}:6443"
 controllerManager:
     extraArgs:
         bind-address: "0.0.0.0"
@@ -160,6 +164,7 @@ EOF
 # Install Kubernetes without kube-proxy
 kubeadm init --config "$HOME"/init_kubeadm.yaml --skip-phases=addon/kube-proxy --ignore-preflight-errors=NumCPU,Mem
 
+# Set up kubeconfig for the current user
 mkdir -p "$HOME"/.kube
 cp -i /etc/kubernetes/admin.conf "$HOME"/.kube/config
 chown "$(id -u)":"$(id -g)" "$HOME"/.kube/config
@@ -167,10 +172,49 @@ chown "$(id -u)":"$(id -g)" "$HOME"/.kube/config
 # Install Helm CLI
 curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 
-# Install Cilium and ArgoCD via Helm
+
+# Install Cilium Helm chart
 helm repo add cilium https://helm.cilium.io/
-helm repo update
-helm install cilium cilium/cilium --namespace kube-system
+helm install cilium cilium/cilium \
+    --namespace kube-system \
+    --set kubeProxyReplacement=true \
+    --set k8sServiceHost=$KUBE_API_SERVER_VIP \
+    --set k8sServicePort=6443 \
+    --set bgpControlPlane.enabled=true
+
+# Install OpenEBS Helm chart
+helm repo add openebs https://openebs.github.io/charts
+helm install openebs openebs/openebs \
+    --create-namespace \
+    --namespace openebs
+
+# Install ArgoCD Helm chart
+helm repo add argo https://argoproj.github.io/argo-helm
+helm install argocd argo/argo-cd \
+    --version 5.36.10 \
+    --create-namespace \
+    --namespace argocd \
+    --values https://raw.githubusercontent.com/AlcarisMinecraftServer/alcaris_infra/main/manifests/argocd-helm-chart-values.yaml
+helm install argocd argo/argocd-apps \
+    --version 0.0.1 \
+    --values https://raw.githubusercontent.com/AlcarisMinecraftServer/alcaris_infra/main/manifests/argocd-apps-helm-chart-values.yaml
+
+cat <<EOF | kubectl apply -f -
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cluster-wide-apps
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: external-k8s-endpoint
+  namespace: cluster-wide-apps
+type: Opaque
+stringData:
+  fqdn: "$KUBE_API_SERVER_VIP"
+  port: "6443"
+EOF
 
 # clone repo
 git clone -b main https://github.com/AlcarisMinecraftServer/alcaris_infra.git "$HOME"/alcaris_infra

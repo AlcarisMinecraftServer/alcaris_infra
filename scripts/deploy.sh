@@ -91,7 +91,7 @@ config:
     subnets:
     - type: static
       address: '${VMSRVIP}'
-      gateway: '192.168.0.2'
+      gateway: '192.168.0.254'
       netmask: '255.255.255.0'
   - type: nameserver
     address:
