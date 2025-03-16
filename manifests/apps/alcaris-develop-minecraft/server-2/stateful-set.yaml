@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: minecraft-develop-s2
+  labels:
+    app: minecraft-develop-s2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: minecraft-develop-s2
+  template:
+    metadata:
+      labels:
+        app: minecraft-develop-s2
+        mcserver: develop-s2
+    spec:
+      containers:
+        - image: itzg/minecraft-server:latest
+          name: minecraft-server
+          env:
+            - name: MEMORY
+              value: 4G
+            - name: TYPE
+              value: PAPER
+            - name: VERSION
+              value: "1.21.1"
+            - name: EULA
+              value: "TRUE"
+            - name: COPY_CONFIG_DEST
+              value: /data
+          ports:
+            - name: minecraft
+              containerPort: 25565
+          volumeMounts:
+            - name: minecraft-server-config
+              mountPath: /config/server.properties
+              subPath: server.properties
+            - name: minecraft-server-config
+              mountPath: /config/bukkit.yml
+              subPath: bukkit.yml
+            - name: minecraft-server-config
+              mountPath: /config/spigot.yml
+              subPath: spigot.yml
+            - name: minecraft-server-config
+              mountPath: /config/config/paper-global.yml
+              subPath: paper-global.yml
+
+            - name: minecraft-ops-config
+              mountPath: ops.json
+              subPath: ops.json
+      volumes:
+        - name: minecraft-server-config
+          configMap:
+            name: minecraft-server-config
+        - name: minecraft-ops-config
+          configMap:
+            name: minecraft-ops-config
+  volumeClaimTemplates:
+    - metadata:
+        name: minecraft-server-data
+      spec:
+        storageClassName: local-path
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 50Gi

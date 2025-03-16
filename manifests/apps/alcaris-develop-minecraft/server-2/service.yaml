@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: minecraft-develop-s2
+  labels:
+    app: minecraft-server
+    mcserver: develop-s2
+spec:
+  type: ClusterIP
+  ports:
+    - name: minecraft
+      port: 25565
+      protocol: TCP
+      targetPort: minecraft
+  selector:
+    mcserver: develop-s2

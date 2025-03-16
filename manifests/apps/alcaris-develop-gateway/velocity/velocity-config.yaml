@@ -21,6 +21,8 @@ data:
 
     [servers]
     s1 = "minecraft-develop-s1.alcaris-develop-minecraft.svc.cluster.local:25565"
+    s2 = "minecraft-develop-s2.alcaris-develop-minecraft.svc.cluster.local:25565"
+    s3 = "minecraft-develop-s3.alcaris-develop-minecraft.svc.cluster.local:25565"
 
     try = ["s1"]
 
