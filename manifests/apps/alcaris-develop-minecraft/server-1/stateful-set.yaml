@@ -27,6 +27,8 @@ spec:
               value: "1.21.1"
             - name: EULA
               value: "TRUE"
+            - name: COPY_CONFIG_DEST
+              value: /data
           ports:
             - name: minecraft
               containerPort: 25565
@@ -47,9 +49,6 @@ spec:
             - name: minecraft-ops-config
               mountPath: ops.json
               subPath: ops.json
-
-            - name: minecraft-server-data
-              mountPath: /data
       volumes:
         - name: minecraft-server-config
           configMap:
