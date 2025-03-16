@@ -5,4 +5,6 @@ namespace: alcaris-develop-gateway
 
 resources:
   - velocity.yaml
+  - velocity-config.yaml
+  - velocity-forwarding-secret.yaml
   - velocity-loadbalancer.yaml
