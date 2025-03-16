@@ -43,13 +43,20 @@ spec:
             - name: minecraft-server-config
               mountPath: /config/paper-global.yml
               subPath: paper-global.yml
-              
+
             - name: minecraft-ops-config
               mountPath: /config/ops.json
               subPath: ops.json
 
             - name: minecraft-server-data
               mountPath: /data
+      volumes:
+        - name: minecraft-server-config
+          configMap:
+            name: minecraft-server-config
+        - name: minecraft-ops-config
+          configMap:
+            name: minecraft-ops-config
   volumeClaimTemplates:
     - metadata:
         name: minecraft-server-data
