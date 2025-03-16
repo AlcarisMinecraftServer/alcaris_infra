@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: minecraft-develop-s1
-  namespace: alcairs-develop-minecraft
+  namespace: alcaris-develop-minecraft
   labels:
     app: minecraft-develop-s1
 spec:
@@ -19,7 +19,7 @@ spec:
         - image: itzg/minecraft-server:latest
           name: minecraft-server
           env:
-            - name: MEMROY
+            - name: MEMORY
               value: 4G
             - name: TYPE
               value: PAPER
