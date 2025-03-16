@@ -14,3 +14,4 @@ spec:
       targetPort: minecraft
   selector:
     mcserver: develop-s3
+  loadBalancerIP: 192.168.0.233
