@@ -34,6 +34,9 @@ spec:
             - name: velocity-config
               mountPath: /config/velocity.toml
               subPath: velocity.toml
+            - name: velocity-config
+              mountPath: /config/forwarding.secret
+              subPath: forwarding.secret
       volumes:
         - name: velocity-config
           configMap:
