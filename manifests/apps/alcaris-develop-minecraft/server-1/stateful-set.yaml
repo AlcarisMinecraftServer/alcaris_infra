@@ -37,6 +37,7 @@ spec:
     - metadata:
         name: minecraft-server-data
       spec:
+        storageClassName: local-path
         accessModes:
           - ReadWriteOnce
         resources:
