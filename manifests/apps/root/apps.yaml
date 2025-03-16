@@ -68,7 +68,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: minecraft-apps
+  name: alcaris-develop-gateway-apps
   namespace: argocd
 spec:
   generators:
@@ -76,20 +76,20 @@ spec:
         repoURL: https://github.com/AlcarisMinecraftServer/alcaris_infra
         revision: main
         directories:
-          - path: manifests/apps/minecraft/*
+          - path: manifests/apps/alcaris-develop-gateway/*
   template:
     metadata:
-      name: "minecraft-{{path.basenameNormalized}}"
+      name: "alcaris-develop-gateway-{{path.basenameNormalized}}"
       namespace: argocd
     spec:
-      project: minecraft
+      project: alcaris-develop-gateway
       source:
         repoURL: https://github.com/AlcarisMinecraftServer/alcaris_infra
         targetRevision: main
         path: "{{path}}"
       destination:
         server: https://kubernetes.default.svc
-        namespace: minecraft
+        namespace: alcaris-develop-gateway
       syncPolicy:
         automated:
           prune: true
@@ -97,6 +97,46 @@ spec:
           allowEmpty: true
         syncOptions:
           - CreateNamespace=true
+          - ServerSideApply=true
+        retry:
+          limit: -1
+          backoff:
+            duration: 5s
+            factor: 2
+            maxDuration: 2m
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: alcaris-develop-minecraft
+  namespace: argocd
+spec:
+  generators:
+    - git:
+        repoURL: https://github.com/AlcarisMinecraftServer/alcaris_infra
+        revision: main
+        directories:
+          - path: manifests/apps/alcaris-develop-minecraft/*
+  template:
+    metadata:
+      name: "alcaris-develop-minecraft-{{path.basenameNormalized}}"
+      namespace: argocd
+    spec:
+      project: alcaris-develop-minecraft
+      source:
+        repoURL: https://github.com/AlcarisMinecraftServer/alcaris_infra
+        targetRevision: main
+        path: "{{path}}"
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: alcaris-develop-minecraft
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+          allowEmpty: true
+        syncOptions:
+          - ServerSideApply=true
         retry:
           limit: -1
           backoff:

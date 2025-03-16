@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: velocity
+  name: velocity
+spec:
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app: velocity
+  template:
+    metadata:
+      labels:
+        app: velocity
+    spec:
+      containers:
+        - name: velocity
+          image: itzg/mc-proxy:java21
+          env:
+            - name: MEMORY
+              value: 512m
+            - name: TYPE
+              value: VELOCITY
+          ports:
+            - name: velocity
+              containerPort: 25577
+          startupProbe:
+            tcpSocket:
+              port: 25577
+            failureThreshold: 6
+            periodSeconds: 20
+          volumeMounts:
+            - name: velocity-config
+              mountPath: velocity.toml
+              subPath: velocity.toml
+      volumes:
+        - name: velocity-config
+          configMap:
+            name: velocity-config

@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: minecraft-develop-s1
+  namespace: alcairs-develop-minecraft
+  labels:
+    app: minecraft-develop-s1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: minecraft-develop-s1
+  template:
+    metadata:
+      labels:
+        app: minecraft-develop-s1
+    spec:
+      containers:
+        - image: itzg/minecraft-server:latest
+          name: minecraft-server
+          env:
+            - name: MEMROY
+              value: 4G
+            - name: TYPE
+              value: PAPER
+            - name: VERSION
+              value: "1.21.1"
+            - name: EULA
+              value: "TRUE"
+          ports:
+            - name: minecraft
+              containerPort: 25565
+          volumeMounts:
+            - name: minecraft-server-data
+              mountPath: /data
+  volumeClaimTemplates:
+    - metadata:
+        name: minecraft-server-data
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 50Gi

@@ -14,6 +14,8 @@ spec:
       server: https://kubernetes.default.svc
     - namespace: 'metallb-system'
       server: https://kubernetes.default.svc
+    - namespace: "local-path-storage"
+      server: https://kubernetes.default.svc
   clusterResourceWhitelist:
     - group: '*'
       kind: '*'
@@ -21,14 +23,33 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: minecraft
+  name: alcaris-develop-gateway
   namespace: argocd
 spec:
-  description: Project for deploying and managing Minecraft servers
+  description: The project of gateway system for the alcaris network (develop)
   sourceRepos:
     - 'https://github.com/AlcarisMinecraftServer/alcaris_infra'
   destinations:
-    - namespace: minecraft
+    - namespace: alcaris-develop-gateway
+      server: https://kubernetes.default.svc
+    - namespace: argocd
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: alcaris-develop-minecraft
+  namespace: argocd
+spec:
+  description: The project of minecraft server system for the alcaris network (develop)
+  sourceRepos:
+    - 'https://github.com/AlcarisMinecraftServer/alcaris_infra'
+  destinations:
+    - namespace: alcaris-develop-minecraft
       server: https://kubernetes.default.svc
     - namespace: argocd
       server: https://kubernetes.default.svc
