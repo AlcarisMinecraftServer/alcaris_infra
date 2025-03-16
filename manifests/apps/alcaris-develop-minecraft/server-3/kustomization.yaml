@@ -6,5 +6,3 @@ namespace: alcaris-develop-minecraft
 resources:
   - service.yaml
   - stateful-set.yaml
-  - configs/ops-config.yaml
-  - configs/server-config.yaml
