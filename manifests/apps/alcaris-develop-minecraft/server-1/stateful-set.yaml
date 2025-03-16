@@ -14,6 +14,7 @@ spec:
     metadata:
       labels:
         app: minecraft-develop-s1
+        mcserver: develop-s1
     spec:
       containers:
         - image: itzg/minecraft-server:latest
