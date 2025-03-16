@@ -1,9 +1,9 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
+  name: velocity
   labels:
     app: velocity
-  name: velocity
 spec:
   revisionHistoryLimit: 0
   selector:
