@@ -305,8 +305,7 @@ helm install cilium cilium/cilium \
     --set k8sServiceHost=${KUBE_API_SERVER_VIP} \
     --set k8sServicePort=8443 \
     --set bgpControlPlane.enabled=true \
-    --set ipam.mode=cluster-pool \
-    --set ipam.operator.clusterPoolIPv4PodCIDRList=["10.96.128.0/18"]
+    --set ipam.mode=cluster-pool
 
 # Install ArgoCD Helm chart
 helm repo add argo https://argoproj.github.io/argo-helm
