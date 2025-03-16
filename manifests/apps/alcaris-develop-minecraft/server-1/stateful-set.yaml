@@ -31,6 +31,23 @@ spec:
             - name: minecraft
               containerPort: 25565
           volumeMounts:
+            - name: minecraft-server-config
+              mountPath: /config/server.properties
+              subPath: server.properties
+            - name: minecraft-server-config
+              mountPath: /config/bukkit.yml
+              subPath: bukkit.yml
+            - name: minecraft-server-config
+              mountPath: /config/spigot.yml
+              subPath: spigot.yml
+            - name: minecraft-server-config
+              mountPath: /config/paper-global.yml
+              subPath: paper-global.yml
+              
+            - name: minecraft-ops-config
+              mountPath: /config/ops.json
+              subPath: ops.json
+
             - name: minecraft-server-data
               mountPath: /data
   volumeClaimTemplates:
