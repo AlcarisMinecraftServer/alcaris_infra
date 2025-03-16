@@ -48,3 +48,5 @@ data:
     port = 25565
     map = "Velocity"
     show-plugins = false
+  forwarding.secret: |
+    ebz6gk84C1pn4H8b49ijLJG64HoHohFJ
