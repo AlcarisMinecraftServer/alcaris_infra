@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: minecraft-develop-s1
-  namespace: alcaris-develop-minecraft
   labels:
     app: minecraft-develop-s1
 spec:
