@@ -32,10 +32,10 @@ spec:
             periodSeconds: 20
           volumeMounts:
             - name: velocity-config
-              mountPath: velocity.toml
+              mountPath: /config/velocity.toml
               subPath: velocity.toml
             - name: velocity-secret
-              mountPath: forwarding.secret
+              mountPath: /config/forwarding.secret
               subPath: forwarding.secret
       volumes:
         - name: velocity-config
