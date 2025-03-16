@@ -8,13 +8,14 @@ kind: JoinConfiguration
 nodeRegistration:
   criSocket: "unix:///var/run/containerd/containerd.sock"
   kubeletExtraArgs:
-    node-ip: "{{ host_addr_cls }}"
+    node-ip: "{{ node_ip }}"
 discovery:
   bootstrapToken:
-    apiServerEndpoint: "{{ kube_api_server_vip }}:6443"
+    apiServerEndpoint: "{{ kube_api_server_vip }}:8443"
     token: "{{ kubeadm_bootstrap_token }}"
     unsafeSkipCAVerification: true
 controlPlane:
+  certificateKey: "{{ kubeadm_uploaded_certs }}"
   localAPIEndpoint:
-    advertiseAddress: "{{ host_addr_cls }}"
+    advertiseAddress: "{{ node_ip }}"
     bindPort: 6443

@@ -1,8 +1,10 @@
 [master]
 alcaris-k8s-cp-1 ansible_host=192.168.0.11 node_ip=192.168.0.11
+alcaris-k8s-cp-2 ansible_host=192.168.0.12 node_ip=192.168.0.12 
 
 [worker]
 alcaris-k8s-wk-1 ansible_host=192.168.0.21 node_ip=192.168.0.21
+alcaris-k8s-wk-2 ansible_host=192.168.0.22 node_ip=192.168.0.22 
 
 
 [all:vars]

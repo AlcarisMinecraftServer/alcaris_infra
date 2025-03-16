@@ -8,9 +8,9 @@ kind: JoinConfiguration
 nodeRegistration:
   criSocket: "unix:///var/run/containerd/containerd.sock"
   kubeletExtraArgs:
-    node-ip: "{{ host_addr_cls }}"
+    node-ip: "{{ node_ip }}"
 discovery:
   bootstrapToken:
-    apiServerEndpoint: "{{ kube_api_server_vip }}:6443"
+    apiServerEndpoint: "{{ kube_api_server_vip }}:8443"
     token: "{{ kubeadm_bootstrap_token }}"
     unsafeSkipCAVerification: true
