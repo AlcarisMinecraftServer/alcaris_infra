@@ -1,30 +1,31 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-set -eu
+set -e
 
-function usage() {
-    echo "usage> setup_k8s.sh [COMMAND]"
-    echo "[COMMAND]:"
-    echo "  help        show command usage"
-    echo "  alcaris-k8s-cp-1    run setup script for alcaris-k8s-cp-1"
-    echo "  alcaris-k8s-wk-*    run setup script for alcaris-k8s-wk-*"
-}
+# Set global variables
+KUBE_API_SERVER_VIP=192.168.0.100
+VIP_INTERFACE=ens18
+NODE_IPS=( 192.168.0.11 192.168.0.12 )
 
 case $1 in
-    alcaris-k8s-cp-1|alcaris-k8s-wk-*)
+    alcaris-k8s-cp-1)
+        KEEPALIVED_STATE=MASTER
+        KEEPALIVED_PRIORITY=101
+        KEEPALIVED_UNICAST_SRC_IP=${NODE_IPS[0]}
+        KEEPALIVED_UNICAST_PEERS=( "${NODE_IPS[1]}" )
         ;;
-    help)
-        usage
-        exit 255
+    alcaris-k8s-cp-2)
+        KEEPALIVED_STATE=BACKUP
+        KEEPALIVED_PRIORITY=99
+        KEEPALIVED_UNICAST_SRC_IP=${NODE_IPS[1]}
+        KEEPALIVED_UNICAST_PEERS=( "${NODE_IPS[0]}" )
+        ;;
+    alcaris-k8s-wk-*)
         ;;
     *)
-        usage
-        exit 255
+        exit 1
         ;;
 esac
-
-KUBE_API_SERVER_VIP="192.168.0.11"
-NODE_IP="$2"
 
 # Install Containerd
 cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
@@ -90,7 +91,8 @@ apt-get install -y kubeadm=1.32.1-1.1 kubectl=1.32.1-1.1 kubelet=1.32.1-1.1
 apt-mark hold kubelet kubectl
 
 # Disable swap
-swapoff -a
+sudo sed -i.bak '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+sudo swapoff -a
 
 cat > /etc/crictl.yaml <<EOF
 runtime-endpoint: unix:///var/run/containerd/containerd.sock
@@ -103,12 +105,123 @@ case $1 in
     alcaris-k8s-wk-*)
         exit 0
         ;;
-    alcaris-k8s-cp-1)
+    alcaris-k8s-cp-1|alcaris-k8s-cp-2)
         ;;
     *)
         exit 1
         ;;
 esac
+
+# Install HAProxy
+apt-get install -y --no-install-recommends software-properties-common
+add-apt-repository ppa:vbernat/haproxy-3.1 -y
+sudo apt-get install -y haproxy=3.1.\*
+
+cat > /etc/haproxy/haproxy.cfg <<EOF
+global
+    log /dev/log    local0
+    log /dev/log    local1 notice
+    chroot /var/lib/haproxy
+    stats socket /run/haproxy/admin.sock mode 660 level admin expose-fd listeners
+    stats timeout 30s
+    user haproxy
+    group haproxy
+    daemon
+defaults
+    log     global
+    mode    http
+    option  httplog
+    option  dontlognull
+    timeout connect 5000
+    timeout client  50000
+    timeout server  50000
+    errorfile 400 /etc/haproxy/errors/400.http
+    errorfile 403 /etc/haproxy/errors/403.http
+    errorfile 408 /etc/haproxy/errors/408.http
+    errorfile 500 /etc/haproxy/errors/500.http
+    errorfile 502 /etc/haproxy/errors/502.http
+    errorfile 503 /etc/haproxy/errors/503.http
+    errorfile 504 /etc/haproxy/errors/504.http
+frontend k8s-api
+    bind ${KUBE_API_SERVER_VIP}:8443
+    mode tcp
+    option tcplog
+    default_backend k8s-api
+backend k8s-api
+    mode tcp
+    option tcplog
+    option tcp-check
+    balance roundrobin
+    default-server inter 10s downinter 5s rise 2 fall 2 slowstart 60s maxconn 250 maxqueue 256 weight 100
+    server k8s-api-1 ${NODE_IPS[0]}:6443 check
+    server k8s-api-2 ${NODE_IPS[1]}:6443 check
+EOF
+
+# Install Keepalived
+echo "net.ipv4.ip_nonlocal_bind = 1" >> /etc/sysctl.conf
+sysctl -p
+apt-get -y install keepalived
+
+cat > /usr/local/bin/check_haproxy.sh <<'EOS'
+#!/bin/bash
+/usr/bin/nc -z -w1 127.0.0.1 8443
+if [ $? -eq 0 ]; then
+    exit 0
+else
+    exit 1
+fi
+EOS
+chmod +x /usr/local/bin/check_haproxy.sh
+
+cat > /etc/keepalived/keepalived.conf <<EOF
+vrrp_script chk_haproxy {
+    script "/usr/local/bin/check_haproxy.sh"
+    interval 2
+    weight 2
+}
+
+vrrp_instance LB_VIP {
+    interface ${VIP_INTERFACE}
+    state ${KEEPALIVED_STATE}
+    priority ${KEEPALIVED_PRIORITY}
+    virtual_router_id 51
+
+    smtp_alert
+    authentication {
+        auth_type AH
+        auth_pass zaq12wsx
+    }
+
+    unicast_src_ip ${KEEPALIVED_UNICAST_SRC_IP}
+    unicast_peer {
+$( for peer in "${KEEPALIVED_UNICAST_PEERS[@]}"; do
+    echo "        $peer"
+done )
+    }
+
+    virtual_ipaddress {
+        ${KUBE_API_SERVER_VIP}
+    }
+
+    track_script {
+        chk_haproxy
+    }
+}
+EOF
+
+# Create keepalived user
+groupadd -r keepalived_script || true
+useradd -r -s /sbin/nologin -g keepalived_script -M keepalived_script || true
+
+echo "keepalived_script ALL=(ALL) NOPASSWD: /usr/bin/killall" >> /etc/sudoers
+
+# Enable VIP services
+systemctl enable keepalived --now
+systemctl enable haproxy --now
+
+# Reload VIP services
+systemctl reload keepalived
+systemctl reload haproxy
 
 # Pull images first
 kubeadm config images pull
@@ -116,10 +229,22 @@ kubeadm config images pull
 # install k9s
 wget https://github.com/derailed/k9s/releases/download/v0.32.7/k9s_Linux_amd64.tar.gz -O - | tar -zxvf - k9s && sudo mv ./k9s /usr/local/bin/
 
+# Ends except first-control-plane
+case $1 in
+    alcaris-k8s-cp-1)
+        ;;
+    alcaris-k8s-cp-2)
+        exit 0
+        ;;
+    *)
+        exit 1
+        ;;
+esac
+
 # Set kubeadm bootstrap token using openssl
 KUBEADM_BOOTSTRAP_TOKEN=$(openssl rand -hex 3).$(openssl rand -hex 8)
 
-# Set init configuration for the first control plane
+# Initialize Kubernetes cluster
 cat > "$HOME"/init_kubeadm.yaml <<EOF
 apiVersion: kubeadm.k8s.io/v1beta3
 kind: InitConfiguration
@@ -128,25 +253,22 @@ bootstrapTokens:
     description: "kubeadm bootstrap token"
     ttl: "24h"
 nodeRegistration:
-    criSocket: "unix:///var/run/containerd/containerd.sock"
-    kubeletExtraArgs:
-      node-ip: "$NODE_IP"
+  criSocket: "unix:///var/run/containerd/containerd.sock"
+  kubeletExtraArgs:
+    node-ip: "$NODE_IP"
 localAPIEndpoint:
-    advertiseAddress: "$NODE_IP"
-    bindPort: 6443
+  advertiseAddress: "$NODE_IP"
+  bindPort: 6443
 skipPhases:
     - addon/kube-proxy
 ---
 apiVersion: kubeadm.k8s.io/v1beta3
 kind: ClusterConfiguration
 networking:
-    serviceSubnet: "10.96.64.0/18"
-    podSubnet: "10.96.128.0/18"
-etcd:
-    local:
-    extraArgs:
+  podSubnet: "10.96.128.0/18"
+  serviceSubnet: "10.96.64.0/18"
 kubernetesVersion: "v1.32.1"
-controlPlaneEndpoint: "${KUBE_API_SERVER_VIP}:6443"
+controlPlaneEndpoint: "192.168.0.100:8443"
 controllerManager:
     extraArgs:
         bind-address: "0.0.0.0"
@@ -166,27 +288,22 @@ kubeadm init --config "$HOME"/init_kubeadm.yaml --skip-phases=addon/kube-proxy -
 
 # Set up kubeconfig for the current user
 mkdir -p "$HOME"/.kube
-cp -i /etc/kubernetes/admin.conf "$HOME"/.kube/config
-chown "$(id -u)":"$(id -g)" "$HOME"/.kube/config
+sudo cp -i /etc/kubernetes/admin.conf "$HOME"/.kube/config
+sudo chown "$(id -u)":"$(id -g)" "$HOME"/.kube/config
 
 # Install Helm CLI
 curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
-
 
 # Install Cilium Helm chart
 helm repo add cilium https://helm.cilium.io/
 helm install cilium cilium/cilium \
     --namespace kube-system \
     --set kubeProxyReplacement=true \
-    --set k8sServiceHost=$KUBE_API_SERVER_VIP \
-    --set k8sServicePort=6443 \
-    --set bgpControlPlane.enabled=true
-
-# Install OpenEBS Helm chart
-helm repo add openebs https://openebs.github.io/charts
-helm install openebs openebs/openebs \
-    --create-namespace \
-    --namespace openebs
+    --set k8sServiceHost=${KUBE_API_SERVER_VIP} \
+    --set k8sServicePort=8443 \
+    --set bgpControlPlane.enabled=true \
+    --set ipam.mode=cluster-pool \
+    --set ipam.operator.clusterPoolIPv4PodCIDRList=["10.96.128.0/18"]
 
 # Install ArgoCD Helm chart
 helm repo add argo https://argoproj.github.io/argo-helm
@@ -199,28 +316,15 @@ helm install argocd argo/argocd-apps \
     --version 0.0.1 \
     --values https://raw.githubusercontent.com/AlcarisMinecraftServer/alcaris_infra/main/manifests/argocd-apps-helm-chart-values.yaml
 
-cat <<EOF | kubectl apply -f -
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: cluster-wide-apps
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: external-k8s-endpoint
-  namespace: cluster-wide-apps
-type: Opaque
-stringData:
-  fqdn: "$KUBE_API_SERVER_VIP"
-  port: "6443"
-EOF
+# Generate control plane certificate
+KUBEADM_UPLOADED_CERTS=$(kubeadm init phase upload-certs --upload-certs | tail -n 1)
 
 # clone repo
 git clone -b main https://github.com/AlcarisMinecraftServer/alcaris_infra.git "$HOME"/alcaris_infra
 
 # add join information to ansible hosts variable
 echo "kubeadm_bootstrap_token: $KUBEADM_BOOTSTRAP_TOKEN" >> "$HOME"/alcaris_infra/ansible/hosts/servers/group_vars/all.yaml
+echo "kubeadm_uploaded_certs: $KUBEADM_UPLOADED_CERTS" >> "$HOME"/alcaris_infra/ansible/hosts/servers/group_vars/all.yaml
 
 # install ansible
 sudo apt-get install -y ansible git sshpass
