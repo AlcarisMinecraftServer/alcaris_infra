@@ -5,14 +5,16 @@ set -e
 # Set global variables
 KUBE_API_SERVER_VIP=192.168.0.100
 VIP_INTERFACE=ens18
-NODE_IPS=( 192.168.0.11 192.168.0.12 )
+NODE_IPS=( 192.168.0.11 )
+# NODE_IPS=( 192.168.0.11 192.168.0.12 )
 
 case $1 in
     alcaris-k8s-cp-1)
         KEEPALIVED_STATE=MASTER
         KEEPALIVED_PRIORITY=101
         KEEPALIVED_UNICAST_SRC_IP=${NODE_IPS[0]}
-        KEEPALIVED_UNICAST_PEERS=( "${NODE_IPS[1]}" )
+        #KEEPALIVED_UNICAST_PEERS=( "${NODE_IPS[1]}" )
+        KEEPALIVED_UNICAST_PEERS=( )
         ;;
     alcaris-k8s-cp-2)
         KEEPALIVED_STATE=BACKUP
@@ -154,8 +156,9 @@ backend k8s-api
     balance roundrobin
     default-server inter 10s downinter 5s rise 2 fall 2 slowstart 60s maxconn 250 maxqueue 256 weight 100
     server k8s-api-1 ${NODE_IPS[0]}:6443 check
-    server k8s-api-2 ${NODE_IPS[1]}:6443 check
 EOF
+
+# server k8s-api-2 ${NODE_IPS[1]}:6443 check
 
 # Install Keepalived
 echo "net.ipv4.ip_nonlocal_bind = 1" >> /etc/sysctl.conf
