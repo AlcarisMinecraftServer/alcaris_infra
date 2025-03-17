@@ -47,7 +47,7 @@ spec:
               subPath: paper-global.yml
 
             - name: minecraft-common-config-ops
-              mountPath: ops.json
+              mountPath: /config/ops.json
               subPath: ops.json
       volumes:
         - name: minecraft-common-config-server
