@@ -4,11 +4,6 @@ metadata:
   name: velocity
 spec:
   type: LoadBalancer
-<<<<<<< HEAD
-  loadBalancerClass: io.cilium/bgp-control-plane
-  externalTrafficPolicy: Local
-=======
->>>>>>> parent of cdf09f0 (feat: 検証)
   ports:
     - name: velocity
       port: 25565
