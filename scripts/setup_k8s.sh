@@ -320,23 +320,23 @@ helm install argocd argo/argocd-apps \
     --version 0.0.1 \
     --values https://raw.githubusercontent.com/AlcarisMinecraftServer/alcaris_infra/main/manifests/argocd-apps-helm-chart-values.yaml
 
-# Generate control plane certificate
-KUBEADM_UPLOADED_CERTS=$(kubeadm init phase upload-certs --upload-certs | tail -n 1)
+# # Generate control plane certificate
+# KUBEADM_UPLOADED_CERTS=$(kubeadm init phase upload-certs --upload-certs | tail -n 1)
 
-# clone repo
-git clone -b main https://github.com/AlcarisMinecraftServer/alcaris_infra.git "$HOME"/alcaris_infra
+# # clone repo
+# git clone -b main https://github.com/AlcarisMinecraftServer/alcaris_infra.git "$HOME"/alcaris_infra
 
-# add join information to ansible hosts variable
-echo "kubeadm_bootstrap_token: $KUBEADM_BOOTSTRAP_TOKEN" >> "$HOME"/alcaris_infra/ansible/hosts/servers/group_vars/all.yaml
-echo "kubeadm_uploaded_certs: $KUBEADM_UPLOADED_CERTS" >> "$HOME"/alcaris_infra/ansible/hosts/servers/group_vars/all.yaml
+# # add join information to ansible hosts variable
+# echo "kubeadm_bootstrap_token: $KUBEADM_BOOTSTRAP_TOKEN" >> "$HOME"/alcaris_infra/ansible/hosts/servers/group_vars/all.yaml
+# echo "kubeadm_uploaded_certs: $KUBEADM_UPLOADED_CERTS" >> "$HOME"/alcaris_infra/ansible/hosts/servers/group_vars/all.yaml
 
-# install ansible
-sudo apt-get install -y ansible git sshpass
+# # install ansible
+# sudo apt-get install -y ansible git sshpass
 
-# export ansible.cfg target
-export ANSIBLE_CONFIG="$HOME"/alcaris_infra/ansible/ansible.cfg
+# # export ansible.cfg target
+# export ANSIBLE_CONFIG="$HOME"/alcaris_infra/ansible/ansible.cfg
 
-# run ansible-playbook
-ansible-galaxy role install -r "$HOME"/alcaris_infra/ansible/roles/requirements.yaml
-ansible-galaxy collection install -r "$HOME"/alcaris_infra/ansible/roles/requirements.yaml
-ansible-playbook -i "$HOME"/alcaris_infra/ansible/hosts/servers/inventory "$HOME"/alcaris_infra/ansible/site.yaml
+# # run ansible-playbook
+# ansible-galaxy role install -r "$HOME"/alcaris_infra/ansible/roles/requirements.yaml
+# ansible-galaxy collection install -r "$HOME"/alcaris_infra/ansible/roles/requirements.yaml
+# ansible-playbook -i "$HOME"/alcaris_infra/ansible/hosts/servers/inventory "$HOME"/alcaris_infra/ansible/site.yaml
