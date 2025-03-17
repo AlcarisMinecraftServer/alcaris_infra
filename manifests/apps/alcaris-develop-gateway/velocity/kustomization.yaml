@@ -4,6 +4,7 @@ kind: Kustomization
 namespace: alcaris-develop-gateway
 
 resources:
-  - velocity.yaml
+  - service.yaml
+  - stateful-set.yaml
+  - network-policy.yaml
   - velocity-config.yaml
-  - velocity-loadbalancer.yaml
