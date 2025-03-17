@@ -31,13 +31,13 @@ spec:
             failureThreshold: 6
             periodSeconds: 20
           volumeMounts:
-            - name: velocity-config
+            - name: gateway-config-velocity
               mountPath: /config/velocity.toml
               subPath: velocity.toml
-            - name: velocity-config
+            - name: gateway-config-velocity
               mountPath: /config/forwarding.secret
               subPath: forwarding.secret
       volumes:
-        - name: velocity-config
+        - name: gateway-config-velocity
           configMap:
-            name: velocity-config
+            name: gateway-config-velocity
