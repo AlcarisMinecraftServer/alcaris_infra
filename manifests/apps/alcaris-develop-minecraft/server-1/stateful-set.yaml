@@ -33,29 +33,39 @@ spec:
             - name: minecraft
               containerPort: 25565
           volumeMounts:
-            - name: minecraft-server-config
+            - name: minecraft-common-config-server
               mountPath: /config/server.properties
               subPath: server.properties
-            - name: minecraft-server-config
+            - name: minecraft-common-config-bukkit
               mountPath: /config/bukkit.yml
               subPath: bukkit.yml
-            - name: minecraft-server-config
+            - name: minecraft-common-config-spigot
               mountPath: /config/spigot.yml
               subPath: spigot.yml
-            - name: minecraft-server-config
+            - name: minecraft-common-config-paper
               mountPath: /config/config/paper-global.yml
               subPath: paper-global.yml
 
-            - name: minecraft-ops-config
+            - name: minecraft-common-config-ops
               mountPath: ops.json
               subPath: ops.json
       volumes:
-        - name: minecraft-server-config
+        - name: minecraft-common-config-server
           configMap:
-            name: minecraft-server-config
-        - name: minecraft-ops-config
+            name: minecraft-common-config-server
+        - name: minecraft-common-config-bukkit
           configMap:
-            name: minecraft-ops-config
+            name: minecraft-common-config-bukkit
+        - name: minecraft-common-config-spigot
+          configMap:
+            name: minecraft-common-config-spigot
+        - name: minecraft-common-config-paper
+          configMap:
+            name: minecraft-common-config-paper
+            
+        - name: minecraft-common-config-ops
+          configMap:
+            name: minecraft-common-config-ops
   volumeClaimTemplates:
     - metadata:
         name: minecraft-server-data
