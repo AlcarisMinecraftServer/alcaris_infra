@@ -103,6 +103,11 @@ spec:
             duration: 5s
             factor: 2
             maxDuration: 2m
+      ignoreDifferences:
+        - group: ""
+          kind: Service
+          jsonPointers:
+            - /status
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
