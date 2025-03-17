@@ -7,6 +7,7 @@ metadata:
 spec:
   type: LoadBalancer
   loadBalancerClass: io.cilium/bgp-control-plane
+  externalTrafficPolicy: Local
   ports:
     - name: velocity
       port: 25565
