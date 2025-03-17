@@ -4,8 +4,6 @@ metadata:
   name: velocity
 spec:
   type: LoadBalancer
-  loadBalancerClass: io.cilium/bgp-control-plane
-  loadBalancerIP: 192.168.0.230
   ports:
     - name: velocity
       port: 25565
@@ -13,3 +11,4 @@ spec:
       targetPort: velocity
   selector:
     app: velocity
+  loadBalancerIP: 192.168.0.230
