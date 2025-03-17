@@ -6,5 +6,4 @@ namespace: alcaris-develop-gateway
 resources:
   - service.yaml
   - stateful-set.yaml
-  - network-policy.yaml
   - velocity-config.yaml
