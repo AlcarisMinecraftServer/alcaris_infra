@@ -9,3 +9,4 @@ resources:
   - configs/paper-config.yaml
   - configs/server-config.yaml
   - configs/spigot-config.yaml
+  - configs/plugins/luckperms-config.yaml
