@@ -110,6 +110,10 @@ spec:
           configMap:
             name: minecraft-common-config-paper
             
+        - name: minecraft-common-config-luckperms
+          configMap:
+            name: minecraft-common-config-luckperms
+            
         - name: minecraft-common-config-ops
           configMap:
             name: minecraft-common-config-ops
