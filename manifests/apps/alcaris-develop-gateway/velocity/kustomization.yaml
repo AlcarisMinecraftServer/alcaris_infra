@@ -7,4 +7,5 @@ resources:
   - service.yaml
   - stateful-set.yaml
   - network-policy.yaml
+  - configs/plugins-config.yaml
   - configs/velocity-config.yaml
