@@ -37,7 +37,6 @@ spec:
   clusterResourceWhitelist:
     - group: '*'
       kind: '*'
-
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
@@ -50,6 +49,24 @@ spec:
     - 'https://github.com/AlcarisMinecraftServer/alcaris_infra'
   destinations:
     - namespace: alcaris-develop-minecraft
+      server: https://kubernetes.default.svc
+    - namespace: argocd
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: alcaris-service
+  namespace: argocd
+spec:
+  description: The project of service system for the alcaris network (prod)
+  sourceRepos:
+    - 'https://github.com/AlcarisMinecraftServer/alcaris_infra'
+  destinations:
+    - namespace: alcaris-service
       server: https://kubernetes.default.svc
     - namespace: argocd
       server: https://kubernetes.default.svc
