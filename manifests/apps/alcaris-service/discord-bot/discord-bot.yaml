@@ -28,3 +28,5 @@ spec:
           envFrom:
             - secretRef:
                 name: discord-bot-secrets
+      imagePullSecrets:
+        - name: ghcr-secret
