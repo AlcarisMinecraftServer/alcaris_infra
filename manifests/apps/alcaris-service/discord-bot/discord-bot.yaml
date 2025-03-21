@@ -19,8 +19,6 @@ spec:
         - name: discord-bot
           image: ghcr.io/alcarisminecraftserver/discord-bot:latest
           env:
-            - name: MONGO_URI
-              value: "mongodb://root:yourSecurePassword@mongodb.cluster-wide-apps.svc.cluster.local:27017"
             - name: PROD_GUILD
               value: "1097098741049200680"
             - name: TEST_GUILD
