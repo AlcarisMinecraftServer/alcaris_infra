@@ -49,6 +49,9 @@ spec:
             - name: minecraft-common-config-ops
               mountPath: /config/ops.json
               subPath: ops.json
+              
+            - name: minecraft-server-data
+              mountPath: /data
       volumes:
         - name: minecraft-common-config-server
           configMap:
