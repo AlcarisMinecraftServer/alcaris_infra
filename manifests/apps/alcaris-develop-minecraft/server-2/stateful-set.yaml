@@ -36,7 +36,6 @@ spec:
                 https://cdn.modrinth.com/data/DKY9btbd/versions/f9NoeotB/worldguard-bukkit-7.0.13-dist.jar,
                 https://github.com/aromaa/WorldGuardExtraFlags/releases/download/v4.2.4/WorldGuardExtraFlags.jar,
                 
-                https://ci.lucko.me/job/LuckPerms/lastSuccessfulBuild/artifact/bukkit/loader/build/libs/LuckPerms-Bukkit-5.4.156.jar,
                 https://ci.extendedclip.com/job/PlaceholderAPI/197/artifact/build/libs/PlaceholderAPI-2.11.6.jar,
                 https://github.com/MilkBowl/Vault/releases/download/1.7.3/Vault.jar,
                 https://github.com/dmulloy2/ProtocolLib/releases/download/5.3.0/ProtocolLib.jar,
