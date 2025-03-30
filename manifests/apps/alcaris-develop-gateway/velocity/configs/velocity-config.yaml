@@ -51,6 +51,7 @@ data:
     s1 = "minecraft-develop-s1.alcaris-develop-minecraft.svc.cluster.local:25565"
     s2 = "minecraft-develop-s2.alcaris-develop-minecraft.svc.cluster.local:25565"
     s3 = "minecraft-develop-s3.alcaris-develop-minecraft.svc.cluster.local:25565"
+    s4 = "minecraft-develop-s4.alcaris-develop-minecraft.svc.cluster.local:25565"
 
     # In what order we should try servers when a player logs in or is kicked from a server.
     try = ["s1"]

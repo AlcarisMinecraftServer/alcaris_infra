@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: minecraft-develop-s4
+  labels:
+    app: minecraft-develop-s4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: minecraft-develop-s4
+  template:
+    metadata:
+      labels:
+        app: minecraft-develop-s4
+        mcserver: develop-s4
+    spec:
+      containers:
+        - image: itzg/minecraft-server:latest
+          name: minecraft-server
+          env:
+            - name: MEMORY
+              value: 4G
+            - name: TYPE
+              value: PAPER
+            - name: VERSION
+              value: "1.19"
+            - name: EULA
+              value: "TRUE"
+            - name: COPY_CONFIG_DEST
+              value: /data
+          ports:
+            - name: minecraft
+              containerPort: 25565
+          volumeMounts:
+            - name: minecraft-common-config-ops
+              mountPath: /config/ops.json
+              subPath: ops.json
+      volumes:            
+        - name: minecraft-common-config-ops
+          configMap:
+            name: minecraft-common-config-ops
+  volumeClaimTemplates:
+    - metadata:
+        name: minecraft-server-data
+      spec:
+        storageClassName: local-path
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 50Gi
