@@ -51,7 +51,6 @@ data:
     s1 = "minecraft-develop-s1.alcaris-develop-minecraft.svc.cluster.local:25565"
     s2 = "minecraft-develop-s2.alcaris-develop-minecraft.svc.cluster.local:25565"
     s3 = "minecraft-develop-s3.alcaris-develop-minecraft.svc.cluster.local:25565"
-    s4 = "minecraft-develop-s4.alcaris-develop-minecraft.svc.cluster.local:25565"
 
     # In what order we should try servers when a player logs in or is kicked from a server.
     try = ["s1"]
@@ -60,7 +59,7 @@ data:
     # Configure your forced hosts here.
     "play-develop.s1.alcaris.net" = ["s1"]
     "play-develop.s2.alcaris.net" = ["s2"]
-    "play-develop.s3.alcaris.net" = ["s4"]
+    "play-develop.s3.alcaris.net" = ["s3"]
 
     [advanced]
     # How large a Minecraft packet has to be before we compress it. Setting this to zero will
