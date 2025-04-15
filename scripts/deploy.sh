@@ -29,8 +29,8 @@ virt-customize -a noble-server-cloudimg-amd64.img --install liburing2 --install 
 qm create $TEMPLATE_VMID --cores 2 --memory 4096 --net0 virtio,bridge=vmbr0 --name alcaris-k8s-template
 
 # Import disk to the target storage and attach it as a SCSI drive
-qm importdisk $TEMPLATE_VMID noble-server-cloudimg-amd64.img $TEMPLATE_BOOT_IMAGE_TARGET_VOLUME
-qm set $TEMPLATE_VMID --scsihw virtio-scsi-pci --scsi0 $TEMPLATE_STORAGE:vm-$TEMPLATE_VMID-disk-0
+qm importdisk $TEMPLATE_VMID noble-server-cloudimg-amd64.img $TEMPLATE_BOOT_IMAGE_TARGET_VOLUME --format qcow2
+qm set $TEMPLATE_VMID --scsihw virtio-scsi-pci --scsi0 $TEMPLATE_BOOT_IMAGE_TARGET_VOLUME:vm-$TEMPLATE_VMID-disk-0
 
 # Add Cloud-Init CD-ROM drive and set boot parameters
 qm set $TEMPLATE_VMID --ide2 $CLOUDINIT_IMAGE_TARGET_VOLUME:cloudinit
@@ -54,6 +54,7 @@ for VM in "${VM_LIST[@]}"; do
     ssh -n "${TARGET_IP}" qm resize "${VMID}" scsi0 30G
     
     # Create Cloud-Init user configuration snippet
+    mkdir -p "$SNIPPET_TARGET_PATH"
     cat > "$SNIPPET_TARGET_PATH"/"$VMNAME"-user.yaml << EOF
 #cloud-config
 hostname: ${VMNAME}
