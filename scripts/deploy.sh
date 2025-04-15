@@ -1,11 +1,11 @@
 #!/bin/bash
 
 TEMPLATE_VMID=9000
-BOOT_IMAGE_TARGET_VOLUME=local-lvm
-CLOUDINIT_IMAGE_TARGET_VOLUME=local-lvm
-TEMPLATE_BOOT_IMAGE_TARGET_VOLUME=local-lvm
-SNIPPET_TARGET_VOLUME=local
-SNIPPET_TARGET_PATH=/var/lib/vz/snippets
+TEMPLATE_STORAGE=nfs-share
+CLOUDINIT_IMAGE_TARGET_VOLUME=nfs-share
+BOOT_IMAGE_TARGET_VOLUME=nfs-share
+SNIPPET_TARGET_VOLUME=nfs-share
+SNIPPET_TARGET_PATH=/mnt/pve/${TEMPLATE_STORAGE}/snippets
 REPOSITORY_RAW_SOURCE_URL="https://raw.githubusercontent.com/AlcarisMinecraftServer/alcaris_infra/main"
 
 VM_LIST=(
@@ -102,10 +102,6 @@ config:
     search:
     - 'local'
 EOF
-
-    # Copy snippets to target Proxmox node
-    scp "$SNIPPET_TARGET_PATH/$VMNAME-user.yaml" "${TARGET_IP}:/var/lib/vz/snippets/"
-    scp "$SNIPPET_TARGET_PATH/$VMNAME-network.yaml" "${TARGET_IP}:/var/lib/vz/snippets/"
 
     # Attach the Cloud-Init snippets to the VM
     ssh -n "${TARGET_IP}" qm set "${VMID}" --cicustom "user=${SNIPPET_TARGET_VOLUME}:snippets/${VMNAME}-user.yaml,network=${SNIPPET_TARGET_VOLUME}:snippets/${VMNAME}-network.yaml"
