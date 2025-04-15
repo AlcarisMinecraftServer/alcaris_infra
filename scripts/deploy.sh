@@ -103,6 +103,10 @@ config:
     - 'local'
 EOF
 
+    # Copy snippets to target Proxmox node
+    scp "$SNIPPET_TARGET_PATH/$VMNAME-user.yaml" "${TARGET_IP}:/var/lib/vz/snippets/"
+    scp "$SNIPPET_TARGET_PATH/$VMNAME-network.yaml" "${TARGET_IP}:/var/lib/vz/snippets/"
+
     # Attach the Cloud-Init snippets to the VM
     ssh -n "${TARGET_IP}" qm set "${VMID}" --cicustom "user=${SNIPPET_TARGET_VOLUME}:snippets/${VMNAME}-user.yaml,network=${SNIPPET_TARGET_VOLUME}:snippets/${VMNAME}-network.yaml"
   done
