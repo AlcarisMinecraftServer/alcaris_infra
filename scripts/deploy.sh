@@ -30,7 +30,7 @@ qm create $TEMPLATE_VMID --cores 2 --memory 4096 --net0 virtio,bridge=vmbr0 --na
 
 # Import disk to the target storage and attach it as a SCSI drive
 qm importdisk $TEMPLATE_VMID noble-server-cloudimg-amd64.img $TEMPLATE_BOOT_IMAGE_TARGET_VOLUME
-qm set $TEMPLATE_VMID --scsihw virtio-scsi-pci --scsi0 $TEMPLATE_BOOT_IMAGE_TARGET_VOLUME:vm-$TEMPLATE_VMID-disk-0
+qm set $TEMPLATE_VMID --scsihw virtio-scsi-pci --scsi0 $TEMPLATE_STORAGE:vm-$TEMPLATE_VMID-disk-0
 
 # Add Cloud-Init CD-ROM drive and set boot parameters
 qm set $TEMPLATE_VMID --ide2 $CLOUDINIT_IMAGE_TARGET_VOLUME:cloudinit
@@ -49,9 +49,6 @@ for VM in "${VM_LIST[@]}"; do
     
     # Set compute resources on the target host
     ssh -n "${TARGET_IP}" qm set "${VMID}" --cores "${CPU}" --memory "${MEM}"
-    
-    # Move the VM disk to the designated storage (fixed variable names)
-    ssh -n "${TARGET_IP}" qm move-disk "${VMID}" scsi0 "${BOOT_IMAGE_TARGET_VOLUME}" --delete true
     
     # Resize the VM disk after cloning (due to cloning time)
     ssh -n "${TARGET_IP}" qm resize "${VMID}" scsi0 30G
