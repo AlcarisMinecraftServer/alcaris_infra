@@ -10,10 +10,10 @@ REPOSITORY_RAW_SOURCE_URL="https://raw.githubusercontent.com/AlcarisMinecraftSer
 
 VM_LIST=(
   #vmid #vmname          #cpu #mem   #vmsrvip      #targetip      #targethost
-  "1001 alcaris-k8s-cp-1 4    24576  192.168.0.11  192.168.0.110  nmkmn-srv-prox01"
+  "1001 alcaris-k8s-cp-1 4    8192   192.168.0.11  192.168.0.110  nmkmn-srv-prox01"
   "1002 alcaris-k8s-cp-2 4    8192   192.168.0.12  192.168.0.111  nmkmn-srv-prox02"
   "1101 alcaris-k8s-wk-1 4    24576  192.168.0.21  192.168.0.110  nmkmn-srv-prox01"
-  "1102 alcaris-k8s-wk-2 4    8192   192.168.0.22  192.168.0.111  nmkmn-srv-prox02"
+  "1102 alcaris-k8s-wk-2 4    24576  192.168.0.22  192.168.0.111  nmkmn-srv-prox02"
 )
 
 echo "Creating Cloud-Init template..."
