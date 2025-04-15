@@ -8,5 +8,5 @@ data:
     tunnel: onp-k8s--http--argocd
     ingress:
       - hostname: argocd.onp-k8s.admin.alcaris.net
-        service: http://argocd-server.argocd:80
+        service: https://argocd-server.argocd:443
       - service: http_status:404
