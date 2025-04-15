@@ -1,0 +1,3 @@
+resources:
+  - argocd-server-lb.yaml
+  - argocd-cm.yaml
