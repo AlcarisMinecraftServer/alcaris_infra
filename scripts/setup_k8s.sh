@@ -327,8 +327,8 @@ KUBEADM_UPLOADED_CERTS=$(kubeadm init phase upload-certs --upload-certs | tail -
 git clone -b main https://github.com/AlcarisMinecraftServer/alcaris_infra.git "$HOME"/alcaris_infra
 
 # add join information to ansible hosts variable
-echo "kubeadm_bootstrap_token: $KUBEADM_BOOTSTRAP_TOKEN" >> "$HOME"/alcaris_infra/ansible/hosts/servers/group_vars/all.yaml
-echo "kubeadm_uploaded_certs: $KUBEADM_UPLOADED_CERTS" >> "$HOME"/alcaris_infra/ansible/hosts/servers/group_vars/all.yaml
+echo "kubeadm_bootstrap_token: $KUBEADM_BOOTSTRAP_TOKEN" >> "$HOME"/alcaris_infra/ansible/group_vars/all.yaml
+echo "kubeadm_uploaded_certs: $KUBEADM_UPLOADED_CERTS" >> "$HOME"/alcaris_infra/ansible/group_vars/all.yaml
 
 # install ansible
 sudo apt-get install -y ansible git sshpass

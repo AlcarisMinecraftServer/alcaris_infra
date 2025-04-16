@@ -3,9 +3,10 @@
 TEMPLATE_VMID=9000
 TEMPLATE_STORAGE=nfs-share
 CLOUDINIT_IMAGE_TARGET_VOLUME=nfs-share
-BOOT_IMAGE_TARGET_VOLUME=nfs-share
+TEMPLATE_BOOT_IMAGE_TARGET_VOLUME=nfs-share
+BOOT_IMAGE_TARGET_VOLUME=local-lvm
 SNIPPET_TARGET_VOLUME=nfs-share
-SNIPPET_TARGET_PATH=/mnt/pve/${TEMPLATE_STORAGE}/snippets
+SNIPPET_TARGET_PATH=/mnt/pve/${SNIPPET_TARGET_VOLUME}/snippets
 REPOSITORY_RAW_SOURCE_URL="https://raw.githubusercontent.com/AlcarisMinecraftServer/alcaris_infra/main"
 
 VM_LIST=(
@@ -28,18 +29,26 @@ virt-customize -a noble-server-cloudimg-amd64.img --install liburing2 --install 
 # Create a new VM and attach a network adapter (vmbr0)
 qm create $TEMPLATE_VMID --cores 2 --memory 4096 --net0 virtio,bridge=vmbr0 --name alcaris-k8s-template
 
-# Import disk to the target storage and attach it as a SCSI drive
-qm importdisk $TEMPLATE_VMID noble-server-cloudimg-amd64.img $TEMPLATE_BOOT_IMAGE_TARGET_VOLUME --format qcow2
-IMPORTED_VOL="vm-${TEMPLATE_VMID}-disk-0"
-qm set $TEMPLATE_VMID --scsihw virtio-scsi-pci --scsi0 ${TEMPLATE_BOOT_IMAGE_TARGET_VOLUME}:${IMPORTED_VOL}
+# Import disk and extract actual disk ID
+DISK_IMPORT_OUTPUT=$(qm importdisk $TEMPLATE_VMID noble-server-cloudimg-amd64.img $TEMPLATE_BOOT_IMAGE_TARGET_VOLUME)
+IMPORTED_DISK=$(echo "$DISK_IMPORT_OUTPUT" | grep -oP "(?<=successfully imported disk ')[^']+")
 
-# Add Cloud-Init CD-ROM drive and set boot parameters
+# finally attach the new disk to the VM as scsi drive
+qm set $TEMPLATE_VMID --scsihw virtio-scsi-pci --scsi0 "$IMPORTED_DISK"
+
+# add Cloud-Init CD-ROM drive
 qm set $TEMPLATE_VMID --ide2 $CLOUDINIT_IMAGE_TARGET_VOLUME:cloudinit
+
+# set the bootdisk parameter to scsi0
 qm set $TEMPLATE_VMID --boot c --bootdisk scsi0
+
+# set serial console
 qm set $TEMPLATE_VMID --serial0 socket --vga serial0
 
 # Convert the VM to a template and clean up
 qm template $TEMPLATE_VMID
+
+# Cleanup
 rm noble-server-cloudimg-amd64.img
 
 echo "Deploying VMs..."
@@ -51,6 +60,9 @@ for VM in "${VM_LIST[@]}"; do
     # Set compute resources on the target host
     ssh -n "${TARGET_IP}" qm set "${VMID}" --cores "${CPU}" --memory "${MEM}"
     
+    # move vm-disk to local
+    ssh -n "${TARGET_IP}" qm move-disk "${VMID}" scsi0 "${BOOT_IMAGE_TARGET_VOLUME}" --delete true
+
     # Resize the VM disk after cloning (due to cloning time)
     ssh -n "${TARGET_IP}" qm resize "${VMID}" scsi0 30G
     
