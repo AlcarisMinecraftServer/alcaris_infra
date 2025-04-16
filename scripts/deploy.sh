@@ -90,6 +90,7 @@ runcmd:
   - su - cloudinit -c "mkdir -p ~/.ssh && chmod 700 ~/.ssh"
   - su - cloudinit -c "curl -sS https://github.com/namakemono-san.keys >> ~/.ssh/authorized_keys"
   - su - cloudinit -c "chmod 600 ~/.ssh/authorized_keys"
+  - su - cloudinit -c "for h in 192.168.0.11 192.168.0.12 192.168.0.21 192.168.0.22; do ssh-keyscan -H \$h >> ~/.ssh/known_hosts; done"
   - su - cloudinit -c "curl -s ${REPOSITORY_RAW_SOURCE_URL}/scripts/setup_k8s.sh > ~/setup_k8s.sh"
   - su - cloudinit -c "sudo bash ~/setup_k8s.sh ${VMNAME} ${VMSRVIP}"
   - chsh -s \$(which bash) cloudinit
