@@ -340,3 +340,9 @@ export ANSIBLE_CONFIG="$HOME"/alcaris_infra/ansible/ansible.cfg
 ansible-galaxy role install -r "$HOME"/alcaris_infra/ansible/roles/requirements.yaml
 ansible-galaxy collection install -r "$HOME"/alcaris_infra/ansible/roles/requirements.yaml
 ansible-playbook -i "$HOME"/alcaris_infra/ansible/hosts/servers/inventory "$HOME"/alcaris_infra/ansible/site.yaml
+
+# move alcaris_infra
+if [ ! -d /home/cloudinit/alcaris_infra ]; then
+    cp -r /root/alcaris_infra /home/cloudinit/alcaris_infra
+    chown -R cloudinit:cloudinit /home/cloudinit/alcaris_infra
+fi
