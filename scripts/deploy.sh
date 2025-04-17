@@ -64,7 +64,7 @@ for VM in "${VM_LIST[@]}"; do
     ssh -n "${TARGET_IP}" qm move-disk "${VMID}" scsi0 "${BOOT_IMAGE_TARGET_VOLUME}" --delete true
 
     # Resize the VM disk after cloning (due to cloning time)
-    ssh -n "${TARGET_IP}" qm resize "${VMID}" scsi0 30G
+    ssh -n "${TARGET_IP}" qm resize "${VMID}" scsi0 100G
     
     # Create Cloud-Init user configuration snippet
     mkdir -p /tmp/snippets
