@@ -1,12 +1,12 @@
 #!/bin/bash
 
 TEMPLATE_VMID=9000
-TEMPLATE_STORAGE=nfs-share
-CLOUDINIT_IMAGE_TARGET_VOLUME=nfs-share
-TEMPLATE_BOOT_IMAGE_TARGET_VOLUME=nfs-share
+TEMPLATE_STORAGE=local
+CLOUDINIT_IMAGE_TARGET_VOLUME=local
+TEMPLATE_BOOT_IMAGE_TARGET_VOLUME=local
 BOOT_IMAGE_TARGET_VOLUME=local-lvm
-SNIPPET_TARGET_VOLUME=nfs-share
-SNIPPET_TARGET_PATH=/mnt/pve/${SNIPPET_TARGET_VOLUME}/snippets
+SNIPPET_TARGET_VOLUME=local
+LOCAL_SNIPPET_DIR=/var/lib/vz/snippets
 REPOSITORY_RAW_SOURCE_URL="https://raw.githubusercontent.com/AlcarisMinecraftServer/alcaris_infra/main"
 
 VM_LIST=(
@@ -20,17 +20,17 @@ VM_LIST=(
 echo "Creating Cloud-Init template..."
 
 # Download Ubuntu 24.04 Cloud Image
-wget https://cloud-images.ubuntu.com/noble/current/noble-server-cloudimg-amd64.img
+wget -O /tmp/noble-server-cloudimg-amd64.img https://cloud-images.ubuntu.com/noble/current/noble-server-cloudimg-amd64.img
 
 # Install qemu-guest-agent into the image
 apt-get update && apt-get install -y libguestfs-tools
-virt-customize -a noble-server-cloudimg-amd64.img --install liburing2 --install qemu-guest-agent
+virt-customize -a /tmp/noble-server-cloudimg-amd64.img --install liburing2 --install qemu-guest-agent
 
 # Create a new VM and attach a network adapter (vmbr0)
 qm create $TEMPLATE_VMID --cores 2 --memory 4096 --net0 virtio,bridge=vmbr0 --name alcaris-k8s-template
 
 # Import disk and extract actual disk ID
-DISK_IMPORT_OUTPUT=$(qm importdisk $TEMPLATE_VMID noble-server-cloudimg-amd64.img $TEMPLATE_BOOT_IMAGE_TARGET_VOLUME)
+DISK_IMPORT_OUTPUT=$(qm importdisk $TEMPLATE_VMID /tmp/noble-server-cloudimg-amd64.img $TEMPLATE_BOOT_IMAGE_TARGET_VOLUME)
 IMPORTED_DISK=$(echo "$DISK_IMPORT_OUTPUT" | grep -oP "(?<=successfully imported disk ')[^']+")
 
 # finally attach the new disk to the VM as scsi drive
@@ -49,7 +49,7 @@ qm set $TEMPLATE_VMID --serial0 socket --vga serial0
 qm template $TEMPLATE_VMID
 
 # Cleanup
-rm noble-server-cloudimg-amd64.img
+rm /tmp/noble-server-cloudimg-amd64.img
 
 echo "Deploying VMs..."
 for VM in "${VM_LIST[@]}"; do
@@ -67,8 +67,8 @@ for VM in "${VM_LIST[@]}"; do
     ssh -n "${TARGET_IP}" qm resize "${VMID}" scsi0 30G
     
     # Create Cloud-Init user configuration snippet
-    mkdir -p "$SNIPPET_TARGET_PATH"
-    cat > "$SNIPPET_TARGET_PATH"/"$VMNAME"-user.yaml << EOF
+    mkdir -p /tmp/snippets
+    cat > /tmp/snippets/"$VMNAME"-user.yaml << EOF
 #cloud-config
 hostname: ${VMNAME}
 timezone: Asia/Tokyo
@@ -97,7 +97,7 @@ runcmd:
 EOF
 
     # Create Cloud-Init network configuration snippet
-    cat > "$SNIPPET_TARGET_PATH"/"$VMNAME"-network.yaml << EOF
+    cat > /tmp/snippets/"$VMNAME"-network.yaml << EOF
 version: 1
 config:
   - type: physical
@@ -114,6 +114,10 @@ config:
     search:
     - 'local'
 EOF
+
+    # Transfer snippets to target host
+    scp /tmp/snippets/"$VMNAME"-user.yaml "${TARGET_IP}:${LOCAL_SNIPPET_DIR}/"
+    scp /tmp/snippets/"$VMNAME"-network.yaml "${TARGET_IP}:${LOCAL_SNIPPET_DIR}/"
 
     # Attach the Cloud-Init snippets to the VM
     ssh -n "${TARGET_IP}" qm set "${VMID}" --cicustom "user=${SNIPPET_TARGET_VOLUME}:snippets/${VMNAME}-user.yaml,network=${SNIPPET_TARGET_VOLUME}:snippets/${VMNAME}-network.yaml"
