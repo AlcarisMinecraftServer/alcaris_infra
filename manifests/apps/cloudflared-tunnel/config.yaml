@@ -12,7 +12,13 @@ data:
         service: http://admin-panel.alcaris-service.svc.cluster.local:3000
 
       - hostname: argocd.onp-k8s.admin.alcaris.net
-        service: http://argocd-server.argocd.svc.cluster.local:80
+        service: https://argocd-server.argocd.svc.cluster.local:80
+
+      - hostname: grafana.onp.admin.alcaris.net
+        service: http://192.168.0.182:3000
+
+      - hostname: zabbix.onp.admin.alcaris.net
+        service: http://192.168.0.181:8080
 
       - hostname: proxmox.onp.admin.alcaris.net
         service: https://192.168.0.110:8006
