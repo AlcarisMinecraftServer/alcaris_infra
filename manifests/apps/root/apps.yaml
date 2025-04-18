@@ -76,7 +76,7 @@ spec:
         repoURL: https://github.com/AlcarisMinecraftServer/alcaris_infra
         revision: main
         directories:
-          - path: manifests/apps/cloudflared-tunnel/*
+          - path: manifests/apps/cloudflared-tunnel/
   template:
     metadata:
       name: "cloudflared-tunnel-{{path.basenameNormalized}}"
