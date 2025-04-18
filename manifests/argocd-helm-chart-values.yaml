@@ -19,7 +19,7 @@ server:
 
 configs:
   cm:
-    create: true
+    create: false
     application.instanceLabelKey: argocd.argoproj.io/instance
     kustomize.buildOptions: --load-restrictor LoadRestrictionsNone
     url: https://argocd.onp-k8s.admin.alcaris.net
