@@ -66,43 +66,32 @@ spec:
         maxDuration: 2m
 ---
 apiVersion: argoproj.io/v1alpha1
-kind: ApplicationSet
+kind: Application
 metadata:
-  name: cloudflared-tunnel-apps
+  name: app-of-cloudflared-tunnel
   namespace: argocd
 spec:
-  generators:
-    - git:
-        repoURL: https://github.com/AlcarisMinecraftServer/alcaris_infra
-        revision: main
-        directories:
-          - path: manifests/apps/cloudflared-tunnel/
-  template:
-    metadata:
-      name: "cloudflared-tunnel-{{path.basenameNormalized}}"
-      namespace: argocd
-    spec:
-      project: cloudflared-tunnel
-      source:
-        repoURL: https://github.com/AlcarisMinecraftServer/alcaris_infra
-        targetRevision: main
-        path: "{{path}}"
-      destination:
-        server: https://kubernetes.default.svc
-        namespace: cloudflared-tunnel
-      syncPolicy:
-        automated:
-          prune: true
-          selfHeal: true
-          allowEmpty: true
-        syncOptions:
-          - CreateNamespace=true
-        retry:
-          limit: -1
-          backoff:
-            duration: 5s
-            factor: 2
-            maxDuration: 2m
+  project: cloudflared-tunnel
+  source:
+    repoURL: https://github.com/AlcarisMinecraftServer/alcaris_infra
+    targetRevision: main
+    path: manifests/apps/cloudflared-tunnel
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: cloudflared-tunnel
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: true
+    syncOptions:
+      - CreateNamespace=true
+    retry:
+      limit: -1
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 2m
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
