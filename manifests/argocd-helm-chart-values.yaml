@@ -30,7 +30,7 @@ configs:
           name: GitHub
           config:
             clientID: Ov23liZzAQdgJHeFA1Mb
-            clientSecret: $argocd-github-oauth-app-secret:ARGOCD_GITHUB_OAUTH_APP_SECRET
+            clientSecret: $ARGOCD_GITHUB_OAUTH_APP_SECRET
             orgs:
               - name: AlcarisMinecraftServer
     admin.enabled: false
@@ -38,3 +38,11 @@ configs:
     policy.csv: |
       g, AlcarisMinecraftServer:onp-admin-argocd, role:admin
     policy.default: role:readonly
+
+dex:
+  env:
+    - name: ARGOCD_GITHUB_OAUTH_APP_SECRET
+      valueFrom:
+        secretKeyRef:
+          name: argocd-github-oauth-app-secret
+          key: ARGOCD_GITHUB_OAUTH_APP_SECRET
