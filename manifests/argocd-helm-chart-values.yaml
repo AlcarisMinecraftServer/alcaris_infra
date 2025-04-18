@@ -30,7 +30,7 @@ configs:
           name: GitHub
           config:
             clientID: Ov23liZzAQdgJHeFA1Mb
-            clientSecret: $secret.argocd-github-oauth-app-secret.ARGOCD_GITHUB_OAUTH_APP_SECRET
+            clientSecret: $argocd-github-oauth-app-secret:ARGOCD_GITHUB_OAUTH_APP_SECRET
             orgs:
               - name: AlcarisMinecraftServer
                 teams:
