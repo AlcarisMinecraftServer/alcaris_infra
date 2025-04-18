@@ -12,4 +12,10 @@ data:
         service: http://admin-panel.alcaris-service.svc.cluster.local:3000
       - hostname: argocd.onp-k8s.admin.alcaris.net
         service: http://argocd-server.argocd.svc.cluster.local:80
+        originRequest:
+          noTLSVerify: true
+      - hostname: proxmox.onp-k8s.admin.alcaris.net
+        service: https://192.168.0.110:8006
+        originRequest:
+          noTLSVerify: true
       - service: http_status:404
