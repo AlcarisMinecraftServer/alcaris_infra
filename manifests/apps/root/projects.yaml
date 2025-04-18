@@ -41,24 +41,6 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: alcaris-develop-gateway
-  namespace: argocd
-spec:
-  description: The project of gateway system for the alcaris network (develop)
-  sourceRepos:
-    - 'https://github.com/AlcarisMinecraftServer/alcaris_infra'
-  destinations:
-    - namespace: alcaris-develop-gateway
-      server: https://kubernetes.default.svc
-    - namespace: argocd
-      server: https://kubernetes.default.svc
-  clusterResourceWhitelist:
-    - group: '*'
-      kind: '*'
----
-apiVersion: argoproj.io/v1alpha1
-kind: AppProject
-metadata:
   name: alcaris-develop-minecraft
   namespace: argocd
 spec:
