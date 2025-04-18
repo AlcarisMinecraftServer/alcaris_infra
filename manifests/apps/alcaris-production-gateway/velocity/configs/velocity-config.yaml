@@ -48,18 +48,20 @@ data:
     enable-player-address-logging = true
 
     [servers]
-    s1 = "minecraft-develop-s1.alcaris-develop-minecraft.svc.cluster.local:25565"
-    s2 = "minecraft-develop-s2.alcaris-develop-minecraft.svc.cluster.local:25565"
-    s3 = "minecraft-develop-s3.alcaris-develop-minecraft.svc.cluster.local:25565"
+    s1 = "minecraft-production-s1.alcaris-production-minecraft.svc.cluster.local:25565"
+    s2 = "minecraft-production-s2.alcaris-production-minecraft.svc.cluster.local:25565"
+    s3 = "minecraft-production-s3.alcaris-production-minecraft.svc.cluster.local:25565"
+    s4 = "minecraft-production-s4.alcaris-production-minecraft.svc.cluster.local:25565"
 
     # In what order we should try servers when a player logs in or is kicked from a server.
     try = ["s1"]
 
     [forced-hosts]
     # Configure your forced hosts here.
-    "play-develop.s1.alcaris.net" = ["s1"]
-    "play-develop.s2.alcaris.net" = ["s2"]
-    "play-develop.s3.alcaris.net" = ["s3"]
+    "play.s1.alcaris.net" = ["s1"]
+    "play.s2.alcaris.net" = ["s2"]
+    "play.s3.alcaris.net" = ["s3"]
+    "play.s4.alcaris.net" = ["s4"]
 
     [advanced]
     # How large a Minecraft packet has to be before we compress it. Setting this to zero will
