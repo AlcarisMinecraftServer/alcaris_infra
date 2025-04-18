@@ -19,5 +19,23 @@ server:
 
 configs:
   cm:
+    create: true
+    application.instanceLabelKey: argocd.argoproj.io/instance
+    kustomize.buildOptions: --load-restrictor LoadRestrictionsNone
     url: https://argocd.onp-k8s.admin.alcaris.net
-    server.insecure: true
+    dex.config: |
+      connectors:
+        - type: github
+          id: github
+          name: GitHub
+          config:
+            clientID: Ov23liZzAQdgJHeFA1Mb
+            clientSecret: $argocd-github-oauth-app-secret:ARGOCD_GITHUB_OAUTH_APP_SECRET
+            orgs:
+              - name: AlcarisMinecraftServer
+                teams:
+                  - onp-admin-argocd
+  rbac:
+    policy.csv: |
+      g, AlcarisMinecraftServer:onp-admin-argocd, role:admin
+    policy.default: role:readonly
