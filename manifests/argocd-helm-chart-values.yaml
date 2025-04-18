@@ -16,3 +16,8 @@ server:
     enabled: true
     minAvailable: 1
     maxUnavailable: 1
+
+configs:
+  cm:
+    url: https://argocd.onp-k8s.admin.alcaris.net
+    server.insecure: true
