@@ -6,11 +6,10 @@ metadata:
   labels:
     app: admin-panel
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
     - port: 3000
-      targetPort: 3000
-      nodePort: 30080
+      targetPort: admin-panel
   selector:
     app: admin-panel
   loadBalancerIP: 192.168.0.240
