@@ -5,14 +5,14 @@ metadata:
   namespace: cloudflared-tunnel
 data:
   config.yaml: |
-    tunnel: onp-k8s--http--cloudflared-tunnel
+    tunnel: onp-k8s-cloudflared-tunnel
     credentials-file: /etc/cloudflared/cloudflared-tunnel.json
     ingress:
       - hostname: portal.onp-k8s.admin.alcaris.net
         service: http://admin-panel.alcaris-service.svc.cluster.local:3000
 
       - hostname: argocd.onp-k8s.admin.alcaris.net
-        service: https://argocd-server.argocd.svc.cluster.local:80
+        service: http://argocd-server.argocd.svc.cluster.local:80
 
       - hostname: grafana.onp.admin.alcaris.net
         service: http://192.168.0.182:3000
@@ -21,6 +21,6 @@ data:
         service: http://192.168.0.181:8080
 
       - hostname: proxmox.onp.admin.alcaris.net
-        service: https://192.168.0.110:8006
+        service: http://192.168.0.110:8006
       
       - service: http_status:404
