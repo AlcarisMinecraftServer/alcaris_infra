@@ -9,7 +9,7 @@ spec:
   type: LoadBalancer
   ports:
     - port: 3000
-      targetPort: admin-panel
+      targetPort: 3000
   selector:
     app: admin-panel
   loadBalancerIP: 192.168.0.240
