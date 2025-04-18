@@ -1,0 +1,161 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gateway-production-config-plugins
+data:
+  velocitab-config.yml: |
+    # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+    # ┃       Velocitab Config       ┃
+    # ┃    Developed by William278   ┃
+    # ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+    # ┣╸ Information: https://william278.net/project/velocitab
+    # ┗╸ Documentation: https://william278.net/docs/velocitab
+
+    # Check for updates on startup
+    check_for_updates: true
+    # Whether to remove nametag from players' heads if the nametag associated with their server group is empty.
+    remove_nametags: false
+    # Whether to disable header and footer if they are empty and let backend servers handle them.
+    disable_header_footer_if_empty: true
+    # Which text formatter to use (MINIMESSAGE, MINEDOWN or LEGACY)
+    formatter: MINIMESSAGE
+    # All servers which are not in other groups will be put in the fallback group.
+    # "false" will exclude them from Velocitab.
+    fallback_enabled: true
+    # The formats to use for the fallback group.
+    fallback_group: default
+    # Whether to show all players from all groups in the TAB list.
+    show_all_players_from_all_groups: false
+    # Whether to enable the PAPIProxyBridge hook for PAPI support
+    enable_papi_hook: true
+    # How long in seconds to cache PAPI placeholders for, in milliseconds. (0 to disable)
+    papi_cache_time: 1000
+    # If you are using MINIMESSAGE formatting, enable this to support MiniPlaceholders in formatting.
+    enable_mini_placeholders_hook: true
+    # Whether to send scoreboard teams packets. Required for player list sorting and nametag formatting.
+    # Turn this off if you're using scoreboard teams on backend servers.
+    send_scoreboard_packets: false
+    # If built-in placeholders return a blank string, fallback to Placeholder API equivalents.
+    # For example, if %prefix% returns a blank string, use %luckperms_prefix%. Requires PAPIProxyBridge.
+    fallback_to_papi_if_placeholder_blank: false
+    # Whether to sort players in the TAB list.
+    sort_players: true
+    # Remove gamemode spectator effect for other players in the TAB list.
+    remove_spectator_effect: true
+    # Whether to enable the Plugin Message API (allows backend plugins to perform certain operations)
+    enable_plugin_message_api: true
+    # Whether to force sending tab list packets to all players, even if a packet for that action has already been sent. This could fix issues with some mods.
+    force_sending_tab_list_packets: false
+    # A list of links that will be sent to display on player pause menus (Minecraft 1.21+ clients only).
+    # • Labels can be fully custom or built-in (one of 'bug_report', 'community_guidelines', 'support', 'status',
+    #   'feedback', 'community', 'website', 'forums', 'news', or 'announcements').
+    # • If you supply a url with a 'bug_report' label, it will be shown if the player is disconnected.
+    # • Specify a set of server groups each URL should be sent on. Use '*' to show a URL to all groups.
+    server_links: []
+  velocitab-tab_groups.yml: |
+    # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+    # ┃      Velocitab TabGroups     ┃
+    # ┃    Developed by William278   ┃
+    # ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+    # ┣╸ Information: https://william278.net/project/velocitab
+    # ┗╸ Documentation: https://william278.net/docs/velocitab
+
+    groups:
+    - name: default
+      headers:
+      - WIP
+      footers:
+      - 'Ping: %ping%ms %server_tps_5_colored%'
+      format: '%server%%prefix% &#fafafa&%username%'
+      nametag:
+        prefix: ''
+        suffix: ''
+      servers:
+      - s1
+      - s2
+      - s3
+      sorting_placeholders:
+      - '%role_weight%'
+      - '%server%'
+      - '%username%'
+      placeholder_replacements:
+        '%server%':
+          - placeholder: s1
+            replacement: 
+          - placeholder: s2
+            replacement: 
+          - placeholder: s3
+            replacement: 
+      collisions: false
+      header_footer_update_rate: 1000
+      placeholder_update_rate: 5000
+      only_list_players_in_same_server: false
+  rocketjoin-config.yml: |
+    #    _____            _        _          _       _
+    #    |  __ \          | |      | |        | |     (_)
+    #    | |__) |___   ___| | _____| |_       | | ___  _ _ __
+    #    |  _  // _ \ / __| |/ / _ \ __|  _   | |/ _ \| | '_ \
+    #    | | \ \ (_) | (__|   <  __/ |_  | |__| | (_) | | | | |
+    #    |_|  \_\___/ \___|_|\_\___|\__|  \____/ \___/|_|_| |_|
+
+    # Do not change these values
+    config-version: 2.4
+    already-asked: false
+
+    # WARNING: If this plugin is running on bungeecord or velocity please read https://wiki.lorenzo0111.me/rocketjoin/bungeecord
+
+    # Start of the configuration
+
+    prefix: "&8&l»"
+    no_permission: "&cYou do not have permission to use this command!"
+
+    # Enable Update Message on Join. Default: true
+    update-message: true
+
+    # Placeholders: {Player} (Name) and {DisplayPlayer} (Display Name)
+    # PlaceholderAPI Support! Download it from tinyurl.com/PlaceholderAPI
+
+    # Join message
+    # Note:
+    # otherServerMessage is only available in a proxy( Velocity or Bungeecord)
+    # Additional placeholders: {server}
+    join:
+      enabled: true
+      message: "&a{player} &7joined!"
+      otherServerMessage: "&a{player} &7joined &a{server}!"
+      enable-title: false
+      # Send a title to the player when they join the server!
+      title: "&a&lWelcome {player}!"
+      subtitle: "&7Welcome in ServerName Server!"
+
+    leave:
+      enabled: true
+      message: "&c{player} &7left!"
+      otherServerMessage: "&c{player} &7left &a{server}!"
+
+    # Only available in a proxy(Velocity or Bungeecord)
+    # Called on server switch
+    # Additional placeholders: {oldServer} {newServer}
+    serverSwitch:
+      enabled: true
+      messageFrom: "&b{player} &7left to &b{newServer} server."
+      messageTo: "&b{player} &7joined from &b{oldServer} server."
+
+    # Commands that will be executed from console when an user joins the server
+    # If you want to disable this just set it to []
+    # See https://wiki.lorenzo0111.me/rocketjoin/execute-commands for more information
+    # commands: []
+    commands: []
+
+    # If you enable hide feature people with the permission of hide-permission won't have a join message
+    enable-hide: false
+    hide-permission: "rocketjoin.silent"
+
+    # ---> Custom Conditions <---
+
+    conditions: {}
+
+    # Use \n for a new line
+    # Set to "disable" to disable this feature
+    # welcome: "disable"
+    welcome: "disable"
