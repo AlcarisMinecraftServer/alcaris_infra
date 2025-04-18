@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: minecraft-common-config-luckperms
+  name: minecraft-production-common-config-luckperms
 data:
   #region groups
   group-default.yml: |
