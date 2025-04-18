@@ -6,6 +6,7 @@ metadata:
 data:
   config.yaml: |
     tunnel: onp-k8s--http--cloudflared-tunnel
+    credentials-file: /etc/cloudflared/cloudflared-tunnel.json
     ingress:
       - hostname: portal.onp-k8s.admin.alcaris.net
         service: http://admin-panel.alcaris-service.svc.cluster.local:3000

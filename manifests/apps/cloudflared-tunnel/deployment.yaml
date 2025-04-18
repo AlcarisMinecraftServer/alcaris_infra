@@ -15,17 +15,21 @@ spec:
     spec:
       containers:
         - name: cloudflared
-          image: cloudflare/cloudflared:latest
+          image: cloudflare/cloudflared:2024.4.0
           args:
             - tunnel
             - --config
             - /etc/cloudflared/config.yaml
             - run
           volumeMounts:
-            - name: config
+            - name: cloudflared-config
               mountPath: /etc/cloudflared
               readOnly: true
       volumes:
-        - name: config
-          configMap:
-            name: cloudflared-tunnel-config
+        - name: cloudflared-config
+          projected:
+            sources:
+              - configMap:
+                  name: cloudflared-tunnel-config
+              - secret:
+                  name: cloudflared-credentials
