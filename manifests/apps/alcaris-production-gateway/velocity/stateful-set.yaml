@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: velocity
+  name: gateway-production-velocity
   labels:
-    app: velocity
+    app: gateway-production-velocity
 spec:
   revisionHistoryLimit: 0
   selector:
     matchLabels:
-      app: velocity
+      app: gateway-production-velocity
   template:
     metadata:
       labels:
-        app: velocity
+        app: gateway-production-velocity
     spec:
       containers:
-        - name: velocity
+        - name: gateway-production-velocity
           image: itzg/mc-proxy:java21
           resources:
             requests:
