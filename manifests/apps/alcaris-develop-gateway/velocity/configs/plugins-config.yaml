@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: velocity-production-config-velocity
+  name: velocity-develop-config-plugins
 data:
   velocitab-config.yml: |
     # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓

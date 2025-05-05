@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: velocity-production
+  name: velocity-develop
 spec:
   type: LoadBalancer
   ports:
     - name: velocity
-      port: 25565
+      port: 25566
       protocol: TCP
       targetPort: velocity
   selector:
-    app: velocity-production
-  loadBalancerIP: 192.168.0.220
+    app: velocity-develop
+  loadBalancerIP: 192.168.0.230

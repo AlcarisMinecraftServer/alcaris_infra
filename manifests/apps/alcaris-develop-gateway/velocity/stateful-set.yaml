@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: velocity-production
+  name: velocity-develop
   labels:
-    app: velocity-production
+    app: velocity-develop
 spec:
   revisionHistoryLimit: 0
   selector:
     matchLabels:
-      app: velocity-production
+      app: velocity-develop
   template:
     metadata:
       labels:
-        app: velocity-production
+        app: velocity-develop
     spec:
       containers:
         - name: velocity
@@ -42,25 +42,25 @@ spec:
             failureThreshold: 6
             periodSeconds: 20
           volumeMounts:
-            - name: velocity-production-config-velocity
+            - name: velocity-develop-config-velocity
               mountPath: /config/velocity.toml
               subPath: velocity.toml
-            - name: velocity-production-config-velocity
+            - name: velocity-develop-config-velocity
               mountPath: /config/forwarding.secret
               subPath: forwarding.secret
-            - name: velocity-production-config-plugins
+            - name: velocity-develop-config-plugins
               mountPath: /plugins/velocitab/config.yml
               subPath: velocitab-config.yml
-            - name: velocity-production-config-plugins
+            - name: velocity-develop-config-plugins
               mountPath: /plugins/velocitab/tab_groups.yml
               subPath: velocitab-tab_groups.yml
-            - name: velocity-production-config-plugins
+            - name: velocity-develop-config-plugins
               mountPath: /plugins/rocketjoin/config.yml
               subPath: rocketjoin-config.yml
       volumes:
-        - name: velocity-production-config-velocity
+        - name: velocity-develop-config-velocity
           configMap:
-            name: velocity-production-config-velocity
-        - name: velocity-production-config-plugins
+            name: velocity-develop-config-velocity
+        - name: velocity-develop-config-plugins
           configMap:
-            name: velocity-production-config-plugins
+            name: velocity-develop-config-plugins

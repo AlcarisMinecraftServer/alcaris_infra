@@ -3,11 +3,11 @@
 apiVersion: cilium.io/v2
 kind: CiliumNetworkPolicy
 metadata:
-  name: allow-from-tcpshield-to-velocity-production
+  name: allow-from-tcpshield-to-velocity-develop
 spec:
   endpointSelector:
     matchLabels:
-      app: velocity-production
+      app: velocity-develop
   ingress:
     - fromCIDRSet:
         - cidr: 198.178.119.0/24
