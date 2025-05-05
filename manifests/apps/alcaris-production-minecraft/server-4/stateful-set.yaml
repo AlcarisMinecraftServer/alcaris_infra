@@ -42,6 +42,10 @@ spec:
                 
                 https://github.com/4drian3d/SignedVelocity/releases/download/1.3.0/SignedVelocity-Paper-1.3.0.jar,
                 https://download.luckperms.net/1575/bukkit/loader/LuckPerms-Bukkit-5.4.158.jar,
+                
+                https://github.com/Multiverse/Multiverse-Core/releases/download/5.0.0-pre.4/multiverse-core-5.0.0-pre.4.jar,
+                https://github.com/Multiverse/Multiverse-Portals/releases/download/5.0.0-pre.4/multiverse-portals-5.0.0-pre.4.jar,
+                https://github.com/Multiverse/Multiverse-Inventories/releases/download/5.0.0-pre.4/multiverse-inventories-5.0.0-pre.4.jar,
 
                 https://github.com/AlcarisMinecraftServer/EssentialishWarp/releases/download/v0.10.0/EssentialishWarp-0.10.0.jar
           ports:
