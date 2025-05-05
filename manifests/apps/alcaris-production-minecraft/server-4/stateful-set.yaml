@@ -47,7 +47,9 @@ spec:
                 https://github.com/Multiverse/Multiverse-Portals/releases/download/5.0.0-pre.4/multiverse-portals-5.0.0-pre.4.jar,
                 https://github.com/Multiverse/Multiverse-Inventories/releases/download/5.0.0-pre.4/multiverse-inventories-5.0.0-pre.4.jar,
 
-                https://github.com/AlcarisMinecraftServer/EssentialishWarp/releases/download/v0.10.0/EssentialishWarp-0.10.0.jar
+                https://github.com/AlcarisMinecraftServer/EssentialishWarp/releases/download/v0.10.0/EssentialishWarp-0.10.0.jar,
+
+                https://github.com/SkriptLang/Skript/releases/download/2.11.1/Skript-2.11.1.jar
           ports:
             - name: minecraft
               containerPort: 25565
