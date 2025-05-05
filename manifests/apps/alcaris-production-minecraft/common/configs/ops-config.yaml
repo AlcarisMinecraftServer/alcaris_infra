@@ -22,5 +22,65 @@ data:
         "name": "gamutyan",
         "level": 4,
         "bypassesPlayerLimit": false
+      },
+      {
+        "uuid": "99367b70-e328-4f2a-a6be-687938ebe4a8",
+        "name": "tobutensyo274",
+        "level": 4,
+        "bypassesPlayerLimit": false
+      },
+      {
+        "uuid": "514413e6-9dc2-489d-9ed9-4d732fe6ff21",
+        "name": "hachibeeeee",
+        "level": 3,
+        "bypassesPlayerLimit": false
+      },
+      {
+        "uuid": "4f946ea6-7f38-44dc-965c-7e32c9c631ec",
+        "name": "tensyogames",
+        "level": 4,
+        "bypassesPlayerLimit": false
+      },
+      {
+        "uuid": "c9be047a-fa47-46e9-96d6-8dd8aedf1c19",
+        "name": "takesan",
+        "level": 3,
+        "bypassesPlayerLimit": false
+      },
+      {
+        "uuid": "61a3e53d-ab68-4128-b9e7-8131f8b79711",
+        "name": "fatmyu",
+        "level": 3,
+        "bypassesPlayerLimit": false
+      },
+      {
+        "uuid": "259b28e6-c6df-417e-9b18-d48f32fe773c",
+        "name": "OGIF",
+        "level": 3,
+        "bypassesPlayerLimit": false
+      },
+      {
+        "uuid": "5afe3dde-1748-49fe-895c-125387889a82",
+        "name": "Kanu_Y",
+        "level": 3,
+        "bypassesPlayerLimit": false
+      },
+      {
+        "uuid": "fe814942-d2c3-43af-ab92-1381c07af010",
+        "name": "daimaokun",
+        "level": 3,
+        "bypassesPlayerLimit": false
+      },
+      {
+        "uuid": "9dabb9f3-4e80-43ea-a0e8-bf7f36d71d20",
+        "name": "Tomoggu",
+        "level": 4,
+        "bypassesPlayerLimit": false
+      },
+      {
+        "uuid": "de6ba920-8772-4ca5-a267-d71de4322f50",
+        "name": "KUSAMOCHI107",
+        "level": 3,
+        "bypassesPlayerLimit": false
       }
     ]
