@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: natsume-backend
+  namespace: natsume-backend
+  labels:
+    app: natsume-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: natsume-backend
+  template:
+    metadata:
+      labels:
+        app: natsume-backend
+    spec:
+      containers:
+        - name: natsume-backend
+          image: ghcr.io/alcarisminecraftserver/natsume-backend:latest
+          envFrom:
+            - secretRef:
+                name: natsume-backend-secrets
+      imagePullSecrets:
+        - name: ghcr-secret
