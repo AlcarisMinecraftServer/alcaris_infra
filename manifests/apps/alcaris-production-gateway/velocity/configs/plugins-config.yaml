@@ -74,6 +74,7 @@ data:
       - s1
       - s2
       - s3
+      - s4
       sorting_placeholders:
       - '%role_weight%'
       - '%server%'
@@ -81,11 +82,13 @@ data:
       placeholder_replacements:
         '%server%':
           - placeholder: s1
-            replacement: 
+            replacement: 
           - placeholder: s2
-            replacement: 
+            replacement: 
           - placeholder: s3
-            replacement: 
+            replacement: 
+          - placeholder: s4
+            replacement: 
       collisions: false
       header_footer_update_rate: 1000
       placeholder_update_rate: 5000
