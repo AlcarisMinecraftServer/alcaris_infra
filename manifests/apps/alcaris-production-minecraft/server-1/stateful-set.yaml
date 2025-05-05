@@ -95,6 +95,9 @@ spec:
             - name: minecraft-production-common-config-ops
               mountPath: /config/ops.json
               subPath: ops.json
+
+            - name: minecraft-server-data
+              mountPath: /data
       volumes:
         - name: minecraft-production-common-config-server
           configMap:
