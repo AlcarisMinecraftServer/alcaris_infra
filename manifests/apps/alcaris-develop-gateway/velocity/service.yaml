@@ -11,4 +11,5 @@ spec:
       targetPort: velocity
   selector:
     app: velocity-develop
+  externalTrafficPolicy: Local
   loadBalancerIP: 192.168.0.230
