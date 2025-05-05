@@ -127,3 +127,21 @@ spec:
   clusterResourceWhitelist:
     - group: '*'
       kind: '*'
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: database
+  namespace: argocd
+spec:
+  description: The project of database system for the alcaris network
+  sourceRepos:
+    - 'https://github.com/AlcarisMinecraftServer/alcaris_infra'
+  destinations:
+    - namespace: database
+      server: https://kubernetes.default.svc
+    - namespace: argocd
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'

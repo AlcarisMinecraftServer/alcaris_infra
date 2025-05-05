@@ -297,3 +297,42 @@ spec:
             duration: 5s
             factor: 2
             maxDuration: 2m
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: database-apps
+  namespace: argocd
+spec:
+  generators:
+    - git:
+        repoURL: https://github.com/AlcarisMinecraftServer/alcaris_infra
+        revision: main
+        directories:
+          - path: manifests/apps/database/*
+  template:
+    metadata:
+      name: "database-{{path.basenameNormalized}}"
+      namespace: argocd
+    spec:
+      project: database
+      source:
+        repoURL: https://github.com/AlcarisMinecraftServer/alcaris_infra
+        targetRevision: main
+        path: "{{path}}"
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: database
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+          allowEmpty: true
+        syncOptions:
+          - CreateNamespace=true
+        retry:
+          limit: -1
+          backoff:
+            duration: 5s
+            factor: 2
+            maxDuration: 2m
