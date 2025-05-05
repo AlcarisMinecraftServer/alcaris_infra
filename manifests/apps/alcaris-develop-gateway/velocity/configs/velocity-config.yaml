@@ -59,10 +59,6 @@ data:
     [forced-hosts]
     # Configure your forced hosts here.
     "play-develop.alcaris.net" = ["s1"]
-    "play-develop.s1.alcaris.net" = ["s1"]
-    "play-develop.s2.alcaris.net" = ["s2"]
-    "play-develop.s3.alcaris.net" = ["s3"]
-    "play-develop.s4.alcaris.net" = ["s4"]
 
     [advanced]
     # How large a Minecraft packet has to be before we compress it. Setting this to zero will
