@@ -3,7 +3,7 @@ kind: Kustomization
 
 namespace: database
 resources:
-  - statefulset.yaml
+  - stateful-set.yaml
   - service.yaml
 
 # ファイル管理していい値だけ
