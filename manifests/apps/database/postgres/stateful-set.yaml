@@ -30,7 +30,9 @@ spec:
     - metadata:
         name: pg-data
       spec:
-        accessModes: ["ReadWriteOnce"]
+        storageClassName: local-path
+        accessModes:
+          - ReadWriteOnce
         resources:
           requests:
             storage: 10Gi
