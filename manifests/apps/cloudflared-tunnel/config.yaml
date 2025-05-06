@@ -28,9 +28,9 @@ data:
           noTLSVerify: true
 
       - hostname: natsume.onp-k8s.admin.alcaris.net
-        service: http://natsume-frontend.natsume-frontend.svc.cluster.local:4173
+        service: http://natsume-frontend.alcaris-service.svc.cluster.local:4173
 
       - hostname: api-natsume.onp-k8s.admin.alcaris.net
-        service: http://natsume-backend.natsume-backend.svc.cluster.local:4173
+        service: http://natsume-backend.alcaris-service.svc.cluster.local:4173
 
       - service: http_status:404
