@@ -45,7 +45,7 @@ spec:
                 
                 https://github.com/Multiverse/Multiverse-Core/releases/download/5.0.0-pre.4/multiverse-core-5.0.0-pre.4.jar,
                 https://github.com/Multiverse/Multiverse-Portals/releases/download/5.0.0-pre.4/multiverse-portals-5.0.0-pre.4.jar,
-                https://github.com/Multiverse/Multiverse-Inventories/releases/download/5.0.0-pre.4/multiverse-inventories-5.0.0-pre.4.jar
+                https://github.com/Multiverse/Multiverse-Inventories/releases/download/5.0.0-pre.4/multiverse-inventories-5.0.0-pre.4.jar,
 
                 https://ci.loohpjames.com/job/ImageFrame/lastSuccessfulBuild/artifact/common/target/ImageFrame-1.8.2.0.jar
 
