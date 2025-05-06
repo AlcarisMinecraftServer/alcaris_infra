@@ -8,8 +8,8 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - port: 4173
-      targetPort: 4173
+    - port: 80
+      targetPort: 80
   selector:
     app: natsume-frontend
   loadBalancerIP: 192.168.0.241
