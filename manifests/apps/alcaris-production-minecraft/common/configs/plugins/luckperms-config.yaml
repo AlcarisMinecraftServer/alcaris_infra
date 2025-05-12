@@ -41,6 +41,17 @@ data:
     meta:
     - default:
         value: 'false'
+  group-staff.yml: |
+    name: staff
+    permissions:
+    - minecraft.command.deop:
+        value: false
+    - minecraft.command.op:
+        value: false
+    - weight.80
+    meta:
+    - default:
+        value: 'false'
   # endregion
   # region users
   user-namakemono_san.yml: |
@@ -79,4 +90,10 @@ data:
     primary-group: admin
     parents:
     - admin
+  user-BiasedAsp5207.yml: |
+    uuid: c3cfcb9b-16dd-4427-b2f9-6150249cf1ec
+    name: BiasedAsp5207
+    primary-group: staff
+    parents:
+    - staff
   # endregion
