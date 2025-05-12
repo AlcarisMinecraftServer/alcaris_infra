@@ -18,7 +18,7 @@ data:
     enable-rcon=false
     enable-status=true
     enforce-secure-profile=true
-    enforce-whitelist=false
+    enforce-whitelist=true
     entity-broadcast-range-percentage=100
     force-gamemode=false
     function-permission-level=2
