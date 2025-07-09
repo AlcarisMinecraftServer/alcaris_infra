@@ -39,14 +39,13 @@ spec:
                 https://ci.extendedclip.com/job/PlaceholderAPI/197/artifact/build/libs/PlaceholderAPI-2.11.6.jar,
                 https://github.com/MilkBowl/Vault/releases/download/1.7.3/Vault.jar,
                 https://github.com/dmulloy2/ProtocolLib/releases/download/5.3.0/ProtocolLib.jar,
-                https://github.com/ucchyocean/LunaChat/releases/download/v3.0.16/LunaChat.jar,
                 
                 https://github.com/4drian3d/SignedVelocity/releases/download/1.3.0/SignedVelocity-Paper-1.3.0.jar,
                 https://ci.lucko.me/job/LuckPerms/1589/artifact/bukkit/loader/build/libs/LuckPerms-Bukkit-5.5.4.jar,
                 
-                https://github.com/Multiverse/Multiverse-Core/releases/download/4.3.13/multiverse-core-4.3.13.jar,
-                https://github.com/Multiverse/Multiverse-Portals/releases/download/4.2.3/multiverse-portals-4.2.3.jar,
-                https://github.com/Multiverse/Multiverse-Inventories/releases/download/4.2.8/multiverse-inventories-4.2.8.jar,
+                https://github.com/Multiverse/Multiverse-Core/releases/download/5.0.0-pre.4/multiverse-core-5.0.0-pre.4.jar,
+                https://github.com/Multiverse/Multiverse-Portals/releases/download/5.0.0-pre.4/multiverse-portals-5.0.0-pre.4.jar,
+                https://github.com/Multiverse/Multiverse-Inventories/releases/download/5.0.0-pre.4/multiverse-inventories-5.0.0-pre.4.jar,
 
                 https://ci.loohpjames.com/job/ImageFrame/145/artifact/common/target/ImageFrame-1.8.4.0.jar
 
