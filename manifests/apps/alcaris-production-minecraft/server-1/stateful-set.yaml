@@ -136,10 +136,8 @@ spec:
           configMap:
             name: minecraft-production-common-config-ops
 
-        - name: minecraft-production-server1-config-multiverse-core
-          configMap:
-            name: minecraft-production-server1-config-multiverse-core
-            
+
+
   volumeClaimTemplates:
     - metadata:
         name: minecraft-server-data
