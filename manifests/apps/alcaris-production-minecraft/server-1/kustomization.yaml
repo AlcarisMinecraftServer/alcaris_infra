@@ -6,3 +6,8 @@ namespace: alcaris-production-minecraft
 resources:
   - service.yaml
   - stateful-set.yaml
+
+configMapGenerator:
+  - name: minecraft-production-server1-config-multiverse-core
+    files:
+      - configs/plugins/Multiverse-Core/worlds.yml
