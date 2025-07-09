@@ -108,6 +108,12 @@ spec:
 
             - name: minecraft-server-data
               mountPath: /data
+
+            # MV-core設定
+            - name: minecraft-production-server1-config-multiverse-core
+              mountPath: /plugins/Multiverse-Core/worlds.yml
+              subPath: worlds.yml
+
       volumes:
         - name: minecraft-production-common-config-server
           configMap:
