@@ -6,4 +6,4 @@ namespace: alcaris-production-minecraft
 resources:
   - service.yaml
   - stateful-set.yaml
-  - configs/plugins/worlds.yml
+  - configs/plugins/Multiverse-Core/worlds.yml
