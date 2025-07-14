@@ -47,7 +47,8 @@ spec:
                 https://github.com/Multiverse/Multiverse-Portals/releases/download/5.0.0-pre.4/multiverse-portals-5.0.0-pre.4.jar,
                 https://github.com/Multiverse/Multiverse-Inventories/releases/download/5.0.0-pre.4/multiverse-inventories-5.0.0-pre.4.jar,
 
-                https://ci.loohpjames.com/job/ImageFrame/145/artifact/common/target/ImageFrame-1.8.4.0.jar
+                https://ci.loohpjames.com/job/ImageFrame/145/artifact/common/target/ImageFrame-1.8.4.0.jar,
+                https://github.com/AlcarisMinecraftServer/AlcarisChatSupporter/releases/download/1.0.0/AlcarisChatSupport-1.0.0.jar
 
           ports:
             - name: minecraft
