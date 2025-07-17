@@ -7,12 +7,12 @@ resources:
   - service.yaml
 
 secretGenerator:
-  - name: mysql-secret
+  - name: mariadb-secret
     type: Opaque
     literals:
       - TZ=Asia/Tokyo
-      - MYSQL_USER=alcaris
-      - MYSQL_PASSWORD=mysql
-      - MYSQL_DATABASE=alcaris
+      - MARIADB_USER=alcaris
+      - MARIADB_PASSWORD=mysql
+      - MARIADB_DATABASE=alcaris
 generatorOptions:
   disableNameSuffixHash: true

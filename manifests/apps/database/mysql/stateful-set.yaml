@@ -1,34 +1,34 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: mysql
+  name: mariadb
   namespace: database
 spec:
-  serviceName: mysql
+  serviceName: mariadb
   replicas: 1
   selector:
     matchLabels:
-      app: mysql
+      app: mariadb
   template:
     metadata:
       labels:
-        app: mysql
+        app: mariadb
     spec:
       containers:
-        - name: mysql
-          image: mysql:9.3.0-oracle
+        - name: mariadb
+          image: mariadb:lts
           ports:
             - containerPort: 3306
-              name: mysql
+              name: mariadb
           envFrom:
             - secretRef:
-                name: mysql-secret
+                name: mariadb-secret
           volumeMounts:
-            - name: mysql-persistent-storage
+            - name: mariadb-persistent-storage
               mountPath: /var/lib/mysql
   volumeClaimTemplates:
     - metadata:
-        name: mysql-persistent-storage
+        name: mariadb-persistent-storage
       spec:
         storageClassName: local-path
         accessModes:
