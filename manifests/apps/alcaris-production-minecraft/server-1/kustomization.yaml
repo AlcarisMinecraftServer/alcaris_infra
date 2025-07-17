@@ -14,3 +14,6 @@ configMapGenerator:
   - name: minecraft-production-server1-config-multiverse-core
     files:
       - configs/plugins/Multiverse-Core/worlds.yml
+  - name: minecraft-production-server1-config-whitelist-message
+    files:
+      - configs/plugins/Whitelist-Message/config.yml
