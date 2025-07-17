@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: mysql
-          image: mysql:9.3.0
+          image: mysql:8.0
           ports:
             - containerPort: 3306
               name: mysql
@@ -24,11 +24,11 @@ spec:
             - secretRef:
                 name: mysql-secret
           volumeMounts:
-            - name: mysql-data
-              mountPath: /var/lib/mysql/data
+            - name: mysql-persistent-storage
+              mountPath: /var/lib/mysql
   volumeClaimTemplates:
     - metadata:
-        name: mysql-data
+        name: mysql-persistent-storage
       spec:
         storageClassName: local-path
         accessModes:
