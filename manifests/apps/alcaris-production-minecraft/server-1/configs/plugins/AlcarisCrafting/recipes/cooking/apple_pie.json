@@ -1,0 +1,16 @@
+{
+    "materials": [
+      {
+        "id": "apple",
+        "amount": 1
+      },
+      {
+        "id": "wheat",
+        "amount": 1
+      }
+    ],
+    "product": {
+      "id": "apple_pie",
+      "amount": 1
+    }
+  }
