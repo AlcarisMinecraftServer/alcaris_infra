@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: mariadb-operator-crds
   namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   project: cluster-wide-apps
   source:
@@ -11,44 +13,6 @@ spec:
     targetRevision: 0.38.1
     helm:
       releaseName: mariadb-operator-crds
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: mariadb-operator
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
-      - ServerSideApply=true
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: mariadb-operator
-  namespace: argocd
-spec:
-  project: cluster-wide-apps
-  source:
-    chart: mariadb-operator
-    repoURL: https://mariadb-operator.github.io/mariadb-operator
-    targetRevision: 0.38.1
-    helm:
-      releaseName: mariadb-operator
-      values: |
-        image:
-          repository: ghcr.io/mariadb-operator/mariadb-operator
-          pullPolicy: IfNotPresent
-        ha:
-          enabled: true
-        metrics:
-          enabled: true
-          additionalLabels:
-            release: prometheus
-        webhook:
-          cert:
-            certManager:
-              enabled: true
   destination:
     server: https://kubernetes.default.svc
     namespace: mariadb-operator
