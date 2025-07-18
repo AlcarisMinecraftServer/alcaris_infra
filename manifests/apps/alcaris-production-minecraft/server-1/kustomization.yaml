@@ -6,7 +6,6 @@ namespace: alcaris-production-minecraft
 resources:
   - service.yaml
   - stateful-set.yaml
-  - alcariscore-configmap-auto-generate.yaml
 
 generatorOptions:
   disableNameSuffixHash: true
