@@ -1,0 +1,1 @@
+{"id":"magical_space_food","category":"food","version":1746545168,"name":"魔法の宇宙食","lore":["シャトルランから輸入された宇宙食！","一瞬で食べれるよ！"],"rarity":3,"max_stack":16,"custom_model_data":-1,"price":{"buy":0,"sell":500,"can_sell":true},"tags":[],"data":{"attributes":[],"buff":[],"can_always_eat":false,"eat_seconds":0.05,"effects":[],"nutrition":6.0,"saturation":4.0}}

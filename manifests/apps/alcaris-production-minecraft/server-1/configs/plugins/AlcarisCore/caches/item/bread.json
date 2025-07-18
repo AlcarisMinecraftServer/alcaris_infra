@@ -1,0 +1,1 @@
+{"id":"bread","category":"food","version":1752718161,"name":"パン","lore":["ただのパン"],"rarity":1,"max_stack":64,"custom_model_data":0,"price":{"buy":0,"sell":0,"can_sell":false},"tags":[],"data":{"attributes":[],"buffs":[],"can_always_eat":false,"eat_seconds":1.8,"effects":[],"nutrition":4.0,"saturation":2.0}}
