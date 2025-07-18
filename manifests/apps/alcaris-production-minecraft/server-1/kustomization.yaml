@@ -30,7 +30,7 @@ configMapGenerator:
   - name: minecraft-production-server1-config-alcariscore
     files:
       - configs/plugins/AlcarisCore/config.yml
-      - configs/plugins/AlcarisCore/caches
+      - configs/plugins/AlcarisCore/caches/item
  
   - name: minecraft-production-server1-config-alcariscrafting
     files:
