@@ -26,3 +26,13 @@ configMapGenerator:
   - name: minecraft-production-server1-config-autoopgive
     files:
       - configs/plugins/AutoOPGive/config.yml
+
+  - name: minecraft-production-server1-config-alcariscore
+    files:
+      - configs/plugins/AlcarisCore/config.yml
+ 
+  - name: minecraft-production-server1-config-alcariscrafting
+    files:
+      - configs/plugins/AlcarisCore/cooking/apple_pie.json
+      - configs/plugins/AlcarisCore/cooking/honey_bottle.json
+      - configs/plugins/AlcarisCore/crafting/obsidian_dagger.json
