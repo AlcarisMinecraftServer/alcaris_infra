@@ -5,6 +5,7 @@ server-id: "s2"
 
 # データベース設定
 database:
+  type: mariadb
   host: "database-mariadb.database.svc.cluster.local"
   port: 3306
   name: "alcaris"
