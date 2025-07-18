@@ -50,7 +50,6 @@ spec:
                 https://ci.loohpjames.com/job/ImageFrame/145/artifact/common/target/ImageFrame-1.8.4.0.jar,
                 https://funtservers.net:1716/DLitems/AlcarisChatSupport-1.0.0.jar,
                 https://funtservers.net:1716/DLitems/Whitelist-Message.jar,
-                https://github.com/gamu-433/Inventory_Share/releases/download/v2/Inventory_Share-1.21.1.jar,
                 https://github.com/gamu-433/AutoOPGive/releases/download/v1/autoopgive-1.0.0.jar
 
           ports:
