@@ -33,6 +33,6 @@ configMapGenerator:
  
   - name: minecraft-production-server1-config-alcariscrafting
     files:
-      - configs/plugins/AlcarisCore/cooking/apple_pie.json
-      - configs/plugins/AlcarisCore/cooking/honey_bottle.json
-      - configs/plugins/AlcarisCore/crafting/obsidian_dagger.json
+      - configs/plugins/AlcarisCrafting/cooking/apple_pie.json
+      - configs/plugins/AlcarisCrafting/cooking/honey_bottle.json
+      - configs/plugins/AlcarisCrafting/crafting/obsidian_dagger.json
