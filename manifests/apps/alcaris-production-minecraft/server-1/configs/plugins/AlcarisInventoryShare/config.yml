@@ -6,11 +6,11 @@ server-id: "s1"
 # データベース設定
 database:
   type: mariadb
-  host: "mariadb.database"
+  host: "mariadb.alcaris-production-minecraft.svc.cluster.local"
   port: 3306
-  name: "alcaris"
-  user: "alcaris"
-  password: "mariadb"
+  name: "inventory"
+  user: "inventory"
+  password: "${DB_PASSWORD}"
   useSSL: false
 
 # 共有グループ設定
@@ -25,8 +25,8 @@ sharing-groups:
 # 各サーバーの設定
 servers:
   s1:
-    sync-enderchest: true  # エンダーチェストの同期を有効にする
-    sync-economy: true     # Jeconのお金の同期を有効にする
+    sync-enderchest: true # エンダーチェストの同期を有効にする
+    sync-economy: true # Jeconのお金の同期を有効にする
 
   s2:
     sync-enderchest: true
@@ -39,7 +39,6 @@ servers:
   s4:
     sync-enderchest: true
     sync-economy: true
-
 
 sync:
   # 同期完了時のサウンド設定

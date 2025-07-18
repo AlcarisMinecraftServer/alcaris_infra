@@ -9,7 +9,7 @@ resources:
 
 generatorOptions:
   disableNameSuffixHash: true
-  
+
 configMapGenerator:
   - name: minecraft-production-server1-config-multiverse-core
     files:
@@ -30,7 +30,7 @@ configMapGenerator:
   - name: minecraft-production-server1-config-alcariscore
     files:
       - configs/plugins/AlcarisCore/config.yml
- 
+
   - name: minecraft-production-server1-config-alcariscrafting
     files:
       - configs/plugins/AlcarisCrafting/recipes/cooking/apple_pie.json
