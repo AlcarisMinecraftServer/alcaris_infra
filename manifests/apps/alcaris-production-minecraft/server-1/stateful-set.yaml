@@ -52,9 +52,9 @@ spec:
                 https://funtservers.net:1716/DLitems/Whitelist-Message.jar,
                 https://github.com/gamu-433/AutoOPGive/releases/download/v1/autoopgive-1.0.0.jar,
 
-                https://drive.google.com/file/d/18qYBeRiZGaMY2wiLnLQ4w_FxNkvPUDA5/view?usp=sharing,
-                https://drive.google.com/file/d/1HmLx8ZlYFY5WllnibFMd5CwCXst89Z3U/view?usp=sharing,
-                https://drive.google.com/file/d/1k4jKi7pfHWDPij7uIjWgKriPjZe5mpvU/view?usp=sharing
+                https://github.com/AlcarisMinecraftServer/alcarisOpenPlugins/releases/download/somen/AlcarisCore-1.0.0-somen1000.jar,
+                https://github.com/AlcarisMinecraftServer/alcarisOpenPlugins/releases/download/somen/AlcarisCrafting-1.0.0.jar,
+                https://github.com/AlcarisMinecraftServer/alcarisOpenPlugins/releases/download/somen/AlcarisItems-1.0.0-SNAPSHOT.jar
 
           ports:
             - name: minecraft
