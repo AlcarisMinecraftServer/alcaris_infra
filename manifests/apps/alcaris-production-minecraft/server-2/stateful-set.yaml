@@ -131,9 +131,9 @@ spec:
           configMap:
             name: minecraft-production-common-config-ops
 
-        - name: minecraft-production-server1-config-alcarisinventoryshare
+        - name: minecraft-production-server2-config-alcarisinventoryshare
           configMap:
-            name: minecraft-production-server1-config-alcarisinventoryshare
+            name: minecraft-production-server2-config-alcarisinventoryshare
 
 
   volumeClaimTemplates:
