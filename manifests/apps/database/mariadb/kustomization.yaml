@@ -12,6 +12,7 @@ secretGenerator:
     literals:
       - TZ=Asia/Tokyo
       - MARIADB_USER=alcaris
+      - MARIADB_PASSWORD=mariadb
       - MARIADB_ROOT_PASSWORD=mariadb
       - MARIADB_DATABASE=alcaris
 generatorOptions:
