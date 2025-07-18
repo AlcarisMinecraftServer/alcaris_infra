@@ -133,6 +133,20 @@ spec:
             - name: minecraft-production-server1-config-alcarisinventoryshare
               mountPath: /plugins/AlcarisInventoryShare/config.yml
               subPath: config.yml
+            
+            - name: minecraft-production-server1-config-alcariscore-auto-generate
+              mountPath: /plugins/AlcarisCore/caches
+
+            - name: minecraft-production-server1-config-alcariscore
+              mountPath: /plugins/AlcarisCore/config.yml
+              subPath: config.yml
+
+            - name: minecraft-production-server1-config-alcariscrafting
+              mountPath: /plugins/AlcarisCrafting/recipes/cooking
+              subPath: apple_pie.json
+
+            - name: minecraft-production-server1-config-alcariscrafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting
 
 
       volumes:
@@ -173,7 +187,17 @@ spec:
           configMap:
             name: minecraft-production-server1-config-alcarisinventoryshare
 
+        - name: minecraft-production-server1-config-alcariscore-auto-generate
+          configMap:
+            name: minecraft-production-server1-config-alcariscore-auto-generate
 
+        - name: minecraft-production-server1-config-alcariscore
+          configMap:
+            name: minecraft-production-server1-config-alcariscore
+
+        - name: minecraft-production-server1-config-alcariscrafting
+          configMap:
+            name: minecraft-production-server1-config-alcariscrafting
 
   volumeClaimTemplates:
     - metadata:
