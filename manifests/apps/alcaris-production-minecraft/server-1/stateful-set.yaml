@@ -140,23 +140,9 @@ spec:
             - name: minecraft-production-server1-config-alcariscore
               mountPath: /plugins/AlcarisCore/config.yml
               subPath: config.yml
-
-            # AlcarisCore cookingディレクトリのマウント
-            - name: minecraft-production-server1-config-alcariscore-auto-generate
-              mountPath: /plugins/AlcarisCore/cooking
-              subPath: item
-
-            # AlcarisCore craftingディレクトリのマウント  
-            - name: minecraft-production-server1-config-alcariscore-auto-generate
-              mountPath: /plugins/AlcarisCore/crafting
-              subPath: item
-
+              
             - name: minecraft-production-server1-config-alcariscrafting
-              mountPath: /plugins/AlcarisCrafting/recipes/cooking
-              subPath: apple_pie.json
-
-            - name: minecraft-production-server1-config-alcariscrafting
-              mountPath: /plugins/AlcarisCrafting/recipes/crafting
+              mountPath: /plugins/AlcarisCrafting/recipes
 
 
       volumes:
