@@ -140,6 +140,12 @@ spec:
             - name: minecraft-production-server1-config-alcariscore
               mountPath: /plugins/AlcarisCore/config.yml
               subPath: config.yml
+            
+            - name: minecraft-production-server1-config-alcariscore
+              mountPath: /plugins/AlcarisCore/cooking
+            
+            - name: minecraft-production-server1-config-alcariscore
+              mountPath: /plugins/AlcarisCore/crafting
               
             - name: minecraft-production-server1-config-alcariscrafting
               mountPath: /plugins/AlcarisCrafting/recipes
