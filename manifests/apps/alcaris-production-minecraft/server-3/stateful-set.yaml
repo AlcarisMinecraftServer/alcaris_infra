@@ -45,7 +45,8 @@ spec:
                 
                 https://github.com/Multiverse/Multiverse-Core/releases/download/5.0.0-pre.4/multiverse-core-5.0.0-pre.4.jar,
                 https://github.com/Multiverse/Multiverse-Portals/releases/download/5.0.0-pre.4/multiverse-portals-5.0.0-pre.4.jar,
-                https://github.com/Multiverse/Multiverse-Inventories/releases/download/5.0.0-pre.4/multiverse-inventories-5.0.0-pre.4.jar
+                https://github.com/Multiverse/Multiverse-Inventories/releases/download/5.0.0-pre.4/multiverse-inventories-5.0.0-pre.4.jar,
+                https://funtservers.net:1716/DLitems/Inventory_Share-1.21.1.jar
           ports:
             - name: minecraft
               containerPort: 25565
