@@ -135,7 +135,8 @@ spec:
               subPath: config.yml
             
             - name: minecraft-production-server1-config-alcariscore-auto-generate
-              mountPath: /plugins/AlcarisCore/caches
+              mountPath: alcariscore-configmap-auto-generate.yaml
+              subPath: alcariscore-configmap-auto-generate.yaml
 
             - name: minecraft-production-server1-config-alcariscore
               mountPath: /plugins/AlcarisCore/config.yml
