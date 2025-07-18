@@ -133,10 +133,6 @@ spec:
             - name: minecraft-production-server1-config-alcarisinventoryshare
               mountPath: /plugins/AlcarisInventoryShare/config.yml
               subPath: config.yml
-            
-            - name: minecraft-production-server1-config-alcariscore-auto-generate
-              mountPath: alcariscore-configmap-auto-generate.yaml
-              subPath: alcariscore-configmap-auto-generate.yaml
 
             - name: minecraft-production-server1-config-alcariscore
               mountPath: /plugins/AlcarisCore/config.yml
@@ -183,10 +179,6 @@ spec:
         - name: minecraft-production-server1-config-alcarisinventoryshare
           configMap:
             name: minecraft-production-server1-config-alcarisinventoryshare
-
-        - name: minecraft-production-server1-config-alcariscore
-          configMap:
-            name: minecraft-production-server1-config-alcariscore-auto-generate
 
         - name: minecraft-production-server1-config-alcariscore
           configMap:
