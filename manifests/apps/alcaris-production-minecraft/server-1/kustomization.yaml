@@ -31,3 +31,9 @@ configMapGenerator:
   - name: minecraft-production-server1-config-alcariscore
     files:
       - configs/plugins/AlcarisCore/config.yml
+ 
+  - name: minecraft-production-server1-config-alcariscrafting
+    files:
+      - configs/plugins/AlcarisCrafting/recipes/cooking/apple_pie.json
+      - configs/plugins/AlcarisCrafting/recipes/cooking/honey_bread.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/obsidian_dagger.json

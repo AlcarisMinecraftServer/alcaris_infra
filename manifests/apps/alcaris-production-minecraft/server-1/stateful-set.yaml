@@ -140,12 +140,6 @@ spec:
             - name: minecraft-production-server1-config-alcariscore
               mountPath: /plugins/AlcarisCore/config.yml
               subPath: config.yml
-            
-            - name: minecraft-production-server1-config-alcariscore
-              mountPath: /plugins/AlcarisCore/cooking
-            
-            - name: minecraft-production-server1-config-alcariscore
-              mountPath: /plugins/AlcarisCore/crafting
               
             - name: minecraft-production-server1-config-alcariscrafting
               mountPath: /plugins/AlcarisCrafting/recipes
@@ -189,7 +183,7 @@ spec:
           configMap:
             name: minecraft-production-server1-config-alcarisinventoryshare
 
-        - name: minecraft-production-server1-config-alcariscore-auto-generate
+        - name: minecraft-production-server1-config-alcariscore
           configMap:
             name: minecraft-production-server1-config-alcariscore-auto-generate
 
