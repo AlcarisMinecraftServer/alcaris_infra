@@ -6,7 +6,7 @@ server-id: "s1"
 # データベース設定
 database:
   type: mariadb
-  host: "database-mariadb.database.svc.cluster.local"
+  host: "mariadb.database"
   port: 3306
   name: "alcaris"
   user: "alcaris"
