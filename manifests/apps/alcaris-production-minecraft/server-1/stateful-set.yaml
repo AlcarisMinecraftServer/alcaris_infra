@@ -117,6 +117,20 @@ spec:
             - name: minecraft-production-server1-config-multiverse-core
               mountPath: /plugins/Multiverse-Core/worlds.yml
               subPath: worlds.yml
+            
+            # whitelist-message設定
+            - name: minecraft-production-server1-config-whitelist-message
+              mountPath: /plugins/Whitelist-Message/config.yml
+              subPath: config.yml
+
+            - name: minecraft-production-server1-config-autoopgive
+              mountPath: /plugins/AutoOPGive/config.yml
+              subPath: config.yml
+
+            - name: minecraft-production-server1-config-alcarisinventoryshare
+              mountPath: /plugins/AlcarisInventoryShare/config.yml
+              subPath: config.yml
+
 
       volumes:
         - name: minecraft-production-common-config-server

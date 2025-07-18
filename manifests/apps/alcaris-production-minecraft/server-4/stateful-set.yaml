@@ -105,6 +105,12 @@ spec:
               mountPath: /config/ops.json
               subPath: ops.json
 
+            # plugin設定
+            - name: minecraft-production-server4-config-alcarisinventoryshare
+              mountPath: /plugins/AlcarisInventoryShare/config.yml
+              subPath: config.yml
+
+
             - name: minecraft-server-data
               mountPath: /data
       volumes:
