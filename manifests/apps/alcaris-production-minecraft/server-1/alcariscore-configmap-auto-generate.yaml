@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: minecraft-production-server1-config-alcariscrafting
+  name: minecraft-production-server1-config-alcariscore-auto-generate
 data:
   honey_bottle.json: |
     {"id":"honey_bottle","category":"food","version":1752718166,"name":"ハチミツ","lore":["ハチミツ入りの瓶。そのまま飲むと甘すぎるかも。"],"rarity":1,"max_stack":64,"custom_model_data":0,"price":{"buy":0,"sell":0,"can_sell":false},"tags":[],"data":{"attributes":[],"buffs":[],"can_always_eat":false,"eat_seconds":1.0,"effects":[],"nutrition":2.0,"saturation":0.8}}  bone_fragment.json: |
