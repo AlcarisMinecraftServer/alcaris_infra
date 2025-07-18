@@ -144,6 +144,18 @@ spec:
           configMap:
             name: minecraft-production-server1-config-multiverse-core
 
+        - name: minecraft-production-server1-config-whitelist-message
+          configMap:
+            name: minecraft-production-server1-config-whitelist-message
+
+        - name: minecraft-production-server1-config-autoopgive
+          configMap:
+            name: minecraft-production-server1-config-autoopgive
+
+        - name: minecraft-production-server1-config-alcarisinventoryshare
+          configMap:
+            name: minecraft-production-server1-config-alcarisinventoryshare
+
 
 
   volumeClaimTemplates:

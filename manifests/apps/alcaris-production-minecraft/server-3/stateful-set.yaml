@@ -124,6 +124,12 @@ spec:
         - name: minecraft-production-common-config-ops
           configMap:
             name: minecraft-production-common-config-ops
+
+        - name: minecraft-production-server1-config-alcarisinventoryshare
+          configMap:
+            name: minecraft-production-server1-config-alcarisinventoryshare
+
+
   volumeClaimTemplates:
     - metadata:
         name: minecraft-server-data

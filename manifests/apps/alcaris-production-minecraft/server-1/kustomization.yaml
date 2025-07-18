@@ -22,7 +22,7 @@ configMapGenerator:
   - name: minecraft-production-server1-config-alcarisinventoryshare
     files:
       - configs/plugins/AlcarisInventoryShare/config.yml
-      
+
   - name: minecraft-production-server1-config-autoopgive
     files:
       - configs/plugins/AutoOPGive/config.yml
