@@ -6,11 +6,11 @@ server-id: "s1"
 # データベース設定
 database:
   type: mariadb
-  host: "mariadb.alcaris-production-minecraft.svc.cluster.local"
+  host: "mariadb.database.svc.cluster.local"
   port: 3306
-  name: "inventory"
-  user: "inventory"
-  password: "${DB_PASSWORD}"
+  name: "AlcarisInventory"
+  user: "namakemono"
+  password: "zaq12wsx"
   useSSL: false
 
 # 共有グループ設定

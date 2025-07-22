@@ -4,5 +4,7 @@ metadata:
   name: mariadb-initdb
 data:
   init.sql: |
+    CREATE DATABASE IF NOT EXISTS AlcarisInventory;
     CREATE DATABASE IF NOT EXISTS AlcarisDelivery;
     CREATE DATABASE IF NOT EXISTS AlcarisPlayer;
+

@@ -1,15 +1,15 @@
 mariadb:
   # データベースホスト名（デフォルト: localhost）
-  host: mariadb.database
+  host: mariadb.database.svc.cluster.local
   # データベースポート番号（デフォルト: 3306）
   port: 3306
   # データベース名（デフォルト: AlcarisPlayer）
-  database: namakemono
+  database: AlcarisPlayer
   # データベースユーザー名（デフォルト: root）
   user: root
   # データベースパスワード（デフォルト: 空）
-  password: "zaq12wsx"
-  
+  password: zaq12wsx
+
 # プラグイン設定
 plugin:
   # デバッグモード（デフォルト: false）
