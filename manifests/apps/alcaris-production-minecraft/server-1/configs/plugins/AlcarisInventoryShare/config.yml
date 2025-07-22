@@ -9,7 +9,7 @@ database:
   host: "mariadb.database.svc.cluster.local"
   port: 3306
   name: "AlcarisInventory"
-  user: "namakemono"
+  user: "root"
   password: "zaq12wsx"
   useSSL: false
 
