@@ -4,7 +4,7 @@ mariadb:
   # データベースポート番号（デフォルト: 3306）
   port: 3306
   # データベース名（デフォルト: AlcarisPlayer）
-  database: alcaris
+  database: namakemono
   # データベースユーザー名（デフォルト: root）
   user: root
   # データベースパスワード（デフォルト: 空）
