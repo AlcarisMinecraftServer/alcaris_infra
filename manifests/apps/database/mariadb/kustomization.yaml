@@ -6,6 +6,7 @@ namespace: mariadb
 resources:
   - stateful-set.yaml
   - service.yaml
+  - initdb-configmap.yaml
 
 secretGenerator:
   - name: mariadb-secret
