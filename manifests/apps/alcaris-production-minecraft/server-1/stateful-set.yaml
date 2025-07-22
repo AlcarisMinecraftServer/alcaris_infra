@@ -54,7 +54,10 @@ spec:
 
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisCore-1.0.0-somen1000.jar,
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisCrafting-1.0.0.jar,
-                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisItems-1.0.0-SNAPSHOT.jar
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisItems-1.0.0-SNAPSHOT.jar,
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisDelivery-1.0-SNAPSHOT.jar,
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisPlayer-1.0-SNAPSHOT.jar
+
           ports:
             - name: minecraft
               containerPort: 25565
@@ -140,6 +143,13 @@ spec:
             - name: minecraft-production-server1-config-alcariscrafting
               mountPath: /plugins/AlcarisCrafting/recipes
 
+            - name: minecraft-production-server1-config-alcarisdelivery
+              mountPath: /plugins/AlcarisDelivery/config.yml
+              subPath: config.yml
+
+            - name: minecraft-production-server1-config-alcarisplayer
+              mountPath: /plugins/AlcarisPlayer/config.yml
+              subPath: config.yml
 
       volumes:
         - name: minecraft-production-common-config-server
@@ -186,6 +196,14 @@ spec:
         - name: minecraft-production-server1-config-alcariscrafting
           configMap:
             name: minecraft-production-server1-config-alcariscrafting
+
+        - name: minecraft-production-server1-config-alcarisdelivery
+          configMap:
+            name: minecraft-production-server1-config-alcarisdelivery
+
+        - name: minecraft-production-server1-config-alcarisplayer
+          configMap:
+            name: minecraft-production-server1-config-alcarisplayer
 
   volumeClaimTemplates:
     - metadata:
