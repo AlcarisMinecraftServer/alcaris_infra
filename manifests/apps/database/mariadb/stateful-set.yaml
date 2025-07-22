@@ -40,6 +40,10 @@ spec:
               mountPath: /var/lib/mysql
             - name: initdb
               mountPath: /docker-entrypoint-initdb.d
+      volumes:
+        - name: initdb
+          configMap:
+            name: mariadb-initdb
   volumeClaimTemplates:
     - metadata:
         name: mariadb-storage
