@@ -1,5 +1,5 @@
 database:
-  host: localhost
+  host: mariadb.database
   port: 3306
   name: alcaris
   user: root

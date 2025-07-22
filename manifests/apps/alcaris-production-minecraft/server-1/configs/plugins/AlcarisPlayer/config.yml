@@ -1,6 +1,6 @@
 mariadb:
   # データベースホスト名（デフォルト: localhost）
-  host: localhost
+  host: mariadb.database
   # データベースポート番号（デフォルト: 3306）
   port: 3306
   # データベース名（デフォルト: AlcarisPlayer）
