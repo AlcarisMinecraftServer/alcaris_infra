@@ -10,3 +10,22 @@ resources:
   - configs/server-config.yaml
   - configs/spigot-config.yaml
   - configs/plugins/luckperms-config.yaml
+
+configMapGenerator:
+  - name: minecraft-production-common-config-discordsrv
+    files:
+      - configs/plugins/DiscordSRV/alerts.yml
+      - configs/plugins/DiscordSRV/config.yml
+      - configs/plugins/DiscordSRV/linking.yml
+      - configs/plugins/DiscordSRV/messages.yml
+      - configs/plugins/DiscordSRV/synchronization.yml
+      - configs/plugins/DiscordSRV/voice.yml
+
+  - name: minecraft-production-common-config-core
+    files:
+      - configs/plugins/AlcarisCore/config.yml
+
+  - name: minecraft-production-common-config-delivery
+    files:
+      - configs/plugins/AlcarisDelivery/config.yml
+      - configs/plugins/AlcarisDelivery/messages.yml

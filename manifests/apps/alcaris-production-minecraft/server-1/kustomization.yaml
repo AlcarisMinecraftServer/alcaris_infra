@@ -11,33 +11,24 @@ generatorOptions:
   disableNameSuffixHash: true
 
 configMapGenerator:
-  - name: minecraft-production-server1-config-multiverse-core
+  - name: minecraft-production-s1-config-multiverse-core
     files:
       - configs/plugins/Multiverse-Core/worlds.yml
 
-  - name: minecraft-production-server1-config-whitelist-message
+  - name: minecraft-production-s1-config-whitelist-message
     files:
       - configs/plugins/Whitelist-Message/config.yml
 
-  - name: minecraft-production-server1-config-autoopgive
+  - name: minecraft-production-s1-config-autoopgive
     files:
       - configs/plugins/AutoOPGive/config.yml
 
-  - name: minecraft-production-server1-config-alcariscore
-    files:
-      - configs/plugins/AlcarisCore/config.yml
-
-  - name: minecraft-production-server1-config-alcariscrafting
+  - name: minecraft-production-s1-config-alcariscrafting
     files:
       - configs/plugins/AlcarisCrafting/recipes/cooking/apple_pie.json
       - configs/plugins/AlcarisCrafting/recipes/cooking/honey_bread.json
       - configs/plugins/AlcarisCrafting/recipes/crafting/obsidian_dagger.json
 
-  - name: minecraft-production-server1-config-alcarisdelivery
-    files:
-      - configs/plugins/AlcarisDelivery/config.yml
-      - configs/plugins/AlcarisDelivery/messages.yml
-
-  - name: minecraft-production-server1-config-alcarisplayer
+  - name: minecraft-production-s1-config-alcarisplayer
     files:
       - configs/plugins/AlcarisPlayer/config.yml

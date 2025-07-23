@@ -1,0 +1,22 @@
+Require linked account to play:
+  Enabled: false
+
+  Listener priority: LOWEST
+  Listener event: AsyncPlayerPreLoginEvent
+  Bypass names: [Scarsz, Vankka]
+  Whitelisted players bypass check: true
+  Check banned players: false
+  Only check banned players: false
+  Not linked message: "&7プレイするには、&bDiscord&7アカウントをリンクする必要があります。\n\n&7アカウントをリンクするには、&b{CODE}&7をそのまま、Discordサーバーの&b{BOT}&7にDMを送信してください。\n\n&7Discordの招待 » &b{INVITE}"
+  Must be in Discord server: true
+  Subscriber role:
+    Require subscriber role to join: false
+    Subscriber roles: ["00000000000000000", "00000000000000000", "00000000000000000"]
+    Require all of the listed roles: false
+    Kick message: "&cプレイするには、Twitchに登録する必要があります。"
+  Messages:
+    DiscordSRV still starting: "&cサーバーがDiscordに接続できていないため、現在リンクステータスを確認できません。\n\nしばらくしてからもう一度お試しください。"
+    Not in server: "&cDiscordサーバーに参加していません。\n\n{INVITE}に参加してください！"
+    Failed to find subscriber role: "&cDiscordで登録者ロールを見つけることができませんでした。\n\nサーバー管理者にお問い合わせください。"
+    Failed for unknown reason: "&cアカウントの確認中にエラーが発生しました。\n\nサーバー管理者にお問い合わせください。"
+    Kicked for unlinking: "&cアカウントのリンクを解除したため、サーバーから追い出されました。\n\nサーバーに再度参加して、アカウントをリンクしてください。"

@@ -11,15 +11,6 @@ generatorOptions:
   disableNameSuffixHash: true
 
 configMapGenerator:
-  - name: minecraft-production-server2-config-alcariscore
-    files:
-      - configs/plugins/AlcarisCore/config.yml
-
-  - name: minecraft-production-server2-config-alcarisdelivery
-    files:
-      - configs/plugins/AlcarisDelivery/config.yml
-      - configs/plugins/AlcarisDelivery/messages.yml
-
-  - name: minecraft-production-server2-config-alcarisplayer
+  - name: minecraft-production-s2-config-player
     files:
       - configs/plugins/AlcarisPlayer/config.yml

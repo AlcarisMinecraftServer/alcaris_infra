@@ -108,20 +108,16 @@ spec:
 
             - name: minecraft-server-data
               mountPath: /data
-            
-            - name: minecraft-production-server2-config-alcariscore
+
+            - name: minecraft-production-common-config-core
               mountPath: /plugins/AlcarisCore/config.yml
               subPath: config.yml
 
-            - name: minecraft-production-server2-config-alcarisdelivery
+            - name: minecraft-production-common-config-delivery
               mountPath: /plugins/AlcarisDelivery/config.yml
               subPath: config.yml
 
-            - name: minecraft-production-server2-config-alcarisdelivery
-              mountPath: /plugins/AlcarisDelivery/messages.yml
-              subPath: messages.yml
-
-            - name: minecraft-production-server2-config-alcarisplayer
+            - name: minecraft-production-s2-config-player
               mountPath: /plugins/AlcarisPlayer/config.yml
               subPath: config.yml
 
@@ -147,18 +143,17 @@ spec:
           configMap:
             name: minecraft-production-common-config-ops
 
-        - name: minecraft-production-server2-config-alcariscore
+        - name: minecraft-production-common-config-core
           configMap:
-            name: minecraft-production-server2-config-alcariscore
+            name: minecraft-production-common-config-core
 
-        - name: minecraft-production-server2-config-alcarisdelivery
+        - name: minecraft-production-common-config-delivery
           configMap:
-            name: minecraft-production-server2-config-alcarisdelivery
+            name: minecraft-production-common-config-delivery
 
-        - name: minecraft-production-server2-config-alcarisplayer
+        - name: minecraft-production-s2-config-player
           configMap:
-            name: minecraft-production-server2-config-alcarisplayer
-
+            name: minecraft-production-s2-config-player
   volumeClaimTemplates:
     - metadata:
         name: minecraft-server-data

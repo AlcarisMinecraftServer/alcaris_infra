@@ -56,7 +56,7 @@ spec:
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisDelivery-1.0-SNAPSHOT.jar,
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisPlayer-1.0-SNAPSHOT.jar,
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/MiningMinigameV2-1.0-SNAPSHOT.jar
-          
+
           ports:
             - name: minecraft
               containerPort: 25565
@@ -111,19 +111,19 @@ spec:
               mountPath: /config/ops.json
               subPath: ops.json
 
-            - name: minecraft-production-server4-config-alcariscore
+            - name: minecraft-production-common-config-core
               mountPath: /plugins/AlcarisCore/config.yml
               subPath: config.yml
 
-            - name: minecraft-production-server4-config-alcarisdelivery
+            - name: minecraft-production-common-config-delivery
               mountPath: /plugins/AlcarisDelivery/config.yml
               subPath: config.yml
 
-            - name: minecraft-production-server4-config-alcarisplayer
+            - name: minecraft-production-s4-config-player
               mountPath: /plugins/AlcarisPlayer/config.yml
               subPath: config.yml
 
-            - name: minecraft-production-server4-config-miningminigamev2
+            - name: minecraft-production-s4-config-miningminigamev2
               mountPath: /plugins/MiningMinigameV2/config.yml
               subPath: config.yml
 
@@ -151,22 +151,21 @@ spec:
           configMap:
             name: minecraft-production-common-config-ops
 
-        - name: minecraft-production-server4-config-alcariscore
+        - name: minecraft-production-common-config-core
           configMap:
-            name: minecraft-production-server4-config-alcariscore
+            name: minecraft-production-common-config-core
 
-        - name: minecraft-production-server4-config-alcarisdelivery
+        - name: minecraft-production-common-config-delivery
           configMap:
-            name: minecraft-production-server4-config-alcarisdelivery
+            name: minecraft-production-common-config-delivery
 
-        - name: minecraft-production-server4-config-alcarisplayer
+        - name: minecraft-production-s4-config-player
           configMap:
-            name: minecraft-production-server4-config-alcarisplayer
+            name: minecraft-production-s4-config-player
 
-        - name: minecraft-production-server4-config-miningminigamev2
+        - name: minecraft-production-s4-config-miningminigamev2
           configMap:
-            name: minecraft-production-server4-config-miningminigamev2
-
+            name: minecraft-production-s4-config-miningminigamev2
   volumeClaimTemplates:
     - metadata:
         name: minecraft-server-data
