@@ -118,8 +118,8 @@ spec:
               subPath: config.yml
 
             - name: minecraft-production-server2-config-alcarisdelivery
-              mountPath: /plugins/AlcarisDelivery/message.yml
-              subPath: message.yml
+              mountPath: /plugins/AlcarisDelivery/messages.yml
+              subPath: messages.yml
 
             - name: minecraft-production-server2-config-alcarisplayer
               mountPath: /plugins/AlcarisPlayer/config.yml

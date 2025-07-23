@@ -36,7 +36,7 @@ configMapGenerator:
   - name: minecraft-production-server1-config-alcarisdelivery
     files:
       - configs/plugins/AlcarisDelivery/config.yml
-      - configs/plugins/AlcarisDelivery/message.yml
+      - configs/plugins/AlcarisDelivery/messages.yml
 
   - name: minecraft-production-server1-config-alcarisplayer
     files:
