@@ -132,10 +132,6 @@ spec:
               mountPath: /plugins/AutoOPGive/config.yml
               subPath: config.yml
 
-            - name: minecraft-production-server1-config-alcarisinventoryshare
-              mountPath: /plugins/AlcarisInventoryShare/config.yml
-              subPath: config.yml
-
             - name: minecraft-production-server1-config-alcariscore
               mountPath: /plugins/AlcarisCore/config.yml
               subPath: config.yml
@@ -188,10 +184,6 @@ spec:
         - name: minecraft-production-server1-config-autoopgive
           configMap:
             name: minecraft-production-server1-config-autoopgive
-
-        - name: minecraft-production-server1-config-alcarisinventoryshare
-          configMap:
-            name: minecraft-production-server1-config-alcarisinventoryshare
 
         - name: minecraft-production-server1-config-alcariscore
           configMap:
