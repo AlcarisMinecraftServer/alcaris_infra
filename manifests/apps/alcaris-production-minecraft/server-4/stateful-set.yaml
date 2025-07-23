@@ -50,6 +50,12 @@ spec:
                 https://github.com/AlcarisMinecraftServer/EssentialishWarp/releases/download/v0.10.0/EssentialishWarp-0.10.0.jar,
 
                 https://github.com/SkriptLang/Skript/releases/download/2.11.1/Skript-2.11.1.jar
+
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisCore-1.0.0-somen1000.jar,
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisItems-1.0.0-SNAPSHOT.jar,
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisDelivery-1.0-SNAPSHOT.jar,
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisPlayer-1.0-SNAPSHOT.jar,
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/MiningMinigameV2-1.0-SNAPSHOT.jar
           
           ports:
             - name: minecraft
@@ -105,9 +111,20 @@ spec:
               mountPath: /config/ops.json
               subPath: ops.json
 
-            # plugin設定
-            - name: minecraft-production-server4-config-alcarisinventoryshare
-              mountPath: /plugins/AlcarisInventoryShare/config.yml
+            - name: minecraft-production-server4-config-alcariscore
+              mountPath: /plugins/AlcarisCore/config.yml
+              subPath: config.yml
+
+            - name: minecraft-production-server4-config-alcarisdelivery
+              mountPath: /plugins/AlcarisDelivery/config.yml
+              subPath: config.yml
+
+            - name: minecraft-production-server4-config-alcarisplayer
+              mountPath: /plugins/AlcarisPlayer/config.yml
+              subPath: config.yml
+
+            - name: minecraft-production-server4-config-miningminigamev2
+              mountPath: /plugins/MiningMinigameV2/config.yml
               subPath: config.yml
 
             - name: minecraft-server-data
@@ -134,9 +151,21 @@ spec:
           configMap:
             name: minecraft-production-common-config-ops
 
-        - name: minecraft-production-server4-config-alcarisinventoryshare
+        - name: minecraft-production-server4-config-alcariscore
           configMap:
-            name: minecraft-production-server4-config-alcarisinventoryshare
+            name: minecraft-production-server4-config-alcariscore
+
+        - name: minecraft-production-server4-config-alcarisdelivery
+          configMap:
+            name: minecraft-production-server4-config-alcarisdelivery
+
+        - name: minecraft-production-server4-config-alcarisplayer
+          configMap:
+            name: minecraft-production-server4-config-alcarisplayer
+
+        - name: minecraft-production-server4-config-miningminigamev2
+          configMap:
+            name: minecraft-production-server4-config-miningminigamev2
 
   volumeClaimTemplates:
     - metadata:

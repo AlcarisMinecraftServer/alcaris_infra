@@ -9,3 +9,16 @@ resources:
 
 generatorOptions:
   disableNameSuffixHash: true
+
+configMapGenerator:
+  - name: minecraft-production-server3-config-alcariscore
+    files:
+      - configs/plugins/AlcarisCore/config.yml
+
+  - name: minecraft-production-server3-config-alcarisdelivery
+    files:
+      - configs/plugins/AlcarisDelivery/config.yml
+
+  - name: minecraft-production-server3-config-alcarisplayer
+    files:
+      - configs/plugins/AlcarisPlayer/config.yml

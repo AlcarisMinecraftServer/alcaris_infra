@@ -1,0 +1,3 @@
+general:
+  apiUrl: "https://api-natsume.onp-k8s.admin.alcaris.net/v1"
+  apiKey: "5OKX5qbir3csxLghpa1u1cD1sfEUuv4TdjyPyoVmDUqOgycqsFZeVHxMYSWSV0iO"
