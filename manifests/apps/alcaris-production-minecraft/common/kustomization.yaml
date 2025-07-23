@@ -11,6 +11,9 @@ resources:
   - configs/spigot-config.yaml
   - configs/plugins/luckperms-config.yaml
 
+generatorOptions:
+  disableNameSuffixHash: true
+
 configMapGenerator:
   - name: minecraft-production-common-config-discordsrv
     files:
