@@ -29,6 +29,6 @@ configMapGenerator:
       - configs/plugins/AlcarisCrafting/recipes/cooking/honey_bread.json
       - configs/plugins/AlcarisCrafting/recipes/crafting/obsidian_dagger.json
 
-  - name: minecraft-production-s1-config-alcarisplayer
+  - name: minecraft-production-s1-config-player
     files:
       - configs/plugins/AlcarisPlayer/config.yml

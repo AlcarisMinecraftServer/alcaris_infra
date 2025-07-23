@@ -147,7 +147,7 @@ spec:
               mountPath: /plugins/AlcarisDelivery/messages.yml
               subPath: messages.yml
 
-            - name: minecraft-production-s1-config-alcarisplayer
+            - name: minecraft-production-s1-config-player
               mountPath: /plugins/AlcarisPlayer/config.yml
               subPath: config.yml
 
