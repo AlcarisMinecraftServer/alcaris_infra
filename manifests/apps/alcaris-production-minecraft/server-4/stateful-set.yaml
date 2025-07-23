@@ -119,6 +119,10 @@ spec:
               mountPath: /plugins/AlcarisDelivery/config.yml
               subPath: config.yml
 
+            - name: minecraft-production-common-config-delivery
+              mountPath: /plugins/AlcarisDelivery/messages.yml
+              subPath: messages.yml
+
             - name: minecraft-production-s4-config-player
               mountPath: /plugins/AlcarisPlayer/config.yml
               subPath: config.yml
