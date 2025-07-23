@@ -49,7 +49,7 @@ spec:
 
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisCore-1.0.0-somen1000.jar,
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisItems-1.0.0-SNAPSHOT.jar,
-                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisDelivery-1.0-SNAPSHOT.jar,
+                https://funtservers.net:1716/DLitems/AlcarisDelivery-1.0-SNAPSHOT.jar,
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisPlayer-1.0-SNAPSHOT.jar
 
           ports:
@@ -116,6 +116,10 @@ spec:
             - name: minecraft-production-server2-config-alcarisdelivery
               mountPath: /plugins/AlcarisDelivery/config.yml
               subPath: config.yml
+
+            - name: minecraft-production-server2-config-alcarisdelivery
+              mountPath: /plugins/AlcarisDelivery/message.yml
+              subPath: message.yml
 
             - name: minecraft-production-server2-config-alcarisplayer
               mountPath: /plugins/AlcarisPlayer/config.yml

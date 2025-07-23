@@ -1,0 +1,63 @@
+# AlcarisDelivery Messages Configuration
+# Use & for color codes (e.g., &a for green, &c for red)
+
+# Database messages
+database:
+  connecting: "&7[AlcarisDelivery] データベースに接続中..."
+  connected: "&a[AlcarisDelivery] データベース接続が正常に完了しました。"
+  failed: "&c[AlcarisDelivery] データベースに接続できません。プラグインを無効化します。"
+  error: "&c[AlcarisDelivery] エラー詳細"
+
+# Plugin messages
+plugin:
+  enabled: "&a[AlcarisDelivery] プラグインが正常に有効化されました。"
+
+# NPC messages
+npc:
+  name: "&e[配達NPC]"
+
+# GUI messages
+gui:
+  storage-title: "&e配達ストレージ"
+  view-title: "&e{player}のストレージ"
+
+# Command messages
+command:
+  player-only: "&cプレイヤーのみ実行可能です。"
+  no-permission: "&c権限がありません。"
+  unknown: "&c不明なコマンドです。/aldelivery help でヘルプを表示します。"
+
+  # NPC commands
+  npc:
+    usage: "&c使い方: /aldelivery npc <create|remove|list>"
+    created: "&a配達NPC(村人)を設置しました。"
+    removed: "&a配達NPCを削除しました。"
+    not-found: "&c近くに配達NPCが見つかりません。(5ブロック以内)"
+    list: "&a現在 {count} 体の配達NPCが設置されています。"
+
+  # Size commands
+  size:
+    usage: "&c使い方: /aldelivery size <9～54>"
+    invalid-number: "&c数値を入力してください。"
+    invalid-size: "&c9, 18, 27, 36, 45, 54のいずれかを指定してください。"
+    success: "&aインベントリ枠数を{size}に設定しました。"
+
+  # View commands
+  view:
+    usage: "&c使い方: /aldelivery view <プレイヤー名>"
+    player-not-found: "&cプレイヤーが見つかりません。"
+    success: "&a{player}のストレージを表示しました。"
+
+  # Reload command
+  reload:
+    success: "&a設定ファイルを再読み込みしました。"
+
+  # Help messages
+  help:
+    header: "&e=== AlcarisDelivery Commands ==="
+    npc-create: "&a/aldelivery npc create &7- 配達NPCを作成"
+    npc-remove: "&a/aldelivery npc remove &7- 近くの配達NPCを削除"
+    npc-list: "&a/aldelivery npc list &7- 配達NPC数を表示"
+    size: "&a/aldelivery size <枠数> &7- ストレージ枠数を設定"
+    view: "&a/aldelivery view <プレイヤー> &7- プレイヤーのストレージを表示"
+    reload: "&a/aldelivery reload &7- 設定を再読み込み"
