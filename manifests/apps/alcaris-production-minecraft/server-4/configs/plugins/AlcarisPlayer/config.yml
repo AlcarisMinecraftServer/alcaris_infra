@@ -23,4 +23,4 @@ plugin:
 game_stats:
   # ゲーム統計機能を有効にするかどうか（デフォルト: true）
   # falseに設定すると、HP/MPシステム、攻撃/防御計算、アイテムステータス機能が無効になります
-  enabled: true
+  enabled: false

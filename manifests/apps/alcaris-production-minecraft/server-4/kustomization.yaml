@@ -9,3 +9,20 @@ resources:
 
 generatorOptions:
   disableNameSuffixHash: true
+
+configMapGenerator:
+  - name: minecraft-production-server4-config-alcariscore
+    files:
+      - configs/plugins/AlcarisCore/config.yml
+
+  - name: minecraft-production-server4-config-alcarisdelivery
+    files:
+      - configs/plugins/AlcarisDelivery/config.yml
+
+  - name: minecraft-production-server4-config-alcarisplayer
+    files:
+      - configs/plugins/AlcarisPlayer/config.yml
+
+  - name: minecraft-production-server4-config-miningminigamev2
+    files:
+      - configs/plugins/MiningMinigameV2/config.yml
