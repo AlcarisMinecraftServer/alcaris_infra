@@ -132,8 +132,8 @@ spec:
               subPath: config.yml
 
             - name: minecraft-production-s4-config-fastasyncworldedit
-              mountPath: /plugins/FastAsyncWorldEdit/config.yml
-              subPath: config.yml
+              mountPath: /plugins/FastAsyncWorldEdit/schematics/miningminigame_lobby.schem
+              subPath: miningminigame_lobby.schem
 
             - name: minecraft-server-data
               mountPath: /data
