@@ -159,29 +159,29 @@ spec:
           configMap:
             name: minecraft-common-config-ops
 
-        - name: minecraft-production-s1-config-whitelist-message
+        - name: minecraft-develop-s1-config-whitelist-message
           configMap:
-            name: minecraft-production-s1-config-whitelist-message
+            name: minecraft-develop-s1-config-whitelist-message
 
-        - name: minecraft-production-common-config-core
+        - name: minecraft-develop-common-config-core
           configMap:
-            name: minecraft-production-common-config-core
+            name: minecraft-develop-common-config-core
 
-        - name: minecraft-production-common-config-delivery
+        - name: minecraft-develop-common-config-delivery
           configMap:
-            name: minecraft-production-common-config-delivery
+            name: minecraft-develop-common-config-delivery
 
-        - name: minecraft-production-s1-config-player
+        - name: minecraft-develop-s1-config-player
           configMap:
-            name: minecraft-production-s1-config-player
+            name: minecraft-develop-s1-config-player
 
-        - name: minecraft-production-s1-config-crafting
+        - name: minecraft-develop-s1-config-crafting
           configMap:
-            name: minecraft-production-s1-config-crafting
+            name: minecraft-develop-s1-config-crafting
 
-        - name: minecraft-production-s1-config-autoopgive
+        - name: minecraft-develop-s1-config-autoopgive
           configMap:
-            name: minecraft-production-s1-config-autoopgive
+            name: minecraft-develop-s1-config-autoopgive
   volumeClaimTemplates:
     - metadata:
         name: minecraft-server-data
