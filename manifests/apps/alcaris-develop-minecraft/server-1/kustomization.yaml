@@ -11,10 +11,6 @@ generatorOptions:
   disableNameSuffixHash: true
 
 configMapGenerator:
-  - name: minecraft-develop-s1-config-multiverse-core
-    files:
-      - configs/plugins/Multiverse-Core/worlds.yml
-
   - name: minecraft-develop-s1-config-whitelist-message
     files:
       - configs/plugins/Whitelist-Message/config.yml
