@@ -1,0 +1,5 @@
+Whitelist_Message: '&8* &e&lWhitelist &8*{newline}{newline}&cYou are not whitelisted
+  to this server!{newline}{newline}{newline}&fif you think this is a bug, {newline}please
+  contact us on our forum!'
+Permission_Message: '&cYou do not have permission to do this! {newline}&fRequired
+  permission: &ewhitelistmessage.admin'

@@ -1,0 +1,16 @@
+{
+    "materials": [
+      {
+        "id": "bread",
+        "amount": 1
+      },
+      {
+        "id": "honey_bottle",
+        "amount": 1
+      }
+    ],
+    "product": {
+      "id": "honey_bread",
+      "amount": 1
+    }
+  }
