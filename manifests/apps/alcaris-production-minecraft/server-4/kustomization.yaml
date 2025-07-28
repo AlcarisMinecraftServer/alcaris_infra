@@ -18,3 +18,7 @@ configMapGenerator:
   - name: minecraft-production-s4-config-miningminigamev2
     files:
       - configs/plugins/MiningMinigameV2/config.yml
+
+  - name: minecraft-production-s4-config-fastasyncworldedit
+    files:
+      - configs/plugins/FastAsyncWorldEdit/schematics/miningminigame_lobby.schem
