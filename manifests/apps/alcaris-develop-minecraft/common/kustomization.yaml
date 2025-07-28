@@ -15,15 +15,6 @@ generatorOptions:
   disableNameSuffixHash: true
 
 configMapGenerator:
-  - name: minecraft-develop-common-config-discordsrv
-    files:
-      - configs/plugins/DiscordSRV/alerts.yml
-      - configs/plugins/DiscordSRV/config.yml
-      - configs/plugins/DiscordSRV/linking.yml
-      - configs/plugins/DiscordSRV/messages.yml
-      - configs/plugins/DiscordSRV/synchronization.yml
-      - configs/plugins/DiscordSRV/voice.yml
-
   - name: minecraft-develop-common-config-core
     files:
       - configs/plugins/AlcarisCore/config.yml
