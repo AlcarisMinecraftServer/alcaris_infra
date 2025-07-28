@@ -5,7 +5,7 @@ metadata:
   labels:
     app: minecraft-develop-s1
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: minecraft-develop-s1
@@ -24,7 +24,7 @@ spec:
             - name: TYPE
               value: PAPER
             - name: VERSION
-              value: "1.21.1"
+              value: "1.21.8"
             - name: EULA
               value: "TRUE"
             - name: COPY_CONFIG_DEST
@@ -35,12 +35,28 @@ spec:
                 https://github.com/IntellectualSites/FastAsyncWorldEdit/releases/download/2.13.0/FastAsyncWorldEdit-Paper-2.13.0.jar,
                 https://cdn.modrinth.com/data/DKY9btbd/versions/J66QOTLZ/worldguard-bukkit-7.0.12-dist.jar,
                 https://github.com/aromaa/WorldGuardExtraFlags/releases/download/v4.2.4/WorldGuardExtraFlags.jar,
-                
+
                 https://ci.extendedclip.com/job/PlaceholderAPI/197/artifact/build/libs/PlaceholderAPI-2.11.6.jar,
                 https://github.com/MilkBowl/Vault/releases/download/1.7.3/Vault.jar,
                 https://github.com/dmulloy2/ProtocolLib/releases/download/5.3.0/ProtocolLib.jar,
-                
-                https://github.com/4drian3d/SignedVelocity/releases/download/1.3.0/SignedVelocity-Paper-1.3.0.jar
+
+                https://github.com/4drian3d/SignedVelocity/releases/download/1.3.0/SignedVelocity-Paper-1.3.0.jar,
+                https://ci.lucko.me/job/LuckPerms/1589/artifact/bukkit/loader/build/libs/LuckPerms-Bukkit-5.5.4.jar,
+
+                https://github.com/Multiverse/Multiverse-Core/releases/download/5.0.0-pre.4/multiverse-core-5.0.0-pre.4.jar,
+                https://github.com/Multiverse/Multiverse-Portals/releases/download/5.0.0-pre.4/multiverse-portals-5.0.0-pre.4.jar,
+                https://github.com/Multiverse/Multiverse-Inventories/releases/download/5.0.0-pre.4/multiverse-inventories-5.0.0-pre.4.jar,
+
+                https://ci.loohpjames.com/job/ImageFrame/145/artifact/common/target/ImageFrame-1.8.4.0.jar,
+                https://funtservers.net:1716/DLitems/AlcarisChatSupport-1.0.0.jar,
+                https://funtservers.net:1716/DLitems/Whitelist-Message.jar,
+                https://github.com/gamu-433/AutoOPGive/releases/download/v1/autoopgive-1.0.0.jar,
+
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisCore-1.0.0-somen1000.jar,
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisCrafting-1.0.0.jar,
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisItems-1.0.0-SNAPSHOT.jar,
+                https://funtservers.net:1716/DLitems/AlcarisDelivery-1.0-SNAPSHOT.jar,
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisPlayer-1.0-SNAPSHOT.jar
 
           ports:
             - name: minecraft
@@ -108,11 +124,11 @@ spec:
         - name: minecraft-common-config-paper
           configMap:
             name: minecraft-common-config-paper
-            
+
         - name: minecraft-common-config-luckperms
           configMap:
             name: minecraft-common-config-luckperms
-            
+
         - name: minecraft-common-config-ops
           configMap:
             name: minecraft-common-config-ops
