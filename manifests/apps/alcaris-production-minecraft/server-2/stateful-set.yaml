@@ -51,6 +51,7 @@ spec:
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisItems-1.0.0-SNAPSHOT.jar,
                 https://funtservers.net:1716/DLitems/AlcarisDelivery-1.0-SNAPSHOT.jar,
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisPlayer-1.0-SNAPSHOT.jar,
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisResource-1.0-SNAPSHOT.jar
 
           ports:
             - name: minecraft
@@ -125,6 +126,15 @@ spec:
               mountPath: /plugins/AlcarisPlayer/config.yml
               subPath: config.yml
 
+            - name: minecraft-production-s2-config-alcarisresource
+              mountPath: /plugins/AlcarisResource/npc_config.yml
+              subPath: npc_config.yml
+            - name: minecraft-production-s2-config-alcarisresource
+              mountPath: /plugins/AlcarisResource/mobs/mobs-example.yml
+              subPath: mobs/mobs-example.yml
+            - name: minecraft-production-s2-config-alcarisresource
+              mountPath: /plugins/AlcarisResource/blocks/blocks-example.yml
+              subPath: blocks/blocks-example.yml
 
       volumes:
         - name: minecraft-production-common-config-server
@@ -160,6 +170,9 @@ spec:
           configMap:
             name: minecraft-production-s2-config-player
 
+        - name: minecraft-production-s2-config-alcarisresource
+          configMap:
+            name: minecraft-production-s2-config-alcarisresource
   
   volumeClaimTemplates:
     - metadata:
