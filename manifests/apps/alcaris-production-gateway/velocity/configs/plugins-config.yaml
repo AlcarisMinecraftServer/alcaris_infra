@@ -124,25 +124,24 @@ data:
     # Additional placeholders: {server}
     join:
       enabled: true
-      message: "&a{player} &7joined!"
-      otherServerMessage: "&a{player} &7joined &a{server}!"
+      message: "&a{player} &7がサーバーに参加しました"
+      otherServerMessage: "&a{player} &7が &a{server} &7に参加しました"
       enable-title: false
-      # Send a title to the player when they join the server!
       title: "&a&lWelcome {player}!"
       subtitle: "&7Welcome in ServerName Server!"
 
     leave:
       enabled: true
-      message: "&c{player} &7left!"
-      otherServerMessage: "&c{player} &7left &a{server}!"
+      message: "&c{player} &7がサーバーから退出しました"
+      otherServerMessage: "&c{player} &7が &a{server} &7から退出しました"
 
     # Only available in a proxy(Velocity or Bungeecord)
     # Called on server switch
     # Additional placeholders: {oldServer} {newServer}
     serverSwitch:
       enabled: true
-      messageFrom: "&b{player} &7left to &b{newServer} server."
-      messageTo: "&b{player} &7joined from &b{oldServer} server."
+      messageFrom: "&b{player} &7が &b{newServer} &7から退出しました"
+      messageTo: "&b{player} &7が &b{oldServer} &7に参加しました"
 
     # Commands that will be executed from console when an user joins the server
     # If you want to disable this just set it to []
