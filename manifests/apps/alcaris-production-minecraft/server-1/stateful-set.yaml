@@ -56,7 +56,9 @@ spec:
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisCrafting-1.0.0.jar,
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisItems-1.0.0-SNAPSHOT.jar,
                 https://funtservers.net:1716/DLitems/AlcarisDelivery-1.0-SNAPSHOT.jar,
-                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisPlayer-1.0-SNAPSHOT.jar
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisPlayer-1.0-SNAPSHOT.jar,
+                https://github.com/HimaJyun/Jecon/releases/download/2.2.1/Jecon-2.2.1.jar,
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisCasino-1.0-SNAPSHOT.jar
 
           ports:
             - name: minecraft
