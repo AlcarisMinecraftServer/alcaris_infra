@@ -1,0 +1,20 @@
+npcs:
+  保険管理員:
+    insurance_manage: true
+    insurance_teleport: false
+    multiplier: 1
+    additional_cost: 0
+    teleport_locations: []
+    random_teleport:
+      enabled: false
+      range: 1000
+  テレポート屋:
+    insurance_manage: false
+    insurance_teleport: true
+    multiplier: 2
+    additional_cost: 10
+    teleport_locations:
+    - "resource_lvl1,0,64,0"
+    random_teleport:
+      enabled: true
+      range: 1000

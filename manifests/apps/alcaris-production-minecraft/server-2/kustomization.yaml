@@ -14,3 +14,7 @@ configMapGenerator:
   - name: minecraft-production-s2-config-player
     files:
       - configs/plugins/AlcarisPlayer/config.yml
+
+  - name: minecraft-production-s2-config-alcarisresource
+    files:
+      - configs/plugins/AlcarisResource/config.yml

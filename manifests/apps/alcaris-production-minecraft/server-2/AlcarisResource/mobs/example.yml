@@ -1,0 +1,8 @@
+mobs:
+  ZOMBIE:
+    - itemId: "zombie_flesh"
+      amount: 2
+      probability: 0.5
+    - itemId: "rotten_flesh"
+      amount: 1
+      probability: 0.2
