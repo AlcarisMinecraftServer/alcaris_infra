@@ -18,5 +18,5 @@ configMapGenerator:
   - name: minecraft-production-s2-config-alcarisresource
     files:
       - configs/plugins/AlcarisResource/npc_config.yml
-      - configs/plugins/AlcarisResource/mobs/example.yml=mobs-example.yml
-      - configs/plugins/AlcarisResource/blocks/example.yml=blocks-example.yml
+      - configs/plugins/AlcarisResource/mobs/mobs-example.yml
+      - configs/plugins/AlcarisResource/blocks/blocks-example.yml
