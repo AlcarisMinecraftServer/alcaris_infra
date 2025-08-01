@@ -66,7 +66,7 @@ data:
       - WIP
       footers:
       - 'Ping: %ping%ms %server_tps_5_colored%'
-      format: '%server%%prefix% &#fafafa&%username%'
+      format: '%server%%prefix% %username%'
       nametag:
         prefix: ''
         suffix: ''
