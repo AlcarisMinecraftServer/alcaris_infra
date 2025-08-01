@@ -17,4 +17,4 @@ configMapGenerator:
 
   - name: minecraft-production-s2-config-alcarisresource
     files:
-      - configs/plugins/AlcarisResource/config.yml
+      - configs/plugins/AlcarisResource/npc_config.yml
