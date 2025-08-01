@@ -60,12 +60,6 @@ data:
         "bypassesPlayerLimit": false
       },
       {
-        "uuid": "5afe3dde-1748-49fe-895c-125387889a82",
-        "name": "Kanu_Y",
-        "level": 3,
-        "bypassesPlayerLimit": false
-      },
-      {
         "uuid": "fe814942-d2c3-43af-ab92-1381c07af010",
         "name": "daimaokun",
         "level": 3,
