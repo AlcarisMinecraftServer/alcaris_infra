@@ -129,6 +129,12 @@ spec:
             - name: minecraft-production-s2-config-alcarisresource
               mountPath: /plugins/AlcarisResource/npc_config.yml
               subPath: npc_config.yml
+            - name: minecraft-production-s2-config-alcarisresource
+              mountPath: /plugins/AlcarisResource/mobs/example.yml
+              subPath: mobs/example.yml
+            - name: minecraft-production-s2-config-alcarisresource
+              mountPath: /plugins/AlcarisResource/blocks/example.yml
+              subPath: blocks/example.yml
 
       volumes:
         - name: minecraft-production-common-config-server
