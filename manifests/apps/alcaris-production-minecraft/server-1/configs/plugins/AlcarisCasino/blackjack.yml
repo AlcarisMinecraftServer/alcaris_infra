@@ -1,0 +1,30 @@
+# ブラックジャック設定ファイル
+
+# 勝率設定
+win-rate:
+  # プレイヤーの勝率を調整するかどうか（falseの場合は完全にランダム）
+  enabled: false
+  # プレイヤーの勝率（パーセンテージ）
+  percentage: 50.0
+
+# メッセージ設定
+messages:
+  # コマンド関連
+  only-player: "&7&l[&e&lBJ&7&l] &cこのコマンドはプレイヤーのみが実行できます。"
+  usage: "&7&l[&e&lBJ&7&l] &e&l使用方法: /bj start <金額>"
+  invalid-amount: "&7&l[&e&lBJ&7&l] &c&l無効な金額です。正の整数を入力してください。"
+  already-playing: "&7&l[&e&lBJ&7&l] &c&lすでにブラックジャックをプレイ中です。&c(この状態が治らない場合、運営に報告してください)"
+  insufficient-funds: "&7&l[&e&lBJ&7&l] &c&l所持金が足りません。"
+
+  # ゲーム進行関連
+  player-bust: "&7&l[&e&lBJ&7&l] &c&lバースト！ &7あなたの負けです..."
+  dealer-bust: "&7&l[&e&lBJ&7&l] &a&lディーラーがバースト！ &7あなたの勝ちです！"
+  player-blackjack: "&7&l[&e&lBJ&7&l] &6&l★ ブラックジャック達成！ &7あなたの勝ちです！"
+  dealer-blackjack: "&7&l[&e&lBJ&7&l] &c&lディーラーがブラックジャック達成... &7あなたの負けです..."
+  both-blackjack: "&7&l[&e&lBJ&7&l] &e&l両方ブラックジャック！ &7引き分けです！"
+  tie: "&7&l[&e&lBJ&7&l] &e&l引き分け！ &7掛け金は返却されます。"
+
+  # 結果関連
+  player-win: "&7&l[&e&lBJ&7&l] &a&l勝利！ &7{amount}円を獲得しました！"
+  player-lose: "&7&l[&e&lBJ&7&l] &c&l敗北... &7{amount}円を失いました..."
+  game-quit: "&7&l[&e&lBJ&7&l] &7ゲームを放棄しました。&c{amount}円を失いました..."
