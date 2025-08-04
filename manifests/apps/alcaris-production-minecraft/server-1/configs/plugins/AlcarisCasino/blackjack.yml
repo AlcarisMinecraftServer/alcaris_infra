@@ -3,9 +3,9 @@
 # 勝率設定
 win-rate:
   # プレイヤーの勝率を調整するかどうか（falseの場合は完全にランダム）
-  enabled: false
+  enabled: true
   # プレイヤーの勝率（パーセンテージ）
-  percentage: 50.0
+  percentage: 20.0
 
 # メッセージ設定
 messages:
