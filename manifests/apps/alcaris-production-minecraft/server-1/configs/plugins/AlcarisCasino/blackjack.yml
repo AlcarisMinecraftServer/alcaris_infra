@@ -3,7 +3,7 @@
 # 勝率設定
 win-rate:
   # プレイヤーの勝率を調整するかどうか（falseの場合は完全にランダム）
-  enabled: true
+  enabled: false
   # プレイヤーの勝率（パーセンテージ）
   percentage: 40.0
 
