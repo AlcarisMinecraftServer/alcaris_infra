@@ -48,6 +48,8 @@ spec:
                 https://github.com/Multiverse/Multiverse-Portals/releases/download/5.0.0-pre.4/multiverse-portals-5.0.0-pre.4.jar,
                 https://github.com/Multiverse/Multiverse-Inventories/releases/download/5.0.0-pre.4/multiverse-inventories-5.0.0-pre.4.jar,
 
+                https://funtservers.net:1716/DLitems/MythicMobs-5.8.1.jar,
+
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisCore-1.0.0-somen1000.jar,
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisItems-1.0.0-SNAPSHOT.jar,
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisDelivery-1.0-SNAPSHOT.jar,
@@ -123,6 +125,38 @@ spec:
               mountPath: /plugins/AlcarisPlayer/config.yml
               subPath: config.yml
 
+            - name: minecraft-production-s3-config-mythicmobs
+              mountPath: /plugins/MythicMobs/mobs/ExampleMobs.yml
+              subPath: ExampleMobs.yml
+
+            - name: minecraft-production-s3-config-mythicmobs
+              mountPath: /plugins/MythicMobs/mobs/ForestCreatures.yml
+              subPath: ForestCreatures.yml
+
+            - name: minecraft-production-s3-config-mythicmobs
+              mountPath: /plugins/MythicMobs/mobs/SavannaCreatures.yml
+              subPath: SavannaCreatures.yml
+
+            - name: minecraft-production-s3-config-mythicmobs
+              mountPath: /plugins/MythicMobs/mobs/StoneMountainCreatures.yml
+              subPath: StoneMountainCreatures.yml
+
+            - name: minecraft-production-s3-config-mythicmobs
+              mountPath: /plugins/MythicMobs/skills/ExampleSkills.yml
+              subPath: ExampleSkills.yml
+
+            - name: minecraft-production-s3-config-mythicmobs
+              mountPath: /plugins/MythicMobs/skills/ForestGuardianSkills.yml
+              subPath: ForestGuardianSkills.yml
+
+            - name: minecraft-production-s3-config-mythicmobs
+              mountPath: /plugins/MythicMobs/skills/SavannaSkills.yml
+              subPath: SavannaSkills.yml
+
+            - name: minecraft-production-s3-config-mythicmobs
+              mountPath: /plugins/MythicMobs/skills/StoneMountainSkills.yml
+              subPath: StoneMountainSkills.yml
+
             - name: minecraft-server-data
               mountPath: /data
       volumes:
@@ -159,6 +193,11 @@ spec:
         - name: minecraft-production-s3-config-player
           configMap:
             name: minecraft-production-s3-config-player
+
+        - name: minecraft-production-s3-config-mythicmobs
+          configMap:
+            name: minecraft-production-s3-config-mythicmobs
+  
   volumeClaimTemplates:
     - metadata:
         name: minecraft-server-data

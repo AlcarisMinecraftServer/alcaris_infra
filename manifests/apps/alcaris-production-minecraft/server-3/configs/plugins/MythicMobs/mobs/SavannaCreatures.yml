@@ -1,0 +1,96 @@
+SavannaOcelot:
+  Type: OCELOT
+  Display: '&c野蛮なネコ'
+  Health: 30
+  Damage: 6
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    Silent: false
+    AlwaysShowName: true
+  AIGoalSelectors:
+    - clear
+    - meleeattack
+    - randomstroll
+    - lookatplayers
+    - randomlookaround
+  AITargetSelectors:
+    - clear
+    - players
+  Skills:
+    - skill{s=SavannaOcelotJump} @self ~onDamaged
+
+SavannaPillager:
+  Type: PILLAGER
+  Display: '&cピリジャー'
+  Health: 30
+  Skills:
+  - damage{amount=5} @target ~onBowHit
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    Silent: false
+    AlwaysShowName: true
+
+SavannaVindicator:
+  Type: VINDICATOR
+  Display: '&cヴィンディケーター'
+  Health: 40
+  Damage: 1
+  Equipment:
+  - iron_axe{enchants=KNOCKBACK:4} HAND
+  Skills:
+  - potion{type=SPEED;duration=60;level=1} @self ~onAttack
+  - potion{type=SPEED;duration=10;level=4} @self ~onAttack
+  Options:
+    MovementSpeed: 0.28
+    PreventOtherDrops: true
+    Silent: false
+
+SavannaElement:
+  Type: SKELETON
+  Display: '&cサバンナエレメント'
+  Health: 50
+  Damage: 4
+  Equipment:
+    - ACACIA_LEAVES{color=RED} HEAD
+    - LEATHER_CHESTPLATE{color=RED} CHEST
+    - LEATHER_LEGGINGS{color=RED} LEGS
+    - LEATHER_BOOTS{color=RED} FEET
+    - ACACIA_LOG HAND
+  Skills:
+    - Potion{type=HUNGER;duration=100;level=19} @target ~onAttack
+  Options:
+    PreventOtherDrops: false
+    PreventRandomWalk: false
+    MovementSpeed: 0.35
+
+SavannaBossSkeleton:
+  Type: SKELETON
+  Display: '&cマスタースケルトン'
+  Health: 500
+  Equipment:
+    - LEATHER_HELMET{color=BLACK} HEAD
+    - LEATHER_CHESTPLATE{color=BLACK} CHEST
+    - LEATHER_LEGGINGS{color=BLACK} LEGS
+    - LEATHER_BOOTS{color=BLACK} FEET
+
+  Skills:
+  - skill{s=SavannaBossSkeletonInfinityArrow} @self ~onBowHit
+  - skill{s=SavannaBossSkeletonInfinityArrowTrigger} @self ~onTimer:600
+  - damage{amount=5} @target ~onBowHit
+  - skill{s=SavannaBossSkeletonMultiShot} @self ~onShoot
+  - skill{s=SavannaBossSkeletonCooldown} @self ~onShoot
+
+  BossBar:
+    Enabled: true
+    Title: '&aマスタースケルトン'
+    Range: 48
+    Color: GREEN
+    Style: SOLID
+
+  Options:
+    PreventOtherDrops: false
+    PreventRandomWalk: false
+    MovementSpeed: 0.28
+    NoDamageTicks: 0

@@ -1,0 +1,131 @@
+MountainCaveSpiderPoison:
+  Cooldown: 10
+  Skills:
+  - potion{t=SLOW;d=50;l=2}
+  - potion{t=GLOWING;d=50}
+  - potion{t=RESISTANCE;d=50;l=3}
+  - particlering{particle=composter;radius=5;points=64}
+  - delay 10
+  - particlering{particle=composter;radius=5;points=64}
+  - delay 10
+  - particlering{particle=composter;radius=5;points=64}
+  - delay 10
+  - particlering{particle=composter;radius=5;points=64}
+  - delay 10
+  - particlering{particle=composter;radius=5;points=64}
+  - delay 10
+  - particlesphere{particle=composter;radius=5;amount=200}
+  - potion{t=POISON;d=100;l=2} @LivingEntitiesInRadius{r=5}
+  - potion{t=SLOW;d=100;l=2} @LivingEntitiesInRadius{r=5}
+  - potion{t=MINING_FATIGUE;d=100;l=6} @LivingEntitiesInRadius{r=5}
+
+MountainSpiderJump:
+  Conditions:
+  - playernotwithin{d=9} true
+  Skills:
+  - potion{t=SLOW;d=40;l=7}
+  - potion{t=GLOWING;d=40}
+  - delay 40
+  - jump{velocity=1.5}
+  - delay 5
+  - leap{velocity=400} @PlayersInRadius{r=48}
+  - jump{velocity=0.3}
+  - delay 5
+  - leap{velocity=400} @PlayersInRadius{r=48}
+
+MountainBlazeBossReflect:
+  Cooldown: 0.05
+  Skills:
+  - shootfireball{v=1;y=2} @PlayersInRadius{r=64}
+
+MountainBlazeBossReflect2:
+  Cooldown: 0.05
+  Skills:
+  - shootfireball{v=0.1;smallfireball=true} @PlayersInRadius{r=64}
+
+
+MountainBlazeBossSummonMinion2:
+  Conditions:
+  - healthpercent{p=<80%}
+  Skills:
+  - summon{type=MountainBossMinion2;amount=3;radius=6;yRadius=1}
+
+MountainBlazeBossSummonMinion2-2:
+  Conditions:
+  - healthpercent{p=<60%}
+  Skills:
+  - summon{type=MountainBossMinion2;amount=5;radius=12;yRadius=1.5}
+  
+MountainBlazeBossSummonMinion2-3:
+  Conditions:
+  - healthpercent{p=<40%}
+  Skills:
+  - summon{type=MountainBossMinion2;amount=7;radius=18;yRadius=2}  
+
+MountainBlazeBossSummonMinion2-4:
+  Conditions:
+  - healthpercent{p=<20%}
+  Skills:
+  - summon{type=MountainBossMinion2;amount=10;radius=24;yRadius=2.5}  
+
+MountainBlazeBossPassive:
+  Skills: 
+  - skill{s=MountainBlazeBossSummonMinion2} @self
+  - skill{s=MountainBlazeBossSummonMinion2-2} @self
+  - skill{s=MountainBlazeBossSummonMinion2-3} @self
+  - skill{s=MountainBlazeBossSummonMinion2-4} @self
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 12
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 12
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 12
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 12
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 3
+  - shootfireball{v=1.5;smallfireball=true} @LivingEntitiesInRadius{r=64}
+  - delay 10
+  - damage{amount=10} @LivingEntitiesInRadius{r=64}
+  - particlesphere{particle=flame;radius=20;amount=1000} @LivingEntitiesInRadius{r=64}
+
+  - delay 10
+  - summon{type=MountainBossMinion;amount=1;radius=2}
