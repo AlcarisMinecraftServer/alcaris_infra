@@ -27,3 +27,15 @@ configMapGenerator:
       - configs/plugins/MythicMobs/skills/ForestGuardianSkills.yml
       - configs/plugins/MythicMobs/skills/SavannaSkills.yml
       - configs/plugins/MythicMobs/skills/StoneMountainSkills.yml
+
+  - name: minecraft-producction-s3-config-pve-systems
+    files:
+      - configs/plugins/PveSystems/mythicmob_loot/mythicmob_loot.yml
+      - configs/plugins/PveSystems/spawners/forest_spawner.yml
+      - configs/plugins/PveSystems/spawners/savanna_spawner.yml
+      - configs/plugins/PveSystems/spawners/stone_mountain_spawner.yml
+      - configs/plugins/PveSystems/spawners/stone_mountain_spawner.yml
+      - configs/plugins/PveSystems/treasureloottables/city_loottables.yml
+      - configs/plugins/PveSystems/treasures/treasures_savanna.yml
+      - configs/plugins/PveSystems/treasures/treasures_city.yml
+      - configs/plugins/PveSystems/config.yml

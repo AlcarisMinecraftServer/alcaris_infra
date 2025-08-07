@@ -1,0 +1,12 @@
+# PveSystems Plugin Configuration
+
+# ログ設定
+logging:
+  debug: false
+  errors: true
+
+# プラグイン設定
+settings:
+  # デフォルトの設定値
+  default_spawn_cooldown: 10
+  default_max_mobs: 20 

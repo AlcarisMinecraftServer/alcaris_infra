@@ -1,0 +1,56 @@
+mythicmob_spawners:
+  savvana_units:
+    enabled: true
+    location:
+    - -83.5 -6 -19.5
+    - -95.5 -6 -22.5
+    - -139.5 -19 -16.5
+    - -63.5 -15 31.5
+    - -98.5 -25 -83.5
+    - -88.5 -33 -155.5
+    - -148.5 -22 12.5
+    summon_cooldown: 32
+    summon_cooldown_random_addition: 48
+    min_player_distance: 8
+    max_player_distance: 32
+    max_nearby_mob_distance: 40
+    max_nearby_mob_count: 40
+    monster_condition:
+      monster1:
+        monster_id: SavannaOcelot
+        spawn_chance_percentage: 100
+      monster2:
+        monster_id: SavannaElement
+        spawn_chance_percentage: 20
+
+  savanna_on_tree:
+    enabled: true
+    location:
+    - -55.5 -29 -163.5
+    - -93.5 -23 -164.5
+    - -81.5 -26 -145.5
+    - -57.5 -30 -137.5
+    - -94.5 -24 -117.5
+    - -74.5 -19 -94.5
+    - -50.5 -12 -80.5
+    - -96.5 -8 -60.5
+    - -143.5 -19 -78.5
+    - -159.5 -17 -47.5
+    - -164.5 -12 -24.5
+    - -155.5 -12 2.5
+    - -140.5 -11 11.5
+    - -105.5 -10 17.5
+    - -67.5 -12 9.5
+    summon_cooldown: 24
+    summon_cooldown_random_addition: 36
+    min_player_distance: 8
+    max_player_distance: 32
+    max_nearby_mob_distance: 40
+    max_nearby_mob_count: 50
+    monster_condition:
+      monster1:
+        monster_id: SavannaPillager
+        spawn_chance_percentage: 100
+      monster2:
+        monster_id: SavannaVindicator
+        spawn_chance_percentage: 30

@@ -53,7 +53,8 @@ spec:
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisCore-1.0.0-somen1000.jar,
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisItems-1.0.0-SNAPSHOT.jar,
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisDelivery-1.0-SNAPSHOT.jar,
-                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisPlayer-1.0-SNAPSHOT.jar
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisPlayer-1.0-SNAPSHOT.jar,
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/PveSystems-1.0-SNAPSHOT.jar
 
           ports:
             - name: minecraft
@@ -157,6 +158,38 @@ spec:
               mountPath: /plugins/MythicMobs/skills/StoneMountainSkills.yml
               subPath: StoneMountainSkills.yml
 
+            - name: minecraft-production-s3-config-pve-systems
+              mountPath: /plugins/PveSystems/mythicmob_loot/mythicmob_loot.yml
+              subPath: mythicmob_loot.yml
+
+            - name: minecraft-production-s3-config-pve-systems
+              mountPath: /plugins/PveSystems/spawner/forest_spawner.yml
+              subPath: forest_spawner.yml
+
+            - name: minecraft-production-s3-config-pve-systems
+              mountPath: /plugins/PveSystems/spawner/savanna_spawner.yml
+              subPath: savanna_spawner.yml
+
+            - name: minecraft-production-s3-config-pve-systems
+              mountPath: /plugins/PveSystems/spawner/stone_mountain_spawner.yml
+              subPath: stone_mountain_spawner.yml
+
+            - name: minecraft-production-s3-config-pve-systems
+              mountPath: /plugins/PveSystems/treasureloottables/city_loottables.yml
+              subPath: city_loottables.yml
+
+            - name: minecraft-production-s3-config-pve-systems
+              mountPath: /plugins/PveSystems/treasures/treasures_savanna.yml
+              subPath: treasures_savanna.yml
+
+            - name: minecraft-production-s3-config-pve-systems
+              mountPath: /plugins/PveSystems/treasures/treasures_city.yml
+              subPath: treasures_city.yml
+
+            - name: minecraft-production-s3-config-pve-systems
+              mountPath: /plugins/PveSystems/config.yml
+              subPath: config.yml
+
             - name: minecraft-server-data
               mountPath: /data
       volumes:
@@ -197,6 +230,10 @@ spec:
         - name: minecraft-production-s3-config-mythicmobs
           configMap:
             name: minecraft-production-s3-config-mythicmobs
+
+        - name: minecraft-production-s3-config-pve-systems
+          configMap:
+            name: minecraft-production-s3-config-pve-systems
   
   volumeClaimTemplates:
     - metadata:

@@ -1,0 +1,39 @@
+mythicmob_spawners:
+  mountain_melee_spawner:
+    enabled: true
+    location:
+    - -23.5 -8 103.5
+    - -48.5 -8 75.5
+    - -82.5 -14 76.5
+    - -122.5 -14 80.5
+    - -128.5 -20 106.5
+    - -92.5 -14 109.5
+    - -59.5 -16 103.5
+    - -32.5 -18 128.5
+    - -57.5 -22 137.5
+    - -79.5 -19 120.5
+    - -107.5 -9 106.5
+    - -137.5 -17 123.5
+    - -78.5 -15 168.5
+    - -22.5 -8 170.5
+    - -60.5 2 206.5
+    - -93.5 2 192.5
+    summon_cooldown: 24
+    summon_cooldown_random_addition: 32
+    min_player_distance: 6
+    max_player_distance: 24
+    max_nearby_mob_distance: 24
+    max_nearby_mob_count: 40
+    monster_condition:
+      monster1:
+        monster_id: MountainSilverFish
+        spawn_chance_percentage: 70
+      monster2:
+        monster_id: Machabite
+        spawn_chance_percentage: 70
+      monster3:
+        monster_id: MountainSpider
+        spawn_chance_percentage: 20
+      monster4:
+        monster_id: MountainCaveSpider 
+        spawn_chance_percentage: 20

@@ -1,0 +1,12 @@
+treasure_loottables:
+  city:
+    roll: 3
+    entries:
+      item:
+        item: copper_ingot
+        amount: 1
+        chance: 0.5
+      exp_bonus:
+        stats: xp
+        amount: 10
+        chance: 1.0

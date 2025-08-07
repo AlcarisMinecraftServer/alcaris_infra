@@ -1,0 +1,47 @@
+SkeletonSoldier:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 8
+
+GreenGoblin:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 8
+
+ForestElement:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 10
+
+ForestArcher:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 8
+
+SavannaOcelot:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 12
+
+SavannaElement:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 20
+
+SavannaPillager:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 12
+
+SavannaVindicator:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 15

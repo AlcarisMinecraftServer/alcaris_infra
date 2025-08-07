@@ -1,0 +1,51 @@
+mythicmob_spawners:
+  forrest_melee_spawner:
+    enabled: true
+    location:
+      - 15.5 -43 -49.5
+      - 33.5 -37 -66.5
+      - 45.5 -34 -90.5
+      - 62.5 -41 -68.5
+      - 94.5 -41 -129.5
+      - 99.5 -37 -172.5
+      - 10.5 -30 -115.5
+      - 19.5 -40 -146.5
+      - 40.5 -41 -166.5
+      - -6.5 -40 -169.5
+    summon_cooldown: 8
+    summon_cooldown_random_addition: 16
+    min_player_distance: 8
+    max_player_distance: 32
+    max_nearby_mob_distance: 32
+    max_nearby_mob_count: 20
+    monster_condition:
+      monster1:
+        monster_id: SkeletonSoldier
+        spawn_chance_percentage: 60
+      monster2:
+        monster_id: GreenGoblin
+        spawn_chance_percentage: 30
+      monster3:
+        monster_id: ForestElement
+        spawn_chance_percentage: 10
+
+
+  forest_range_spanwer:
+    enabled: true
+    location:
+      - 62.5 -35 -149.5
+      - 52.5 -31 -129.5
+      - 38.5 -24 -99.5
+      - 41.5 -28 -66.5
+      - 117.5 -37 -152.5
+      - 18.5 -37 -179.5
+    summon_cooldown: 8
+    summon_cooldown_random_addition: 16
+    min_player_distance: 8
+    max_player_distance: 48
+    max_nearby_mob_distance: 48
+    max_nearby_mob_count: 20
+    monster_condition:
+      monster1:
+        monster_id: ForestArcher
+        spawn_chance_percentage: 50
