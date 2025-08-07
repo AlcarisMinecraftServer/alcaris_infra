@@ -6,6 +6,22 @@ treasure_loottables:
         item: copper_ingot
         amount: 1
         chance: 0.5
+      item:
+        item: grinding_wheel_roll_all
+        amount: 1
+        chance: 0.2
+      item:
+        item: grinding_wheel_roll_specific
+        amount: 1
+        chance: 0.05
+      item:
+        item: grinding_wheel_increment_5
+        amount: 1
+        chance: 0.02
+      item:
+        item: grinding_wheel_roll_specific_high
+        amount: 1
+        chance: 0.005
       exp_bonus:
         stats: xp
         amount: 10
