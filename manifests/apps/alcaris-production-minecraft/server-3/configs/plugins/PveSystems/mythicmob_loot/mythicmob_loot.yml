@@ -67,7 +67,10 @@ SavannaVindicator:
     - amount: 1
       chance: 1
       combat_exp: 15
-
+      
+    - item_id: chipped_axe
+      amount: 1
+      chance: 0.005
 
 SavannaBossSkeleton:
   items:
