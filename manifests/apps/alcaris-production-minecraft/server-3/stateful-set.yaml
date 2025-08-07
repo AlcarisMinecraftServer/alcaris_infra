@@ -187,6 +187,14 @@ spec:
               subPath: treasures_city.yml
 
             - name: minecraft-production-s3-config-pvesystems
+              mountPath: /plugins/PveSystems/treasures/treasures_forest.yml
+              subPath: treasures_forest.yml
+
+            - name: minecraft-production-s3-config-pvesystems
+              mountPath: /plugins/PveSystems/treasures/treasures_desert.yml
+              subPath: treasures_desert.yml
+
+            - name: minecraft-production-s3-config-pvesystems
               mountPath: /plugins/PveSystems/config.yml
               subPath: config.yml
 
