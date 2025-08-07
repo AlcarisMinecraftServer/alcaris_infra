@@ -10,7 +10,7 @@ Machabite:
     FuseTicks: 10
     ExplosionRadius: 2
 
-MountainSivlerFish:
+MountainSilverFish:
    Type: SILVERFISH
    Display: "&aシルバーフィッシュ"
    Health: 30
