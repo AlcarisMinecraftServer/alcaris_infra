@@ -163,16 +163,16 @@ spec:
               subPath: mythicmob_loot.yml
 
             - name: minecraft-production-s3-config-pve-systems
-              mountPath: /plugins/PveSystems/spawner/forest_spawner.yml
-              subPath: forest_spawner.yml
+              mountPath: /plugins/PveSystems/spawner/forest_spawners.yml
+              subPath: forest_spawners.yml
 
             - name: minecraft-production-s3-config-pve-systems
-              mountPath: /plugins/PveSystems/spawner/savanna_spawner.yml
-              subPath: savanna_spawner.yml
+              mountPath: /plugins/PveSystems/spawner/savanna_spawners.yml
+              subPath: savanna_spawners.yml
 
             - name: minecraft-production-s3-config-pve-systems
-              mountPath: /plugins/PveSystems/spawner/stone_mountain_spawner.yml
-              subPath: stone_mountain_spawner.yml
+              mountPath: /plugins/PveSystems/spawner/stone_mountain_spawners.yml
+              subPath: stone_mountain_spawners.yml
 
             - name: minecraft-production-s3-config-pve-systems
               mountPath: /plugins/PveSystems/treasureloottables/city_loottables.yml
