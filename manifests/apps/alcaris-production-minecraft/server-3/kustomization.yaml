@@ -28,7 +28,7 @@ configMapGenerator:
       - configs/plugins/MythicMobs/skills/SavannaSkills.yml
       - configs/plugins/MythicMobs/skills/StoneMountainSkills.yml
 
-  - name: minecraft-producction-s3-config-pvesystems
+  - name: minecraft-production-s3-config-pvesystems
     files:
       - configs/plugins/PveSystems/mythicmob_loot/mythicmob_loot.yml
       - configs/plugins/PveSystems/spawner/forest_spawners.yml
