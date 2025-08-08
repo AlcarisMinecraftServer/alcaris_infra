@@ -148,7 +148,14 @@ spec:
               subPath: messages.yml
 
             - name: minecraft-production-s1-config-crafting
-              mountPath: /plugins/AlcarisCrafting/recipes
+              mountPath: /plugins/AlcarisCrafting/recipes/cooking/apple_pie.json
+              subPath: apple_pie.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/cooking/honey_bread.json
+              subPath: honey_bread.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/obsidian_dagger.json
+              subPath: obsidian_dagger.json
 
             - name: minecraft-production-s1-config-player
               mountPath: /plugins/AlcarisPlayer/config.yml
