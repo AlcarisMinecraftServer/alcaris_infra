@@ -132,10 +132,10 @@ spec:
               subPath: npc_config.yml
             - name: minecraft-production-s2-config-alcarisresource
               mountPath: /plugins/AlcarisResource/mobs/mobs-example.yml
-              subPath: mobs/mobs-example.yml
+              subPath: mobs-example.yml
             - name: minecraft-production-s2-config-alcarisresource
               mountPath: /plugins/AlcarisResource/blocks/blocks-example.yml
-              subPath: blocks/blocks-example.yml
+              subPath: blocks-example.yml
 
       volumes:
         - name: minecraft-production-common-config-server
