@@ -131,11 +131,11 @@ spec:
               mountPath: /plugins/AlcarisResource/npc_config.yml
               subPath: npc_config.yml
             - name: minecraft-production-s2-config-alcarisresource
-              mountPath: /plugins/AlcarisResource/mobs/mobs-example.yml
-              subPath: mobs-example.yml
+              mountPath: /plugins/AlcarisResource/mobs/mobs-resource-lvl1.yml
+              subPath: mobs-resource-lvl1.yml
             - name: minecraft-production-s2-config-alcarisresource
-              mountPath: /plugins/AlcarisResource/blocks/blocks-example.yml
-              subPath: blocks-example.yml
+              mountPath: /plugins/AlcarisResource/blocks/blocks-resource-lvl1.yml
+              subPath: blocks-resource-lvl1.yml
 
       volumes:
         - name: minecraft-production-common-config-server
