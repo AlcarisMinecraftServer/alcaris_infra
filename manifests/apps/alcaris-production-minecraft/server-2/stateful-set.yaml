@@ -45,8 +45,7 @@ spec:
                 https://ci.lucko.me/job/LuckPerms/1589/artifact/bukkit/loader/build/libs/LuckPerms-Bukkit-5.5.4.jar,
 
                 https://github.com/Multiverse/Multiverse-Core/releases/download/5.0.0-pre.4/multiverse-core-5.0.0-pre.4.jar,
-                https://github.com/Multiverse/Multiverse-Portals/releases/download/5.0.0-pre.4/multiverse-portals-5.0.0-pre.4.jar,
-                https://github.com/Multiverse/Multiverse-Inventories/releases/download/5.0.0-pre.4/multiverse-inventories-5.0.0-pre.4.jar,
+                https://github.com/Multiverse/Multiverse-Portals/releases/download/5.0.0-pre.4/multiverse-portals-5.0.0-pre.4.jar
 
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisCore-1.0.0-somen1000.jar,
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisItems-1.0.0-SNAPSHOT.jar,
