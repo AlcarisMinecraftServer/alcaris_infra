@@ -1,6 +1,6 @@
 {
   "materials": [
-    { "id": "OBSIDIAN",   "amount": 3 },
+    { "id": "OBSIDIAN",   "amount": 1 },
     { "id": "STICK",   "amount": 1 }
   ],
   "product": { "id": "obsidian_dagger", "amount": 1 }

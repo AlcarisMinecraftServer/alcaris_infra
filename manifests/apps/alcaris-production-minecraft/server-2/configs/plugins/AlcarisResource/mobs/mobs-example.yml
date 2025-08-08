@@ -1,3 +1,5 @@
+worlds: ["resource_lvl1"]
+
 mobs:
   ZOMBIE:
     - itemId: "rotten_blood"

@@ -1,3 +1,5 @@
+worlds: ["resource_lvl1"] 
+
 blocks:
   STONE:
     - itemId: "tin_ingot"
