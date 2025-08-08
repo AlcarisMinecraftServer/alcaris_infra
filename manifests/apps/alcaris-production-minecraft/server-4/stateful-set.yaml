@@ -56,7 +56,8 @@ spec:
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisItems-1.0.0-SNAPSHOT.jar,
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisDelivery-1.0-SNAPSHOT.jar,
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisPlayer-1.0-SNAPSHOT.jar,
-                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/MiningMinigameV2-1.0-SNAPSHOT.jar
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/MiningMinigameV2-1.0-SNAPSHOT.jar,
+                https://github.com/gamu-433/AutoOPGive/releases/download/v1/autoopgive-1.0.0.jar
 
           ports:
             - name: minecraft
