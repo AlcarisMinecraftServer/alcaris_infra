@@ -11,8 +11,8 @@ npcs:
   テレポート屋:
     insurance_manage: false
     insurance_teleport: true
-    multiplier: 2
-    additional_cost: 10
+    multiplier: 1
+    additional_cost: 0
     teleport_locations:
     - "resource_lvl1,0,64,0"
     random_teleport:
