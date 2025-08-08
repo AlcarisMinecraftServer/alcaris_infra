@@ -35,6 +35,7 @@ configMapGenerator:
       - configs/plugins/PveSystems/spawner/savanna_spawners.yml
       - configs/plugins/PveSystems/spawner/mountain_spawners.yml
       - configs/plugins/PveSystems/treasureloottables/city_loottables.yml
+      - configs/plugins/PveSystems/treasureloottables/forest_loottables.yml
       - configs/plugins/PveSystems/treasures/treasures_savanna.yml
       - configs/plugins/PveSystems/treasures/treasures_city.yml
       - configs/plugins/PveSystems/treasures/treasures_forest.yml

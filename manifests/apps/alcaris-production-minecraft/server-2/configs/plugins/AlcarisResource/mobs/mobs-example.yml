@@ -1,8 +1,12 @@
 mobs:
   ZOMBIE:
-    - itemId: "zombie_flesh"
-      amount: 2
-      probability: 0.5
-    - itemId: "rotten_flesh"
+    - itemId: "rotten_blood"
       amount: 1
-      probability: 0.2
+      probability: 0.3
+    - itemId: "zombie_head"
+      amount: 1
+      probability: 0.05
+  DOLPHIN:
+    - itemId: "swordfish"
+      amount: 1
+      probability: 0.05

@@ -32,6 +32,10 @@ ForestGuardian:
       chance: 1
       combat_exp: 150
 
+    - item_id: great_spirit_core  
+      amount: 1
+      chance: 0.005
+
 SavannaOcelot:
   items:
     - amount: 1
@@ -124,6 +128,14 @@ MountainBossBlaze:
       chance: 1
       combat_exp: 200
 
+    - item_id: fireball
+      amount: 4
+      chance: 1
+
     - item_id: burning_stone
       amount: 1
       chance: 0.1
+
+    - item_id: darkmatter
+      amount: 1
+      chance: 0.005

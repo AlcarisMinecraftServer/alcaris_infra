@@ -180,6 +180,10 @@ spec:
               subPath: city_loottables.yml
 
             - name: minecraft-production-s3-config-pvesystems
+              mountPath: /plugins/PveSystems/treasureloottables/forest_loottables.yml
+              subPath: forest_loottables.yml
+
+            - name: minecraft-production-s3-config-pvesystems
               mountPath: /plugins/PveSystems/treasures/treasures_savanna.yml
               subPath: treasures_savanna.yml
 

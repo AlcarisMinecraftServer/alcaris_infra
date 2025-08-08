@@ -22,6 +22,10 @@ treasure_loottables:
         item: grinding_wheel_roll_specific_high
         amount: 1
         chance: 0.005
+      happy_powder:
+        item: happy_powder
+        amount: 1
+        chance: 0.02
       exp_bonus:
         stats: xp
         amount: 10
