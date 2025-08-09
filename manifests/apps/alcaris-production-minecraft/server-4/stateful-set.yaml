@@ -137,6 +137,10 @@ spec:
               mountPath: /plugins/FastAsyncWorldEdit/schematics/miningminigame_lobby.schem
               subPath: miningminigame_lobby.schem
 
+            - name: minecraft-production-s4-config-alcarisitems
+              mountPath: /plugins/AlcarisItems/config.yml
+              subPath: config.yml
+
             - name: minecraft-server-data
               mountPath: /data
       volumes:
@@ -180,6 +184,10 @@ spec:
         - name: minecraft-production-s4-config-fastasyncworldedit
           configMap:
             name: minecraft-production-s4-config-fastasyncworldedit
+
+        - name: minecraft-production-s4-config-alcarisitems
+          configMap:
+            name: minecraft-production-s4-config-alcarisitems
 
   volumeClaimTemplates:
     - metadata:
