@@ -36,3 +36,7 @@ configMapGenerator:
   - name: minecraft-production-s1-config-casino
     files:
       - configs/plugins/AlcarisCasino/blackjack.yml
+
+  - name: minecraft-production-s1-config-alcarisitems
+    files:
+      - configs/plugins/AlcarisItems/config.yml

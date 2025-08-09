@@ -203,6 +203,10 @@ spec:
               mountPath: /plugins/PveSystems/config.yml
               subPath: config.yml
 
+            - name: minecraft-production-s3-config-alcarisitems
+              mountPath: /plugins/AlcarisItems/config.yml
+              subPath: config.yml
+
             - name: minecraft-server-data
               mountPath: /data
       volumes:
@@ -247,6 +251,10 @@ spec:
         - name: minecraft-production-s3-config-pvesystems
           configMap:
             name: minecraft-production-s3-config-pvesystems
+
+        - name: minecraft-production-s3-config-alcarisitems
+          configMap:
+            name: minecraft-production-s3-config-alcarisitems
   
   volumeClaimTemplates:
     - metadata:

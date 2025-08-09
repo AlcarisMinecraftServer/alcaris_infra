@@ -137,6 +137,10 @@ spec:
               mountPath: /plugins/AlcarisResource/blocks/blocks-resource-lvl1.yml
               subPath: blocks-resource-lvl1.yml
 
+            - name: minecraft-production-s2-config-alcarisitems
+              mountPath: /plugins/AlcarisItems/config.yml
+              subPath: config.yml
+
       volumes:
         - name: minecraft-production-common-config-server
           configMap:
@@ -174,6 +178,10 @@ spec:
         - name: minecraft-production-s2-config-alcarisresource
           configMap:
             name: minecraft-production-s2-config-alcarisresource
+
+        - name: minecraft-production-s2-config-alcarisitems
+          configMap:
+            name: minecraft-production-s2-config-alcarisitems
   
   volumeClaimTemplates:
     - metadata:

@@ -41,3 +41,7 @@ configMapGenerator:
       - configs/plugins/PveSystems/treasures/treasures_forest.yml
       - configs/plugins/PveSystems/treasures/treasures_desert.yml
       - configs/plugins/PveSystems/config.yml
+
+  - name: minecraft-production-s3-config-alcarisitems
+    files:
+      - configs/plugins/AlcarisItems/config.yml

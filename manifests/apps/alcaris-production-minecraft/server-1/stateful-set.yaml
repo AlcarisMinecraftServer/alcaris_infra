@@ -165,6 +165,10 @@ spec:
               mountPath: /plugins/AlcarisCasino/blackjack.yml
               subPath: blackjack.yml
 
+            - name: minecraft-production-s1-config-alcarisitems
+              mountPath: /plugins/AlcarisItems/config.yml
+              subPath: config.yml
+
       volumes:
         - name: minecraft-production-common-config-server
           configMap:
@@ -218,6 +222,11 @@ spec:
         - name: minecraft-production-s1-config-autoopgive
           configMap:
             name: minecraft-production-s1-config-autoopgive
+
+        - name: minecraft-production-s1-config-alcarisitems
+          configMap:
+            name: minecraft-production-s1-config-alcarisitems
+
   volumeClaimTemplates:
     - metadata:
         name: minecraft-server-data
