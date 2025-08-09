@@ -34,3 +34,7 @@ respawn:
   z: -1
   yaw: 0
   pitch: 0
+
+item_loss:
+  worlds:
+    - resource_lvl1  
