@@ -1,0 +1,6 @@
+{
+    "materials": [
+        { "id": "diamond_ingot",   "amount": 20 }
+      ],
+      "product": { "id": "diamond_hammer", "amount": 1 }
+}

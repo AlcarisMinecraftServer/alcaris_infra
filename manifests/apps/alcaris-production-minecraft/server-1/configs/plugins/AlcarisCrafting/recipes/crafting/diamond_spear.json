@@ -1,0 +1,7 @@
+{
+    "materials": [
+        { "id": "diamond_ingot",   "amount": 10 },
+        { "id": "carbon_ingot",   "amount": 1 }
+      ],
+      "product": { "id": "diamond_spear", "amount": 1 }
+}

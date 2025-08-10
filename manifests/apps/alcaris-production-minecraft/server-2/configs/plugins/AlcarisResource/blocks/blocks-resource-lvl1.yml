@@ -71,12 +71,6 @@ blocks:
     - itemId: "silver_alloy_ingot"
       amount: 1
       probability: 0.001
-    - itemId: "alcaris_fragment"
-      amount: 1
-      probability: 0.0004
-    - itemId: "alcaris_ingot"
-      amount: 1
-      probability: 0.0002
 
 
 
@@ -156,7 +150,13 @@ blocks:
       probability: 1
     - itemId: "emerald_ingot"
       amount: 1
-      probability: 0.1
+      probability: 0.3
+    - itemId: "alcaris_fragment"
+      amount: 1
+      probability: 0.2
+    - itemId: "alcaris_ingot"
+      amount: 1
+      probability: 0.05
 
   DEEPSLATE_EMERALD_ORE:
     - itemId: "emerald_fragment"
@@ -165,6 +165,12 @@ blocks:
     - itemId: "emerald_ingot"
       amount: 1
       probability: 0.2
+    - itemId: "alcaris_fragment"
+      amount: 1
+      probability: 0.1
+    - itemId: "alcaris_ingot"
+      amount: 1
+      probability: 0.05  
 
   AMETHYST_CLUSTER:
     - itemId: "crystal_fragment"

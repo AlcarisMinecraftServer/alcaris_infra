@@ -1,0 +1,6 @@
+{
+    "materials": [
+        { "id": "AMETHYST_SHARD",   "amount": 64 }
+      ],
+      "product": { "id": "amethyst_dagger", "amount": 1 }
+}

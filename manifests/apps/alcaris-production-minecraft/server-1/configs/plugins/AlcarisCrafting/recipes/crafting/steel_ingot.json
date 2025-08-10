@@ -1,0 +1,7 @@
+{
+    "materials": [
+      { "id": "iron_ingot",   "amount": 5 },
+      { "id": "coal_ingot",   "amount": 3 }
+    ],
+    "product": { "id": "steel_ingot", "amount": 1 }
+  }

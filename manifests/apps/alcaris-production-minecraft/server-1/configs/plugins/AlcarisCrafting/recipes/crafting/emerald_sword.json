@@ -1,0 +1,6 @@
+{
+    "materials": [
+        { "id": "emerald_ingot",   "amount": 2 }
+      ],
+      "product": { "id": "emerald_sword", "amount": 1 }
+}

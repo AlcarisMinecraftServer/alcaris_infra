@@ -28,6 +28,30 @@ configMapGenerator:
       - configs/plugins/AlcarisCrafting/recipes/cooking/apple_pie.json
       - configs/plugins/AlcarisCrafting/recipes/cooking/honey_bread.json
       - configs/plugins/AlcarisCrafting/recipes/crafting/obsidian_dagger.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/amethyst_dagger.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/bronze_spear.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/carbon_steel_katana.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/crystal_sword.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/diamond_hammer.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/diamond_spear.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/emerald_sword.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/frozen_swordfish.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/glass_sword.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/golden_rapier.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/heavy_hummer.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/highters_harness.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/iron_battle_axe.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/iron_spear.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/light_hammer.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/long_sword.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/silver_dagger.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/slash_blade_wood.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/stainless_steel_ingot.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/steel_broadsword.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/steel_ingot.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/steel_sword.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/stone_spear.json
+      - configs/plugins/AlcarisCrafting/recipes/crafting/thorny_shield.json
 
   - name: minecraft-production-s1-config-player
     files:

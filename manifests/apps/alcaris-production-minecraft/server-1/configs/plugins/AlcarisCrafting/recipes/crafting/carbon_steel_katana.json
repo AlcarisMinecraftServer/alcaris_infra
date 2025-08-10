@@ -1,0 +1,7 @@
+{
+    "materials": [
+      { "id": "carbon_ingot",   "amount": 3 },
+      { "id": "grinding_wheel_roll_specific_high",   "amount": 1 }
+    ],
+    "product": { "id": "carbon_steel_katana", "amount": 1 }
+  }

@@ -12,3 +12,7 @@ mobs:
     - itemId: "swordfish"
       amount: 1
       probability: 0.05
+  PHANTOM:
+    - itemId: "sword_of_the_soul"    
+      amount: 1
+      probability: 0.02

@@ -1,0 +1,8 @@
+{
+    "materials": [
+      { "id": "steel_ingot",   "amount": 10 },
+      { "id": "chromium_ingot",   "amount": 20 },
+      { "id": "nickel_ingot",   "amount": 20 }
+    ],
+    "product": { "id": "stainless_steel_ingot", "amount": 1 }
+  }

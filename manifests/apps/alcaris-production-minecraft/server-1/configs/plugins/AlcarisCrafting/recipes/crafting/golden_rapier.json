@@ -1,0 +1,7 @@
+{
+    "materials": [
+      { "id": "gold_ingot",   "amount": 15 },
+      { "id": "silver_ingot",   "amount": 1 }
+    ],
+    "product": { "id": "golden_rapier", "amount": 1 }
+  }

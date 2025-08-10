@@ -1,0 +1,6 @@
+{
+    "materials": [
+        { "id": "glass_shade",   "amount": 1 }
+      ],
+      "product": { "id": "glass_sword", "amount": 1 }
+}
