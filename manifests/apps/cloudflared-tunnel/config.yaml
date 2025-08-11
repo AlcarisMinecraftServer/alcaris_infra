@@ -8,9 +8,6 @@ data:
     tunnel: onp-k8s-cloudflared-tunnel
     credentials-file: /etc/cloudflared/cloudflared-tunnel.json
     ingress:
-      - hostname: portal.onp-k8s.admin.alcaris.net
-        service: http://admin-panel.alcaris-service.svc.cluster.local:3000
-
       - hostname: argocd.onp-k8s.admin.alcaris.net
         service: https://argocd-server.argocd.svc.cluster.local:80
         originRequest:

@@ -29,9 +29,9 @@ data:
     # Whether to enable the PAPIProxyBridge hook for PAPI support
     enable_papi_hook: true
     # How long in seconds to cache PAPI placeholders for, in milliseconds. (0 to disable)
-    papi_cache_time: 1000
+    papi_cache_time: 30000
     # If you are using MINIMESSAGE formatting, enable this to support MiniPlaceholders in formatting.
-    enable_mini_placeholders_hook: true
+    enable_mini_placeholders_hook: false
     # Whether to send scoreboard teams packets. Required for player list sorting and nametag formatting.
     # Turn this off if you're using scoreboard teams on backend servers.
     send_scoreboard_packets: false
