@@ -1,0 +1,237 @@
+worlds: ["resource_lvl1"] 
+
+blocks:
+  STONE:
+    - itemId: "tin_ingot"
+      amount: 1
+      probability: 0.005
+    - itemId: "lead_ingot"
+      amount: 1
+      probability: 0.005
+    - itemId: "silver_ingot"
+      amount: 1
+      probability: 0.003
+    - itemId: "nickel_ingot"
+      amount: 1
+      probability: 0.003
+    - itemId: "chromium_ingot"
+      amount: 1
+      probability: 0.003
+    - itemId: "bronze_ingot"
+      amount: 1
+      probability: 0.005
+    - itemId: "steel_ingot"
+      amount: 1
+      probability: 0.001
+    - itemId: "stainless_steel_ingot"
+      amount: 1
+      probability: 0.001
+    - itemId: "cupronickel_ingot"
+      amount: 1
+      probability: 0.0005
+    - itemId: "silver_alloy_ingot"
+      amount: 1
+      probability: 0.0005
+    - itemId: "alcaris_fragment"
+      amount: 1
+      probability: 0.0002
+    - itemId: "alcaris_ingot"
+      amount: 1
+      probability: 0.0001
+
+
+  DEEPSLATE:
+    - itemId: "tin_ingot"
+      amount: 1
+      probability: 0.01
+    - itemId: "lead_ingot"
+      amount: 1
+      probability: 0.01
+    - itemId: "silver_ingot"
+      amount: 1
+      probability: 0.006
+    - itemId: "nickel_ingot"
+      amount: 1
+      probability: 0.006
+    - itemId: "chromium_ingot"
+      amount: 1
+      probability: 0.006
+    - itemId: "bronze_ingot"
+      amount: 1
+      probability: 0.01
+    - itemId: "steel_ingot"
+      amount: 1
+      probability: 0.002
+    - itemId: "stainless_steel_ingot"
+      amount: 1
+      probability: 0.002
+    - itemId: "cupronickel_ingot"
+      amount: 1
+      probability: 0.001
+    - itemId: "silver_alloy_ingot"
+      amount: 1
+      probability: 0.001
+
+
+
+  COAL_ORE:
+    - itemId: "coal_ingot"
+      amount: 1
+      probability: 1
+
+  DEEPSLATE_COAL_ORE:
+    - itemId: "coal_ingot"
+      amount: 1
+      probability: 1
+
+  COPPER_ORE:
+    - itemId: "copper_fragment"
+      amount: 1
+      probability: 1
+    - itemId: "copper_chunk"  
+      amount: 1
+      probability: 0.2
+    - itemId: "copper_ingot"
+      amount: 1
+      probability: 0.1
+
+  DEEPSLATE_COPPER_ORE:
+    - itemId: "copper_fragment"
+      amount: 1
+      probability: 1
+    - itemId: "copper_chunk"  
+      amount: 1
+      probability: 0.4
+    - itemId: "copper_ingot"
+      amount: 1
+      probability: 0.2
+
+  IRON_ORE:
+    - itemId: "iron_fragment"
+      amount: 1
+      probability: 1  
+    - itemId: "iron_ingot"
+      amount: 1
+      probability: 0.1
+
+  DEEPSLATE_IRON_ORE:
+    - itemId: "iron_fragment"
+      amount: 1
+      probability: 1
+    - itemId: "iron_ingot"
+      amount: 1
+      probability: 0.2
+
+  GOLD_ORE:
+    - itemId: "gold_chunk"
+      amount: 1
+      probability: 1
+    - itemId: "gold_ingot"
+      amount: 1
+      probability: 0.1
+    - itemId: "gold_fragment"
+      amount: 1
+      probability: 0.5
+
+  DEEPSLATE_GOLD_ORE:
+    - itemId: "gold_chunk"
+      amount: 1
+      probability: 1
+    - itemId: "gold_ingot"
+      amount: 1
+      probability: 0.2
+    - itemId: "gold_fragment"
+      amount: 1
+      probability: 0.5
+
+  EMERALD_ORE:
+    - itemId: "emerald_fragment"
+      amount: 1
+      probability: 1
+    - itemId: "emerald_ingot"
+      amount: 1
+      probability: 0.3
+    - itemId: "alcaris_fragment"
+      amount: 1
+      probability: 0.2
+    - itemId: "alcaris_ingot"
+      amount: 1
+      probability: 0.05
+
+  DEEPSLATE_EMERALD_ORE:
+    - itemId: "emerald_fragment"
+      amount: 1
+      probability: 1
+    - itemId: "emerald_ingot"
+      amount: 1
+      probability: 0.2
+    - itemId: "alcaris_fragment"
+      amount: 1
+      probability: 0.1
+    - itemId: "alcaris_ingot"
+      amount: 1
+      probability: 0.05  
+
+  AMETHYST_CLUSTER:
+    - itemId: "crystal_fragment"
+      amount: 1
+      probability: 1
+    - itemId: "crystal_ingot"
+      amount: 1
+      probability: 0.2
+    - itemId: "crystal_chunk"
+      amount: 1
+      probability: 0.1
+
+
+  DIAMOND_ORE:
+    - itemId: "diamond_fragment"
+      amount: 1
+      probability: 1
+    - itemId: "diamond_ingot"
+      amount: 1
+      probability: 0.1
+
+  DEEPSLATE_DIAMOND_ORE:
+    - itemId: "diamond_fragment"
+      amount: 1
+      probability: 1
+    - itemId: "diamond_ingot"
+      amount: 1
+      probability: 0.2
+
+  CHEERY_LOGS:
+    - itemId: "cherry_blossom_branch"
+      amount: 1
+      probability: 0.2
+  SAND:
+    - itemId: "sand_bag"
+      amount: 1
+      probability: 0.1
+    - itemId: "fishing_hook"
+      amount: 1
+      probability: 0.01
+    - itemId: "rock_salt"
+      amount: 1
+      probability: 0.05
+
+  SUGAR_CANE:
+    - itemId: "magical_paper"
+      amount: 1
+      probability: 0.2
+
+  RAW_IRON_BLOCK:
+    - itemId: "rusty_iron"
+      amount: 1
+      probability: 1
+
+  BLUE_ICE:
+    - itemId: "permanent_ice_crystal"
+      amount: 1
+      probability: 0.01
+
+
+  TRIPWIREHOOK:
+    - itemId: "wire"
+      amount: 1
+      probability: 1

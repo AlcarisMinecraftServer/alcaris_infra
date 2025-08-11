@@ -1,0 +1,8 @@
+{
+    "materials": [
+      { "id": "iron_ingot",   "amount": 10 },
+      { "id": "lead_ingot",   "amount": 3 },
+      { "id": "CACTUS",   "amount": 64 }
+    ],
+    "product": { "id": "thorny_shield", "amount": 1 }
+  }

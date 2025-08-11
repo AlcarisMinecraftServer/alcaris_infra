@@ -1,0 +1,20 @@
+treasure_loottables:
+  forest:
+    roll: 3
+    entries:
+      flower:
+        item: flower
+        amount: 1
+        chance: 0.2
+      unknown_type:
+        item: unknown_type
+        amount: 1
+        chance: 0.05
+      unknown_flower:
+        item: unknown_flower
+        amount: 1
+        chance: 0.02
+      exp_bonus:
+        stats: xp
+        amount: 10
+        chance: 1.0

@@ -1,0 +1,141 @@
+SkeletonSoldier:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 8
+    - item_id: broken_bones
+      amount: 1
+      chance: 0.8
+
+ForestElement:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 10
+    - item_id: poisonous_leaves
+      amount: 1
+      chance: 0.15
+
+ForestArcher:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 8
+
+    - item_id: broken_bones
+      amount: 1
+      chance: 0.8
+
+ForestGuardian:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 150
+
+    - item_id: great_spirit_core  
+      amount: 1
+      chance: 0.005
+
+SavannaOcelot:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 12
+
+    - item_id: sharp_claws
+      amount: 1
+      chance: 0.005
+
+SavannaElement:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 20
+
+    - item_id: tree_of_greed
+      amount: 1
+      chance: 0.1
+
+SavannaPillager:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 12
+
+    - item_id: sharp_arrow
+      amount: 1
+      chance: 0.8
+
+SavannaVindicator:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 15
+      
+    - item_id: chipped_axe
+      amount: 1
+      chance: 0.005
+
+SavannaBossSkeleton:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 30
+    - item_id: broken_bones
+      amount: 16
+      chance: 1
+
+
+MountainCaveSpider:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 40
+
+    - item_id: spider_silk
+      amount: 1
+      chance: 0.5
+
+MountainSpider:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 30
+    - item_id: spider_silk
+      amount: 1
+      chance: 0.5
+
+
+MountainSilverFish:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 20
+
+    - item_id: pebbles
+      amount: 1
+      chance: 0.7
+
+Machabite:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 25
+
+MountainBossBlaze:
+  items:
+    - amount: 1
+      chance: 1
+      combat_exp: 200
+
+    - item_id: fireball
+      amount: 4
+      chance: 1
+
+    - item_id: burning_stone
+      amount: 1
+      chance: 0.1
+
+    - item_id: darkmatter
+      amount: 1
+      chance: 0.005

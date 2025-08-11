@@ -1,0 +1,7 @@
+{
+    "materials": [
+        { "id": "crystal_ingot",   "amount": 10 },
+        { "id": "emerald_sword",   "amount": 1 }
+      ],
+      "product": { "id": "crystal_sword", "amount": 1 }
+}

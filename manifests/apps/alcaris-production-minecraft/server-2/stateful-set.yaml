@@ -45,14 +45,15 @@ spec:
                 https://ci.lucko.me/job/LuckPerms/1589/artifact/bukkit/loader/build/libs/LuckPerms-Bukkit-5.5.4.jar,
 
                 https://github.com/Multiverse/Multiverse-Core/releases/download/5.0.0-pre.4/multiverse-core-5.0.0-pre.4.jar,
-                https://github.com/Multiverse/Multiverse-Portals/releases/download/5.0.0-pre.4/multiverse-portals-5.0.0-pre.4.jar,
-                https://github.com/Multiverse/Multiverse-Inventories/releases/download/5.0.0-pre.4/multiverse-inventories-5.0.0-pre.4.jar,
+                https://github.com/Multiverse/Multiverse-Portals/releases/download/5.0.0-pre.4/multiverse-portals-5.0.0-pre.4.jar
 
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisCore-1.0.0-somen1000.jar,
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisItems-1.0.0-SNAPSHOT.jar,
                 https://funtservers.net:1716/DLitems/AlcarisDelivery-1.0-SNAPSHOT.jar,
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisPlayer-1.0-SNAPSHOT.jar,
-                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisResource-1.0-SNAPSHOT.jar
+                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisResource-1.0-SNAPSHOT.jar,
+                https://github.com/gamu-433/AutoOPGive/releases/download/v1/autoopgive-1.0.0.jar,
+                https://github.com/HimaJyun/Jecon/releases/download/2.2.1/Jecon-2.2.1.jar
 
           ports:
             - name: minecraft
@@ -131,11 +132,15 @@ spec:
               mountPath: /plugins/AlcarisResource/npc_config.yml
               subPath: npc_config.yml
             - name: minecraft-production-s2-config-alcarisresource
-              mountPath: /plugins/AlcarisResource/mobs/mobs-example.yml
-              subPath: mobs/mobs-example.yml
+              mountPath: /plugins/AlcarisResource/mobs/mobs-resource-lvl1.yml
+              subPath: mobs-resource-lvl1.yml
             - name: minecraft-production-s2-config-alcarisresource
-              mountPath: /plugins/AlcarisResource/blocks/blocks-example.yml
-              subPath: blocks/blocks-example.yml
+              mountPath: /plugins/AlcarisResource/blocks/blocks-resource-lvl1.yml
+              subPath: blocks-resource-lvl1.yml
+
+            - name: minecraft-production-s2-config-alcarisitems
+              mountPath: /plugins/AlcarisItems/config.yml
+              subPath: config.yml
 
       volumes:
         - name: minecraft-production-common-config-server
@@ -174,6 +179,10 @@ spec:
         - name: minecraft-production-s2-config-alcarisresource
           configMap:
             name: minecraft-production-s2-config-alcarisresource
+
+        - name: minecraft-production-s2-config-alcarisitems
+          configMap:
+            name: minecraft-production-s2-config-alcarisitems
   
   volumeClaimTemplates:
     - metadata:

@@ -14,3 +14,34 @@ configMapGenerator:
   - name: minecraft-production-s3-config-player
     files:
       - configs/plugins/AlcarisPlayer/config.yml
+
+
+  - name: minecraft-production-s3-config-mythicmobs
+    files:
+      - configs/plugins/MythicMobs/mobs/ExampleMobs.yml
+      - configs/plugins/MythicMobs/mobs/ForestCreatures.yml
+      - configs/plugins/MythicMobs/mobs/SavannaCreatures.yml
+      - configs/plugins/MythicMobs/mobs/StoneMountainCreatures.yml
+
+      - configs/plugins/MythicMobs/skills/ExampleSkills.yml
+      - configs/plugins/MythicMobs/skills/ForestGuardianSkills.yml
+      - configs/plugins/MythicMobs/skills/SavannaSkills.yml
+      - configs/plugins/MythicMobs/skills/StoneMountainSkills.yml
+
+  - name: minecraft-production-s3-config-pvesystems
+    files:
+      - configs/plugins/PveSystems/mythicmob_loot/mythicmob_loot.yml
+      - configs/plugins/PveSystems/spawner/forest_spawners.yml
+      - configs/plugins/PveSystems/spawner/savanna_spawners.yml
+      - configs/plugins/PveSystems/spawner/mountain_spawners.yml
+      - configs/plugins/PveSystems/treasureloottables/city_loottables.yml
+      - configs/plugins/PveSystems/treasureloottables/forest_loottables.yml
+      - configs/plugins/PveSystems/treasures/treasures_savanna.yml
+      - configs/plugins/PveSystems/treasures/treasures_city.yml
+      - configs/plugins/PveSystems/treasures/treasures_forest.yml
+      - configs/plugins/PveSystems/treasures/treasures_desert.yml
+      - configs/plugins/PveSystems/config.yml
+
+  - name: minecraft-production-s3-config-alcarisitems
+    files:
+      - configs/plugins/AlcarisItems/config.yml

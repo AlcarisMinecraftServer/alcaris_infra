@@ -59,7 +59,7 @@ spec:
                 https://funtservers.net:1716/DLitems/AlcarisDelivery-1.0-SNAPSHOT.jar,
                 https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisPlayer-1.0-SNAPSHOT.jar,
                 https://github.com/HimaJyun/Jecon/releases/download/2.2.1/Jecon-2.2.1.jar,
-                https://github.com/AlcarisMinecraftServer/AlcarisPublicPlugins/releases/download/somen/AlcarisCasino-1.0-SNAPSHOT.jar
+                https://funtservers.net:1716/DLitems/AlcarisCasino-1.0-SNAPSHOT.jar
 
           ports:
             - name: minecraft
@@ -148,10 +148,97 @@ spec:
               subPath: messages.yml
 
             - name: minecraft-production-s1-config-crafting
-              mountPath: /plugins/AlcarisCrafting/recipes
+              mountPath: /plugins/AlcarisCrafting/recipes/cooking/apple_pie.json
+              subPath: apple_pie.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/cooking/honey_bread.json
+              subPath: honey_bread.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/obsidian_dagger.json
+              subPath: obsidian_dagger.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/amethyst_dagger.json
+              subPath: amethyst_dagger.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/bronze_spear.json
+              subPath: bronze_spear.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/carbon_steel_katana.json
+              subPath: carbon_steel_katana.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/crystal_sword.json
+              subPath: crystal_sword.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/diamond_hammer.json
+              subPath: diamond_hammer.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/diamond_spear.json
+              subPath: diamond_spear.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/emerald_sword.json
+              subPath: emerald_sword.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/frozen_swordfish.json
+              subPath: frozen_swordfish.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/glass_sword.json
+              subPath: glass_sword.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/golden_rapier.json
+              subPath: golden_rapier.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/heavy_hummer.json
+              subPath: heavy_hummer.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/highters_harness.json
+              subPath: highters_harness.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/iron_battle_axe.json
+              subPath: iron_battle_axe.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/iron_spear.json
+              subPath: iron_spear.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/light_hammer.json
+              subPath: light_hammer.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/long_sword.json
+              subPath: long_sword.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/silver_dagger.json
+              subPath: silver_dagger.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/slash_blade_wood.json
+              subPath: slash_blade_wood.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/stainless_steel_ingot.json
+              subPath: stainless_steel_ingot.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/steel_broadsword.json
+              subPath: steel_broadsword.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/steel_ingot.json
+              subPath: steel_ingot.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/steel_sword.json
+              subPath: steel_sword.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/stone_spear.json
+              subPath: stone_spear.json
+            - name: minecraft-production-s1-config-crafting
+              mountPath: /plugins/AlcarisCrafting/recipes/crafting/thorny_shield.json
+              subPath: thorny_shield.json
 
             - name: minecraft-production-s1-config-player
               mountPath: /plugins/AlcarisPlayer/config.yml
+              subPath: config.yml
+
+            - name: minecraft-production-s1-config-casino
+              mountPath: /plugins/AlcarisCasino/blackjack.yml
+              subPath: blackjack.yml
+
+            - name: minecraft-production-s1-config-alcarisitems
+              mountPath: /plugins/AlcarisItems/config.yml
               subPath: config.yml
 
       volumes:
@@ -196,6 +283,10 @@ spec:
           configMap:
             name: minecraft-production-s1-config-player
 
+        - name: minecraft-production-s1-config-casino
+          configMap:
+            name: minecraft-production-s1-config-casino
+
         - name: minecraft-production-s1-config-crafting
           configMap:
             name: minecraft-production-s1-config-crafting
@@ -203,6 +294,11 @@ spec:
         - name: minecraft-production-s1-config-autoopgive
           configMap:
             name: minecraft-production-s1-config-autoopgive
+
+        - name: minecraft-production-s1-config-alcarisitems
+          configMap:
+            name: minecraft-production-s1-config-alcarisitems
+
   volumeClaimTemplates:
     - metadata:
         name: minecraft-server-data

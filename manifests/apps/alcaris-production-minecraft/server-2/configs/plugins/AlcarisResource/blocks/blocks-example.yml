@@ -1,9 +1,0 @@
-blocks:
-  STONE:
-    - itemId: "cobblestone"
-      amount: 1
-      probability: 0.8
-  DIAMOND_ORE:
-    - itemId: "diamond"
-      amount: 1
-      probability: 0.1

@@ -1,0 +1,51 @@
+SavannaOcelotJump:
+  Cooldown: 0.75
+  Skills:
+  - potion{t=SLOW;d=10;l=7}
+  - setAI{ai=false} @self
+  - delay 10
+  - leap{velocity=300} @target
+  - delay 5
+  - setAI{ai=true} @self
+
+SavannaBossSkeletonInfinityArrow:
+  Cooldown: 0.05
+  Conditions:
+  - hastag{t=infinityarrow}
+  Skills:
+  - delay 1
+  - shoot{type=ARROW;damage=1;cfa=true}
+
+SavannaBossSkeletonInfinityArrowTrigger:
+  Skills:
+  - message{m="&cマスタースケルトン<&co> 無限の矢筒を構えた！"} @LivingEntitiesInRadius{r=48}
+  - removetag{t=infinityarrownotready} @self
+  - delay 60
+  - addtag{t=infinityarrow} @self
+  - sound{s=entity.ender_dragon.ambient} @self
+  - delay 200
+  - removetag{t=infinityarrow} @self
+  - message{m="&aマスタースケルトン<&co> 無限の矢筒の効果が切れたようだ..."} @LivingEntitiesInRadius{r=48}
+  - addtag{t=infinityarrownotready} @self
+
+SavannaBossSkeletonMultiShot:
+  Skills:
+  - arrowvolley{a=3;s=200;v=30} @Forward{uel=true}
+  - delay 10
+  - arrowvolley{a=5;s=200;v=30} @Forward{uel=true}
+  - delay 10
+  - arrowvolley{a=7;s=200;v=30} @Forward{uel=true}
+  - delay 10
+  - arrowvolley{a=10;s=150;v=30} @Forward{uel=true}
+  - delay 10
+  - arrowvolley{a=20;s=100;v=30} @Forward{uel=true}
+  - delay 10
+
+SavannaBossSkeletonCooldown:
+  Conditions:
+  - hastag{t=infinityarrownotready}
+
+  Skills:
+  - setAI{ai=false} @self
+  - delay 100
+  - setAI{ai=true} @self

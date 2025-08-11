@@ -1,0 +1,8 @@
+{
+    "materials": [
+      { "id": "LEATHER",   "amount": 64 },
+      { "id": "gold_ingot",   "amount": 1 },
+      { "id": "silver_ingot", "amount": 1 }
+    ],
+    "product": { "id": "highters_harness", "amount": 1 }
+  }

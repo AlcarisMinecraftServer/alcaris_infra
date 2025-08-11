@@ -1,0 +1,17 @@
+# ForestGuardian original skill template triggered at 50% HP
+# Customize mechanics, targeters, and messages as needed.
+
+ForestGuardianRootBurst:
+  Cooldown: 30
+  Skills:
+  - message{m="&2フォレストガーディアン<&co> 大地の怒りを受けよ！"} @PlayersInRadius{r=40}
+  - potion{type=SLOW;duration=120;level=2} @PlayersInRadius{r=10}
+  - damage{amount=6} @PlayersInRadius{r=6}
+  - effect:particles{p=block_crack;m=oak_leaves;amount=120;hSpread=4;ySpread=1;speed=0.2} @self
+
+
+ForestGuardianSummonMinions:
+  Cooldown: 0.1
+  Skills:
+  - summon{type=ForestGuardianMinion1;amount=4;radius=5}
+  - summon{type=ForestGuardianMinion2;amount=1;radius=5}

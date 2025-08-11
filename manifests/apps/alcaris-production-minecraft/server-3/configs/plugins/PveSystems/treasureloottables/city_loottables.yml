@@ -1,0 +1,32 @@
+treasure_loottables:
+  city:
+    roll: 3
+    entries:
+      copper_ingot:
+        item: copper_ingot
+        amount: 1
+        chance: 0.5
+      grinding_wheel_roll_all:
+        item: grinding_wheel_roll_all
+        amount: 1
+        chance: 0.2
+      grinding_wheel_roll_specific:
+        item: grinding_wheel_roll_specific
+        amount: 1
+        chance: 0.05
+      grinding_wheel_increment_5:
+        item: grinding_wheel_increment_5
+        amount: 1
+        chance: 0.02
+      grinding_wheel_roll_specific_high:
+        item: grinding_wheel_roll_specific_high
+        amount: 1
+        chance: 0.005
+      happy_powder:
+        item: happy_powder
+        amount: 1
+        chance: 0.02
+      exp_bonus:
+        stats: xp
+        amount: 10
+        chance: 1.0

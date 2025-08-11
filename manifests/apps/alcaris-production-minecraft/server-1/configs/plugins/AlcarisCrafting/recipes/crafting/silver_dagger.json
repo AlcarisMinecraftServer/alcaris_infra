@@ -1,0 +1,7 @@
+{
+    "materials": [
+      { "id": "silver_ingot",   "amount": 3 },
+      { "id": "STICK",   "amount": 1 }
+    ],
+    "product": { "id": "silver_dagger", "amount": 1 }
+  }

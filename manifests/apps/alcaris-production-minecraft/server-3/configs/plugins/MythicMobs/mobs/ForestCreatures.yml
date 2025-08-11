@@ -1,0 +1,147 @@
+SkeletonSoldier:
+  Type: SKELETON
+  Display: '&7スケルトンソルジャー'
+  Health: 15
+  Damage: 3
+  Equipment:
+  - LEATHER_HELMET HEAD
+  - LEATHER_CHESTPLATE CHEST
+  - LEATHER_LEGGINGS LEGS
+  - LEATHER_BOOTS FEET
+  - WOODEN_SWORD HAND
+  Options:
+    PreventOtherDrops: false
+    PreventRandomWalk: false
+    MovementSpeed: 0.2
+
+GreenGoblin:
+  Type: ZOMBIE
+  Display: '&aグリーンゴブリン'
+  Health: 29
+  Damage: 4
+  Equipment:
+  - LEATHER_HELMET{color=LIME} HEAD
+  - LEATHER_CHESTPLATE{color=LIME} CHEST
+  - LEATHER_LEGGINGS{color=LIME} LEGS
+  - LEATHER_BOOTS{color=LIME} FEET
+  - WOODEN_AXE HAND
+  Options:
+    PreventOtherDrops: false
+    PreventRandomWalk: false
+    MovementSpeed: 0.25
+
+ForestArcher:
+  Type: SKELETON
+  Display: '&aフォレストアーチャー'
+  Health: 15
+  Damage: 5
+  Equipment:
+    - LEATHER_HELMET{color=LIME} HEAD
+    - LEATHER_CHESTPLATE{color=LIME} CHEST
+    - LEATHER_LEGGINGS{color=LIME} LEGS
+    - LEATHER_BOOTS{color=LIME} FEET
+    - BOW HAND
+  Skills:
+    - ArrowVolley{a=3;velocity=1.2;spread=15} @LivingEntitiesInRadius{r=10} ~onAttack 0.3
+    - ArrowVolley{a=1;velocity=2.0;damage=1.5} @target ~onAttack 0.4
+    - Teleport{distance=5} @self ~onDamaged 0.25
+  Options:
+    PreventOtherDrops: false
+    PreventRandomWalk: false
+    MovementSpeed: 0.25
+
+ForestElement:
+  Type: SKELETON
+  Display: '&aフォレストエレメント'
+  Health: 30
+  Damage: 6
+  Equipment:
+    - LEATHER_HELMET{color=LIME} HEAD
+    - LEATHER_CHESTPLATE{color=LIME} CHEST
+    - LEATHER_LEGGINGS{color=LIME} LEGS
+    - LEATHER_BOOTS{color=LIME} FEET
+    - OAK_LEAVES HAND
+  Skills:
+    - Potion{type=SLOW;duration=60;level=2} @LivingEntitiesInRadius{r=4} ~onAttack
+    - Potion{type=POISON;duration=60;level=1} @LivingEntitiesInRadius{r=4} ~onAttack
+
+  Options:
+    PreventOtherDrops: false
+    PreventRandomWalk: false
+    MovementSpeed: 0.3
+
+ForestGuardian:
+  Type: SKELETON
+  Display: '&aフォレストガーディアン'
+  Health: 300
+  Damage: 10
+  Equipment:
+    - OAK_LEAVES HEAD
+    - LEATHER_CHESTPLATE{color=LIME} CHEST
+    - LEATHER_LEGGINGS{color=LIME} LEGS
+    - LEATHER_BOOTS{color=LIME} FEET
+    - OAK_LEAVES HAND
+    - OAK_WOOD OFFHAND
+
+  BossBar:
+    Enabled: true
+    Title: '&aフォレストガーディアン'
+    Range: 48
+    Color: GREEN
+    Style: SOLID
+
+  Skills:
+    - skill{s=ForestGuardianRootBurst} @self ~onDamaged =50% 1
+    - skill{s=ForestGuardianSummonMinions} @self ~onDamaged =90% 1
+    - skill{s=ForestGuardianSummonMinions} @self ~onDamaged =80% 1
+    - skill{s=ForestGuardianSummonMinions} @self ~onDamaged =70% 1
+    - skill{s=ForestGuardianSummonMinions} @self ~onDamaged =60% 1
+    - skill{s=ForestGuardianSummonMinions} @self ~onDamaged =50% 1
+    - skill{s=ForestGuardianSummonMinions} @self ~onDamaged =40% 1
+    - skill{s=ForestGuardianSummonMinions} @self ~onDamaged =30% 1
+    - skill{s=ForestGuardianSummonMinions} @self ~onDamaged =20% 1
+    - skill{s=ForestGuardianSummonMinions} @self ~onDamaged =10% 1
+
+  Options:
+    PreventOtherDrops: false
+    PreventRandomWalk: false
+    MovementSpeed: 0.25
+    NoDamageTicks: 0
+    Scale: 1.3
+    KnockbackResistance: 0.5
+
+ForestGuardianMinion1:
+  Type: SKELETON
+  Display: '&aフォレストガーディアンミニオン'
+  Health: 3
+  Damage: 5
+  Equipment:
+    - OAK_LEAVES HEAD
+    - LEATHER_CHESTPLATE{color=LIME} CHEST
+    - LEATHER_LEGGINGS{color=LIME} LEGS
+    - LEATHER_BOOTS{color=LIME} FEET
+    - OAK_LEAVES HAND
+  Options:
+    PreventOtherDrops: false
+    PreventRandomWalk: false
+    MovementSpeed: 0.35
+    NoDamageTicks: 0
+    Scale: 0.3
+
+ForestGuardianMinion2:
+  Type: SKELETON
+  Display: '&aフォレストガーディアンミニオン'
+  Health: 20
+  Damage: 5
+  Equipment:
+    - OAK_LEAVES HEAD
+    - LEATHER_CHESTPLATE{color=LIME} CHEST
+    - LEATHER_LEGGINGS{color=LIME} LEGS
+    - LEATHER_BOOTS{color=LIME} FEET
+    - OAK_LEAVES HAND
+  Options:
+    PreventOtherDrops: false
+    PreventRandomWalk: false
+    MovementSpeed: 0.30
+    NoDamageTicks: 0
+    Scale: 0.5

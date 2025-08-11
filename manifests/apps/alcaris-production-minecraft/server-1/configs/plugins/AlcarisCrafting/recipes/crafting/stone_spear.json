@@ -1,0 +1,7 @@
+{
+    "materials": [
+      { "id": "pebbles",   "amount": 1 },
+      { "id": "STICK",   "amount": 3 }
+    ],
+    "product": { "id": "stone_spear", "amount": 1 }
+  }

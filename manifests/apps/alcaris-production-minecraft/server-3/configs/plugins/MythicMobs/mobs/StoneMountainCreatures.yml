@@ -1,0 +1,114 @@
+Machabite:
+  Type: CREEPER
+  Display: '&cマッハバイト'
+  Health: 10
+  Options:
+    PreventOtherDrops: false
+    PreventRandomWalk: false
+    MovementSpeed: 0.45
+    PreventMobKillDrops: false 
+    FuseTicks: 10
+    ExplosionRadius: 2
+
+MountainSilverFish:
+   Type: SILVERFISH
+   Display: "&aシルバーフィッシュ"
+   Health: 30
+   Damage: 7
+   Options:
+    PreventOtherDrops: false
+    PreventRandomWalk: false
+    MovementSpeed: 0.2
+    PreventMobKillDrops: false
+
+
+MountainSpider:
+  Type: SPIDER
+  Display: "&cスパイダー"
+  Health: 60
+  Damage: 10
+  Skills:
+  - skill{s=MountainSpiderJump} @self ~onTimer:100
+  - attribute{attribute=GENERIC_SAFE_FALL_DISTANCE;a=50;duration=100000} @self ~onSpawn
+  Options:
+    PreventOtherDrops: false
+    PreventRandomWalk: false
+    MovementSpeed: 0.3
+    PreventMobKillDrops: false
+    KnockbackResistance: 0.7
+    FollowRange: 50
+
+MountainCaveSpider:
+  Type: CAVE_SPIDER
+  Display: "&c洞窟蜘蛛"
+  Health: 35
+  Damage: 10
+  Skills:
+  - skill{s=MountainCaveSpiderPoison} @self ~onDamaged
+  - potion{t=SLOW;d=60;l=1} @target ~onAttack
+  Options:
+    PreventOtherDrops: false
+    PreventRandomWalk: false
+    MovementSpeed: 0.35
+    PreventMobKillDrops: false
+    KnockbackResistance: 0.2
+
+MountainBossBlaze:
+  Type: BLAZE
+  Display: "&cマウンテンブレイズボス"
+  Health: 800
+  Skills: 
+  - skill{s=MountainBlazeBossPassive} @self ~onTimer:400
+  
+  Options:
+    PreventOtherDrops: false
+    PreventRandomWalk: false
+    PreventMobKillDrops: false
+    NoDamageTicks: 0
+
+  BossBar:
+    Enabled: true
+    Title: '&aマウンテンボルケーノ'
+    Range: 64
+    Color: GREEN
+    Style: SOLID
+
+MountainBossMinion:
+  Type: SKELETON
+  Display: "&cミラー"
+  Health: 50
+  Damage: 0
+  Equipment:
+    - LEATHER_HELMET{color=WHITE;enchants=FIRE_PROTECTION:4} HEAD
+    - LEATHER_CHESTPLATE{color=WHITE;enchants=FIRE_PROTECTION:4} CHEST
+    - LEATHER_LEGGINGS{color=WHITE;enchants=FIRE_PROTECTION:4} LEGS
+    - LEATHER_BOOTS{color=WHITE;enchants=FIRE_PROTECTION:4} FEET
+    - SHIELD HAND
+
+  Skills:
+  - skill{s=MountainBlazeBossReflect} @PlayersInRadius{r=64} ~onDamaged 0.2
+
+  Options:
+    PreventOtherDrops: false
+    PreventRandomWalk: false
+    NoDamageTicks: 0
+    KnockbackResistance: 1
+
+MountainBossMinion2:
+  Type: GUARDIAN
+  Display: "&cリフレクトガーディアン"
+  Health: 5
+
+  Options:
+    Scale: 1.5
+    NoAI: true
+    NoDamageTicks: 0
+
+  DamageModifiers:
+  - FIRE 0.01
+  - FIRE_TICK 0.01
+  - PROJECTILE 0.01
+
+  Skills:
+  - skill{s=MountainBlazeBossReflect2} @PlayersInRadius{r=64} ~onDamaged
+  - particlesphere{particle=enchant_hit;radius=3;amount=40} @self ~onDamaged

@@ -1,0 +1,8 @@
+{
+    "materials": [
+      { "id": "IRON_INGOT",   "amount": 1 },
+      { "id": "COBBLESTONE",   "amount": 10 },
+      { "id": "STICK",   "amount": 1 }
+    ],
+    "product": { "id": "long_sword", "amount": 1 }
+  }

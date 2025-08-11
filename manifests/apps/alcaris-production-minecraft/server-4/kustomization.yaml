@@ -22,3 +22,7 @@ configMapGenerator:
   - name: minecraft-production-s4-config-fastasyncworldedit
     files:
       - configs/plugins/FastAsyncWorldEdit/schematics/miningminigame_lobby.schem
+
+  - name: minecraft-production-s4-config-alcarisitems
+    files:
+      - configs/plugins/AlcarisItems/config.yml

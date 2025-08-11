@@ -1,0 +1,7 @@
+{
+    "materials": [
+      { "id": "swordfish",   "amount": 1 },
+      { "id": "permanent_ice_crystal",   "amount": 32 }
+    ],
+    "product": { "id": "frozen_swordfish", "amount": 1 }
+  }
