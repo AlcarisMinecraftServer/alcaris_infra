@@ -3176,3 +3176,1471 @@
     "upgrades": []
   }
 }
+
+{
+  "id": "steel_ingot",
+  "name": "鋼鉄",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10024,
+  "price": {
+    "buy": 0,
+    "sell": 400,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "steel_sword",
+  "name": "スチールソード",
+  "category": "weapon",
+  "lore": [
+    "高品質な鋼で作られた剣",
+    "耐久力が高く、バランスの取れた性能を持つ"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 200,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 12,
+    "max_modification": 7,
+    "durability": 800,
+    "base": {
+      "attributes": {
+        "attack_damage": 12,
+        "attack_speed": 2.5
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "stolen_gold",
+  "name": "奪われた金",
+  "category": "material",
+  "lore": [
+    "ゴブリンが森に来た街の人々から奪い取った金だ。"
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "stone_spear",
+  "name": "石の槍",
+  "category": "weapon",
+  "lore": [
+    "リーチと攻撃速度が速く攻撃力が低い"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 50,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 6,
+        "attack_range": 4,
+        "attack_speed": 3,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "sword_of_the_soul",
+  "name": "魂の剣",
+  "category": "weapon",
+  "lore": [
+    "アメジストで作られた神秘的な短剣",
+    "自分の体力を犠牲に強力な一撃を繰り出すことができる"
+  ],
+  "rarity": 4,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 200,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 18,
+    "max_modification": 9,
+    "durability": 1100,
+    "base": {
+      "attributes": {
+        "attack_damage": 50,
+        "attack_range": -1,
+        "attack_speed": 2,
+        "hpr": -500
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "swordfish",
+  "name": "カジキマグロ",
+  "category": "weapon",
+  "lore": [
+    "頑張って釣り上げたカジキマグロ、その角は並大抵の防御を貫通する"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 200,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 15,
+        "attack_range": 3,
+        "attack_speed": 0.5,
+        "movement_speed": 20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "the_mask_of_a_serial_killer",
+  "name": "シリアルキラーの仮面",
+  "category": "armor",
+  "lore": [
+    "かぶるとシリアルキラーになった気がする。攻撃力とクリティカルダメージが上がるがHPが大幅に下がる。"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 200,
+    "enchantable": true,
+    "armor_type": "helmet",
+    "base": {
+      "attributes": {
+        "atk": 30,
+        "hp": -20,
+        "movement_speed": 20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "thorny_shield",
+  "name": "茨の盾",
+  "category": "weapon",
+  "lore": [
+    "攻撃をガードすることによって敵にダメージを与える"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 7,
+    "durability": 500,
+    "base": {
+      "attributes": {
+        "attack_damage": 10,
+        "attack_speed": 1,
+        "def": 100,
+        "movement_speed": -50
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "tin_ingot",
+  "name": "錫",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10018,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "titanium_sword",
+  "name": "チタンソード",
+  "category": "weapon",
+  "lore": [
+    "軽量で耐久性の高いチタン製の剣",
+    "軽いため攻撃速度が速い",
+    "腐食に強く、長期間使用可能"
+  ],
+  "rarity": 4,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 2000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 15,
+    "max_modification": 12,
+    "durability": 2000,
+    "base": {
+      "attributes": {
+        "attack_damage": 15,
+        "attack_speed": 3,
+        "def": 20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "tree_of_greed",
+  "name": "貪欲の木",
+  "category": "material",
+  "lore": [
+    "この木に触れたものは生命力を奪われていく。"
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 201,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "unfathomable_powder",
+  "name": "得体のしれない粉",
+  "category": "food",
+  "lore": [
+    "なんだかいけない感じがする粉。使ってみるかはよく考えよう。数十秒間幸福感を得る。(副反応ですべてのデバフを受けることになる)"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": -1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 4,
+    "saturation": 0.6,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "unknown_flower",
+  "name": "得体の知らない花",
+  "category": "material",
+  "lore": [
+    "どこで摘んできたかわからない花、なんとも表現しがたい匂いを発している"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "unknown_type",
+  "name": "得体のしれない種",
+  "category": "food",
+  "lore": [
+    "得体のしれない花から採取した種。頑張れば食べれるかもしれない"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 4,
+    "saturation": 0.6,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "vanilla_chainmail_boots",
+  "name": "チェーンのブーツ(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのチェーン装備",
+    "魔法防御力が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "feet",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 700,
+    "enchantable": true,
+    "armor_type": "boots",
+    "base": {
+      "attributes": {
+        "def": 10,
+        "mdf": 20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_chainmail_chestplate",
+  "name": "チェーンのチェストプレート(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのチェーン装備",
+    "魔法防御力が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "chest",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 1000,
+    "enchantable": true,
+    "armor_type": "chestplate",
+    "base": {
+      "attributes": {
+        "def": 20,
+        "mdf": 40
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_chainmail_helmet",
+  "name": "チェーンのヘルメット(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのチェーン装備",
+    "魔法防御力が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 700,
+    "enchantable": true,
+    "armor_type": "helmet",
+    "base": {
+      "attributes": {
+        "def": 10,
+        "mdf": 20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_chainmail_leggings",
+  "name": "チェーンのレギンス(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのチェーン装備",
+    "魔法防御力が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "legs",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 800,
+    "enchantable": true,
+    "armor_type": "leggings",
+    "base": {
+      "attributes": {
+        "def": 15,
+        "mdf": 30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_diamond_boots",
+  "name": "ダイヤのブーツ(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのダイヤ装備",
+    "クリティカル攻撃力と確率が上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "feet",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 2000,
+    "enchantable": true,
+    "armor_type": "boots",
+    "base": {
+      "attributes": {
+        "crd": 30,
+        "crt": 7,
+        "def": 30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_diamond_chestplate",
+  "name": "ダイヤのチェストプレート(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのダイヤ装備",
+    "クリティカル攻撃力と確率が上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "chest",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 3000,
+    "enchantable": true,
+    "armor_type": "chestplate",
+    "base": {
+      "attributes": {
+        "crd": 40,
+        "crt": 10,
+        "def": 40
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_diamond_helmet",
+  "name": "ダイヤのヘルメット(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのダイヤ装備",
+    "クリティカル攻撃力と確率が上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 2000,
+    "enchantable": true,
+    "armor_type": "helmet",
+    "base": {
+      "attributes": {
+        "crd": 20,
+        "crt": 5,
+        "def": 20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_diamond_leggings",
+  "name": "ダイヤのレギンス(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのダイヤ装備",
+    "クリティカル攻撃力と確率が上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "legs",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 2500,
+    "enchantable": true,
+    "armor_type": "leggings",
+    "base": {
+      "attributes": {
+        "crd": 30,
+        "crt": 7,
+        "def": 30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_golden_boots",
+  "name": "金のブーツ(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの金装備",
+    "再生能力が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "feet",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 400,
+    "enchantable": true,
+    "armor_type": "boots",
+    "base": {
+      "attributes": {
+        "def": 10,
+        "hpr": 15
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_golden_chestplate",
+  "name": "金のチェストプレート(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの金装備",
+    "再生能力が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "chest",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 700,
+    "enchantable": true,
+    "armor_type": "chestplate",
+    "base": {
+      "attributes": {
+        "def": 20,
+        "hpr": 30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_golden_helmet",
+  "name": "金のヘルメット(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの金装備",
+    "再生能力が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 400,
+    "enchantable": true,
+    "armor_type": "helmet",
+    "base": {
+      "attributes": {
+        "def": 10,
+        "hpr": 15
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_golden_leggings",
+  "name": "金のレギンス(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの金装備",
+    "再生能力が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "legs",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 600,
+    "enchantable": true,
+    "armor_type": "leggings",
+    "base": {
+      "attributes": {
+        "def": 15,
+        "hpr": 22
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_iron_boots",
+  "name": "鉄のブーツ(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの鉄装備",
+    "防御力がある程度上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "feet",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 1000,
+    "enchantable": true,
+    "armor_type": "boots",
+    "base": {
+      "attributes": {
+        "def": 30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_iron_chestplate",
+  "name": "鉄のチェストプレート(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの鉄装備",
+    "防御力がある程度上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "chest",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 1500,
+    "enchantable": true,
+    "armor_type": "chestplate",
+    "base": {
+      "attributes": {
+        "def": 60
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_iron_helmet",
+  "name": "鉄のヘルメット(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの鉄装備",
+    "防御力がある程度上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 1000,
+    "enchantable": true,
+    "armor_type": "helmet",
+    "base": {
+      "attributes": {
+        "def": 30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_iron_leggings",
+  "name": "鉄のレギンス(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの鉄装備",
+    "防御力がある程度上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "legs",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 1200,
+    "enchantable": true,
+    "armor_type": "leggings",
+    "base": {
+      "attributes": {
+        "def": 45
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_leather_boots",
+  "name": "皮のブーツ(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの皮装備",
+    "移動速度が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "feet",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 300,
+    "enchantable": true,
+    "armor_type": "boots",
+    "base": {
+      "attributes": {
+        "def": 10,
+        "movement_speed": 5
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_leather_chestplate",
+  "name": "皮の上着(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの皮装備",
+    "移動速度が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "chest",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 500,
+    "enchantable": true,
+    "armor_type": "chestplate",
+    "base": {
+      "attributes": {
+        "def": 10,
+        "movement_speed": 15
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_leather_helmet",
+  "name": "皮の帽子(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの皮装備",
+    "移動速度が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 300,
+    "enchantable": true,
+    "armor_type": "helmet",
+    "base": {
+      "attributes": {
+        "def": 5,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_leather_leggings",
+  "name": "皮のズボン(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの皮装備",
+    "移動速度が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "legs",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 400,
+    "enchantable": true,
+    "armor_type": "leggings",
+    "base": {
+      "attributes": {
+        "def": 8,
+        "movement_speed": 12
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_netherite_boots",
+  "name": "ネザライトのブーツ(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのネザライト装備",
+    "移動速度が下がり、攻撃力が上がる"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "slot": "feet",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 3000,
+    "enchantable": true,
+    "armor_type": "boots",
+    "base": {
+      "attributes": {
+        "atk": 10,
+        "movement_speed": -10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_netherite_chestplate",
+  "name": "ネザライトのチェストプレート(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのネザライト装備",
+    "移動速度が下がり、攻撃力が上がる"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "slot": "chest",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 6000,
+    "enchantable": true,
+    "armor_type": "chestplate",
+    "base": {
+      "attributes": {
+        "atk": 20,
+        "movement_speed": -20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_netherite_helmet",
+  "name": "ネザライトのヘルメット(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのネザライト装備",
+    "移動速度が下がり、攻撃力が上がる"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 3000,
+    "enchantable": true,
+    "armor_type": "helmet",
+    "base": {
+      "attributes": {
+        "atk": 10,
+        "movement_speed": -10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_netherite_leggings",
+  "name": "ネザライトのレギンス(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのネザライト装備",
+    "移動速度が下がり、攻撃力が上がる"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "slot": "legs",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 4500,
+    "enchantable": true,
+    "armor_type": "leggings",
+    "base": {
+      "attributes": {
+        "atk": 15,
+        "movement_speed": -15
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "warped_stick",
+  "name": "歪んだ棒",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 10,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "whimsical_bow",
+  "name": "気まぐれの弓",
+  "category": "weapon",
+  "lore": [
+    "気まぐれな弓。矢が自分に向かって飛ぶこともあればとんでもない攻撃力で敵に飛ぶこともある"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 25,
+        "attack_range": 3,
+        "attack_speed": 1.5,
+        "drop_rate_bonus": 5,
+        "experience_bonus": 10,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "wire",
+  "name": "ワイヤー",
+  "category": "material",
+  "lore": [
+    "鉄製のワイヤー"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "wooden_stick",
+  "name": "木の棒",
+  "category": "material",
+  "lore": [
+    "綺麗に切られている木の棒",
+    "武器を作るのに使えるかも？"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 10,
+    "sell": 10,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "world_tree_stick",
+  "name": "世界樹の枝",
+  "category": "weapon",
+  "lore": [
+    "持つと移動速度と自然回復力が上がる"
+  ],
+  "rarity": 3,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 3,
+    "durability": 500,
+    "base": {
+      "attributes": {
+        "attack_damage": 5,
+        "attack_speed": 4,
+        "hpr": 70,
+        "movement_speed": 30,
+        "mpr": 50
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "zombies_head",
+  "name": "ゾンビの頭",
+  "category": "food",
+  "lore": [
+    "ゾンビの頭。頑張って食べれば十秒間アンデット化することができる"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 4,
+    "saturation": 0.6,
+    "can_always_eat": false,
+    "eat_seconds": 10,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
