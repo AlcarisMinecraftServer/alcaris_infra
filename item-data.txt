@@ -1859,3 +1859,1042 @@
   }
 }
 
+{
+  "id": "hinoki_stick",
+  "name": "ひのきのぼう",
+  "category": "weapon",
+  "lore": [
+    "弱い"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 1,
+    "max_modification": 8,
+    "durability": 9999999,
+    "base": {
+      "attributes": {
+        "attack_damage": 1,
+        "attack_range": 4,
+        "attack_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "honey_bottle",
+  "name": "ハチミツ",
+  "category": "food",
+  "lore": [
+    "ハチミツ入りの瓶。そのまま飲むと甘すぎるかも。"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 50,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 2,
+    "saturation": 0.8,
+    "can_always_eat": false,
+    "eat_seconds": 1,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "honey_bread",
+  "name": "はちみつパン",
+  "category": "food",
+  "lore": [
+    "しっとりふわふわのパンにはちみつ",
+    "をたっぷり染み込ませた一品。"
+  ],
+  "rarity": 2,
+  "max_stack": 16,
+  "custom_model_data": -1,
+  "price": {
+    "buy": 0,
+    "sell": 200,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 5,
+    "saturation": 3.5,
+    "can_always_eat": false,
+    "eat_seconds": 1.6,
+    "effects": [],
+    "attributes": [],
+    "buffs": [],
+    "buff": []
+  }
+}
+
+{
+  "id": "ice_cream",
+  "name": "アイスクリーム",
+  "category": "food",
+  "lore": [
+    "夏の定番！１人で食べても仲間と食べてもやっぱりうまい！"
+  ],
+  "rarity": 1,
+  "max_stack": 8,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 10,
+    "saturation": 2,
+    "can_always_eat": false,
+    "eat_seconds": 1,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "insecticide",
+  "name": "殺虫剤",
+  "category": "weapon",
+  "lore": [
+    "虫に絶大な効果を発揮する。人に向けて発射してはいけない"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 247,
+    "base": {
+      "attributes": {
+        "attack_damage": 5,
+        "attack_range": 6,
+        "attack_speed": 4,
+        "drop_rate_bonus": 0,
+        "experience_bonus": 0,
+        "movement_speed": 0
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "iron_battle_axe",
+  "name": "鉄の戦斧",
+  "category": "weapon",
+  "lore": [
+    "重厚な鉄で作られた戦斧",
+    "高い攻撃力を持つが、攻撃速度は遅い"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 7,
+    "max_modification": 9,
+    "durability": 800,
+    "base": {
+      "attributes": {
+        "attack_damage": 22,
+        "attack_speed": 0.7,
+        "movement_speed": -30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "iron_chunk",
+  "name": "鉄の塊",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10006,
+  "price": {
+    "buy": 0,
+    "sell": 299,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "iron_fragment",
+  "name": "鉄の欠片",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 10004,
+  "price": {
+    "buy": 0,
+    "sell": 50,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+
+{
+  "id": "iron_ingot",
+  "name": "鉄",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 10005,
+  "price": {
+    "buy": 0,
+    "sell": 150,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "iron_spear",
+  "name": "鉄の槍",
+  "category": "weapon",
+  "lore": [
+    "リーチと攻撃速度が速く攻撃力が低い"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 7,
+        "attack_range": 4,
+        "attack_speed": 3,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "just_shield",
+  "name": "ジャストガード",
+  "category": "tool",
+  "lore": [
+    "敵の攻撃と同時にガードをすればカウンターを発動することができる。この時耐久値は消費しない"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "tool_type": "pickaxe",
+    "max_damage": 250,
+    "rules": {},
+    "upgrades": []
+  }
+}
+
+{
+  "id": "knowledge",
+  "name": "知識",
+  "category": "food",
+  "lore": [
+    "常に知識に貪欲であれ"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 4,
+    "saturation": 0.6,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "lead_ingot",
+  "name": "鉛",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10019,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "leaf_helmet",
+  "name": "リーフハット",
+  "category": "armor",
+  "lore": [
+    "葉っぱで作られた帽子",
+    "回復力と移動速度が少しだけ上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 200,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "slot": "chest",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 250,
+    "enchantable": true,
+    "armor_type": "chestplate",
+    "base": {
+      "attributes": {
+        "def": 10,
+        "hp": 10,
+        "hpr": 30,
+        "speed": 15
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 25
+  }
+}
+
+{
+  "id": "leather_scrap",
+  "name": "皮の欠片",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 20,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "light_hammer",
+  "name": "軽量ハンマー",
+  "category": "weapon",
+  "lore": [
+    "攻撃速度が速いが、攻撃力が低め"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 12,
+        "attack_range": 2,
+        "attack_speed": 1.5,
+        "movement_speed": -20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "long_sword",
+  "name": "ロングソード",
+  "category": "weapon",
+  "lore": [
+    "攻撃可能距離が長く、ダメージが大きい"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 1,
+    "max_modification": 8,
+    "durability": 200,
+    "base": {
+      "attributes": {
+        "attack_damage": 12,
+        "attack_range": 4,
+        "attack_speed": 1
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "magical_paper",
+  "name": "魔法の紙",
+  "category": "material",
+  "lore": [
+    "特殊な材質で作られた魔力が宿っている紙",
+    "魔導書を作るのに使えるかも?"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 200,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "magical_space_food",
+  "name": "魔法の宇宙食",
+  "category": "food",
+  "lore": [
+    "シャトルランから輸入された宇宙食！",
+    "一瞬で食べれるよ！"
+  ],
+  "rarity": 3,
+  "max_stack": 16,
+  "custom_model_data": -1,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 6,
+    "saturation": 6,
+    "can_always_eat": false,
+    "eat_seconds": 0,
+    "effects": [],
+    "attributes": [],
+    "buffs": [],
+    "buff": []
+  }
+}
+
+{
+  "id": "money_1000",
+  "name": "小切手(1000円分)",
+  "category": "material",
+  "lore": [
+    "小切手(1000円分)"
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "mythril_sword",
+  "name": "ミスリルソード",
+  "category": "weapon",
+  "lore": [
+    "伝説の金属ミスリルで作られた剣",
+    "軽量で強靭な性能を持つ"
+  ],
+  "rarity": 4,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 999,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 22,
+    "max_modification": 12,
+    "durability": 1200,
+    "base": {
+      "attributes": {
+        "attack_damage": 25,
+        "attack_speed": 3,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "netherite_ingot",
+  "name": "ネザライト",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10017,
+  "price": {
+    "buy": 0,
+    "sell": 1500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "nickel_ingot",
+  "name": "ニッケル",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10021,
+  "price": {
+    "buy": 0,
+    "sell": 200,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "obsidian_dagger",
+  "name": "黒曜石の短剣",
+  "category": "weapon",
+  "lore": [
+    "黒曜石で作られた短剣",
+    "耐久力が高く、高威力のクリティカルがまれに出る"
+  ],
+  "rarity": 4,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 15,
+    "max_modification": 5,
+    "durability": 1500,
+    "base": {
+      "attributes": {
+        "attack_damage": 10,
+        "attack_range": -1,
+        "attack_speed": 5,
+        "crd": 300,
+        "movement_speed": 20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "pebbles",
+  "name": "小石",
+  "category": "material",
+  "lore": [
+    "シルバーフィッシュが飲み込んでいたただの小石"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 1,
+  "price": {
+    "buy": 0,
+    "sell": 20,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "permanent_ice_crystal",
+  "name": "永久氷晶",
+  "category": "material",
+  "lore": [
+    "熱を加えない限り、永遠に溶けないと言われている不思議な氷"
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "piece_leather",
+  "name": "革の破片",
+  "category": "material",
+  "lore": [
+    "多分牛の革"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 30,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "platinum_sword",
+  "name": "プラチナソード",
+  "category": "weapon",
+  "lore": [
+    "高級なプラチナで作られた剣",
+    "美しい輝きと優れた性能を兼ね備える"
+  ],
+  "rarity": 3,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 18,
+    "max_modification": 7,
+    "durability": 1500,
+    "base": {
+      "attributes": {
+        "attack_damage": 22,
+        "attack_speed": 4
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "poisonous_leaves",
+  "name": "毒付きの葉",
+  "category": "material",
+  "lore": [
+    "強力な毒が付いている葉だ。",
+    "これを武器にすれば相手を苦しめることが出来るだろう。"
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 49,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "regeneration_helmet",
+  "name": "リジェネヘルメット",
+  "category": "armor",
+  "lore": [
+    "着ると高い回復量が得られる装備"
+  ],
+  "rarity": 3,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 5000,
+    "sell": 2500,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 1000,
+    "enchantable": true,
+    "armor_type": "head",
+    "base": {
+      "attributes": {
+        "hp": 70,
+        "hpr": 100,
+        "mpr": 20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 10,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "rock_salt",
+  "name": "岩塩",
+  "category": "material",
+  "lore": [
+    "調味料の１つ。料理で肉や魚の味付けになどに使う。"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "rotten_blood",
+  "name": "腐った血",
+  "category": "food",
+  "lore": [
+    "アンデット状態を強化する。(飲む勇気はあるか?)"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 4,
+    "saturation": 0.6,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "rotten_scrap",
+  "name": "腐った肉の破片",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 10,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "rusty_iron",
+  "name": "錆びた鉄",
+  "category": "material",
+  "lore": [
+    "錆びていて今の状態では使えない。　",
+    "錆を取れば役に立つかも。"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 60,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "sand_bag",
+  "name": "砂袋",
+  "category": "material",
+  "lore": [
+    "敵に投げつけることで一定時間敵の視界を奪い動けなくする"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 50,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "seed_machine_gun",
+  "name": "種マシンガン",
+  "category": "weapon",
+  "lore": [
+    "得体のしれない種を発射する。敵に発射することで敵に種を埋め込み持続ダメージを与える"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 5,
+        "attack_range": 10,
+        "attack_speed": 3,
+        "movement_speed": -30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "sharp_arrow",
+  "name": "鋭い矢",
+  "category": "material",
+  "lore": [
+    "とても鋭い矢だ。　他の矢より攻撃力が高そうだ。"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 30,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "sharp_claws",
+  "name": "鋭い爪",
+  "category": "weapon",
+  "lore": [
+    "とても鋭い爪だ。　これで引っ搔かれたらひとたまりもなさそうだ。",
+    "かなり軽量なので移動がしやすそうだ。",
+    ""
+  ],
+  "rarity": 3,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 8,
+    "durability": 150,
+    "base": {
+      "attributes": {
+        "attack_damage": 15,
+        "attack_range": -3,
+        "attack_speed": 10,
+        "movement_speed": 40
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "shoddy_string",
+  "name": "粗悪な糸",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 10,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "silver_alloy_ingot",
+  "name": "白銀合金",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10027,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
