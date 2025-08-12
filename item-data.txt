@@ -2898,3 +2898,281 @@
   "tags": [],
   "data": {}
 }
+
+{
+  "id": "silver_dagger",
+  "name": "銀の短剣",
+  "category": "weapon",
+  "lore": [
+    "銀で作られた短剣",
+    "クリティカルが出た時のダメージがとても高い",
+    "魔除けの効果があると言われているが...? (まだ実装してないよ)"
+  ],
+  "rarity": 3,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 5,
+    "durability": 1000,
+    "base": {
+      "attributes": {
+        "attack_damage": 6,
+        "attack_range": -2,
+        "attack_speed": 4,
+        "crd": 400
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "silver_ingot",
+  "name": "銀",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10020,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "skeleton_ribs",
+  "name": "スケルトンの肋骨",
+  "category": "weapon",
+  "lore": [
+    "スケルトンからとれた肋骨、殴られれば意外と痛い"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 20,
+        "attack_range": 3,
+        "attack_speed": 1.1,
+        "movement_speed": -30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "slash_blade_wood",
+  "name": "木刀",
+  "category": "weapon",
+  "lore": [
+    "重い一撃を繰り出すが、あいにく刃が丸い。要は鈍器"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 1,
+    "max_modification": 8,
+    "durability": 200,
+    "base": {
+      "attributes": {
+        "attack_damage": 10,
+        "attack_speed": 1.5
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "smooke_bomb",
+  "name": "スモークボム",
+  "category": "material",
+  "lore": [
+    "周囲を暗闇に巻き込むボム",
+    "誤爆に注意！！"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "soy_sauce_ramen",
+  "name": "醤油ラーメン",
+  "category": "food",
+  "lore": [
+    "醤油ラーメン。具材が載っていてまだ暖かい"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 12,
+    "saturation": 6,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "spatula",
+  "name": "フライ返し",
+  "category": "weapon",
+  "lore": [
+    "使用することで敵を逆向きに3秒間歩かせる。"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 10,
+        "attack_range": 3,
+        "attack_speed": 1.5
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "spider_silk",
+  "name": "クモの糸",
+  "category": "material",
+  "lore": [
+    "ねばねばしていて気持ち悪い。"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 30,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "stainless_steel_ingot",
+  "name": "ステンレス鋼",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10025,
+  "price": {
+    "buy": 0,
+    "sell": 1002,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "steel_broadsword",
+  "name": "鋼のブロードソード",
+  "category": "weapon",
+  "lore": [
+    "鋼で作られた幅広の剣",
+    "バランスの取れた性能を持つ万能武器"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 15,
+    "max_modification": 7,
+    "durability": 600,
+    "base": {
+      "attributes": {
+        "attack_damage": 14,
+        "attack_range": 1.5,
+        "attack_speed": 2
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
