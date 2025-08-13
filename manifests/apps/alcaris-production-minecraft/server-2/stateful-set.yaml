@@ -5,7 +5,7 @@ metadata:
   labels:
     app: minecraft-production-s2
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: minecraft-production-s2
