@@ -5,6 +5,7 @@ metadata:
   labels:
     app: velocity-production
 spec:
+  replicas: 0
   revisionHistoryLimit: 0
   selector:
     matchLabels:
