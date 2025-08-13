@@ -1,0 +1,4646 @@
+{
+  "id": "alcaris_fragment",
+  "name": "アルカリスの欠片",
+  "category": "material",
+  "lore": [
+    "アルカリス鉱石の欠片"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+
+{
+  "id": "alcaris_ingot",
+  "name": "アルカリス鉱石",
+  "category": "material",
+  "lore": [
+    "とてつもなく強い力を秘めた鉱石"
+  ],
+  "rarity": 4,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 2000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+
+{
+  "id": "aluminum_helmet",
+  "name": "アルミホイルハット",
+  "category": "armor",
+  "lore": [
+    "アルミホイルを頭にぐるぐる巻きにしたもの",
+    "これは果たして防具なのか?"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 250,
+    "enchantable": true,
+    "armor_type": "helmet",
+    "base": {
+      "attributes": {
+        "atk": 5,
+        "crd": 10,
+        "crt": 2,
+        "mdf": 30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+
+{
+  "id": "aluminum_rapier",
+  "name": "アルミニウムのレイピア",
+  "category": "weapon",
+  "lore": [
+    "軽量なアルミニウムで作られた細身の剣",
+    "攻撃速度が速く、移動速度も向上",
+    "決闘やフェンシングに適している"
+  ],
+  "rarity": 3,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 200,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 7,
+    "durability": 400,
+    "base": {
+      "attributes": {
+        "attack_damage": 12,
+        "attack_range": -2,
+        "attack_speed": 4,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+
+{
+  "id": "amethyst_dagger",
+  "name": "アメジストの短剣",
+  "category": "weapon",
+  "lore": [
+    "アメジストで作られた神秘的な短剣",
+    "高い攻撃速度とクリティカル率を持つ"
+  ],
+  "rarity": 4,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 200,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 18,
+    "max_modification": 9,
+    "durability": 1100,
+    "base": {
+      "attributes": {
+        "attack_damage": 10,
+        "attack_range": 2,
+        "attack_speed": 6,
+        "crd": 100,
+        "crt": 12,
+        "movement_speed": 30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+
+{
+  "id": "among_us",
+  "name": "アモン〇アス",
+  "category": "tool",
+  "lore": [
+    "使用すればクルーの場合体力を回復するか防具の耐久値を回復する。",
+    "キラーの場合その場で即死する"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "tool_type": "pickaxe",
+    "max_damage": 250,
+    "rules": {},
+    "upgrades": []
+  }
+}
+
+
+{
+  "id": "anxiety_future",
+  "name": "将来への不安",
+  "category": "weapon",
+  "lore": [
+    "オフハンドに持つことで自分に盲目、鈍足、最大体力減少を発症するがその代わり半径20ブロック以内にいる敵mobに攻撃力低下(レベル未定)と15秒ごとに3ダメージ与える"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 1,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 25,
+        "attack_range": 3,
+        "attack_speed": 1.5,
+        "drop_rate_bonus": 5,
+        "experience_bonus": 10,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+
+{
+  "id": "apple_pie",
+  "name": "リンゴパイ",
+  "category": "food",
+  "lore": [
+    "甘くて美味しい！"
+  ],
+  "rarity": 1,
+  "max_stack": 16,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 8,
+    "saturation": 4,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+
+{
+  "id": "apple_tart",
+  "name": "焼きたてのリンゴタルト",
+  "category": "food",
+  "lore": [
+    "甘酸っぱいリンゴがたっぷり",
+    "詰まった香ばしいタルト。",
+    "冒険の合間にほっと一息。"
+  ],
+  "rarity": 3,
+  "max_stack": 16,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 8,
+    "saturation": 4.2,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": [],
+    "buff": []
+  }
+}
+
+
+{
+  "id": "bomb_arrow",
+  "name": "爆弾矢",
+  "category": "weapon",
+  "lore": [
+    "撃てば着地地点に爆発を引き起こす。集団戦闘に最適"
+  ],
+  "rarity": 1,
+  "max_stack": 32,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 25,
+        "attack_range": 3,
+        "attack_speed": 1.5,
+        "drop_rate_bonus": 5,
+        "experience_bonus": 10,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+
+{
+  "id": "bone_fragment",
+  "name": "骨の欠片",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 10,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "bread",
+  "name": "パン",
+  "category": "food",
+  "lore": [
+    "ただのパン"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 30,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 4,
+    "saturation": 2,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+
+{
+  "id": "broken_bones",
+  "name": "折れた骨",
+  "category": "material",
+  "lore": [
+    "戦闘中に傷ついて折れたスケルトンの骨だ。"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "bronze_ingot",
+  "name": "青銅",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10023,
+  "price": {
+    "buy": 0,
+    "sell": 200,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+
+{
+  "id": "bronze_spear",
+  "name": "銅の槍",
+  "category": "weapon",
+  "lore": [
+    "硬い棒に先端が銅で作られた槍"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 3,
+    "max_modification": 7,
+    "durability": 500,
+    "base": {
+      "attributes": {
+        "attack_damage": 5,
+        "attack_range": 4,
+        "attack_speed": 6
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "burning_stone",
+  "name": "燃える石",
+  "category": "material",
+  "lore": [
+    "熱っ！火傷するって... 　　　",
+    "...ってどうして石が燃えてるの？"
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "cabbage",
+  "name": "キャベツ",
+  "category": "food",
+  "lore": [
+    "Mobがたまに落とす新鮮なキャベツ これは何かの料理に使えそうだ..."
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 4,
+    "saturation": 0.6,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "calorie_mate",
+  "name": "カロリーメ〇ト",
+  "category": "food",
+  "lore": [
+    "一瞬で栄養補給!口の中ぱさぱさ!"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 10,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 10,
+    "saturation": 0.6,
+    "can_always_eat": false,
+    "eat_seconds": 0.5,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "carbon_steel_katana",
+  "name": "炭素鋼の刀",
+  "category": "weapon",
+  "lore": [
+    "伝統的な製法で作られた炭素鋼の刀",
+    "高い攻撃力とクリティカル率を持つ",
+    "切れ味が鋭く、一撃必殺の威力"
+  ],
+  "rarity": 5,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 2000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 25,
+    "max_modification": 30,
+    "durability": 11,
+    "base": {
+      "attributes": {
+        "attack_damage": 111,
+        "attack_range": -1,
+        "attack_speed": 4,
+        "crd": 200
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "chabudai",
+  "name": "ちゃぶ台",
+  "category": "weapon",
+  "lore": [
+    "ちゃぶ台返しをすることができる。使用すれば食糧を消費して敵に攻撃する"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 25,
+        "attack_range": 3,
+        "attack_speed": 1.5,
+        "drop_rate_bonus": 5,
+        "experience_bonus": 10,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "charming_leaf",
+  "name": "魅惑の草",
+  "category": "food",
+  "lore": [
+    "アイテムを食べると一緒に戦ってくれる羊を召喚するよ",
+    "(これもマイクラダンジョンズから引用だよ",
+    "再現するのむずいかもだけどペットと戦えるのは面白そうだなって思った)"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 0,
+    "saturation": 0,
+    "can_always_eat": false,
+    "eat_seconds": 2.5,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "cheese",
+  "name": "チーズ",
+  "category": "food",
+  "lore": [
+    "牛乳を焚火で焼くことでトロトロのチーズになったよ"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 4,
+    "saturation": 0.6,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "cheeseburger",
+  "name": "チーズバーガー",
+  "category": "food",
+  "lore": [
+    "パンとステーキとチーズで作れるとてもおいしいチーズバーガー"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 8,
+    "saturation": 1.2,
+    "can_always_eat": false,
+    "eat_seconds": 2.2,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "cherry_blossom_branch",
+  "name": "桜の枝",
+  "category": "material",
+  "lore": [
+    "ほんのり甘い香りがする桜の枝",
+    "きっと何かに使えるかも"
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "chipped_axe",
+  "name": "欠けた斧",
+  "category": "weapon",
+  "lore": [
+    "戦闘によって傷ついた斧。　直せばもっと強くなるだろう。"
+  ],
+  "rarity": 3,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 100,
+    "base": {
+      "attributes": {
+        "attack_damage": 12,
+        "attack_range": 3,
+        "attack_speed": -3.5,
+        "movement_speed": -50
+      },
+      "buffs": [
+        {
+          "amount": 0,
+          "duration": 0,
+          "kind": ""
+        }
+      ],
+      "effects": [
+        {
+          "amplifier": 0,
+          "chance": 1,
+          "duration": 0,
+          "effect": ""
+        }
+      ]
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "chromium_ingot",
+  "name": "クロム",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10022,
+  "price": {
+    "buy": 0,
+    "sell": 204,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "coal_ingot",
+  "name": "石炭",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10000,
+  "price": {
+    "buy": 0,
+    "sell": 50,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "cooking_recipe_book",
+  "name": "料理ガイド",
+  "category": "food",
+  "lore": [
+    "ランダムな通常料理のレシピを開放する",
+    "(メインワールドでのみ使用可能)"
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 4,
+    "saturation": 0.6,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "copper_chunk",
+  "name": "銅の塊",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10003,
+  "price": {
+    "buy": 0,
+    "sell": 150,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "copper_fragment",
+  "name": "銅の欠片",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 10001,
+  "price": {
+    "buy": 0,
+    "sell": 30,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "copper_ingot",
+  "name": "銅",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 10002,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "crown_of_the_berserker",
+  "name": "狂戦士の冠",
+  "category": "armor",
+  "lore": [
+    "装備すると持続的に耐久値が減り装備している間は体力を回復することができない代わりに強大な力を得る"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 4500,
+    "enchantable": true,
+    "armor_type": "helmet",
+    "base": {
+      "attributes": {
+        "atk": 40,
+        "hpr": -20,
+        "movement_speed": -20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "crystal_chunk",
+  "name": "クリスタルの塊",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10014,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "crystal_fragment",
+  "name": "クリスタルの欠片",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 10012,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "crystal_ingot",
+  "name": "クリスタル",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 10013,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "crystal_sword",
+  "name": "クリスタルソード",
+  "category": "weapon",
+  "lore": [
+    "純粋なクリスタルで作られた剣",
+    "魔法の力を秘めており、特殊な効果を持つ"
+  ],
+  "rarity": 3,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 15,
+    "max_modification": 3,
+    "durability": 100,
+    "base": {
+      "attributes": {
+        "attack_damage": 20,
+        "attack_speed": 4,
+        "hpr": 50,
+        "movement_speed": 10,
+        "mpr": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "cupronickel_ingot",
+  "name": "白銅",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10026,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "darkmatter",
+  "name": "暗黒物質",
+  "category": "material",
+  "lore": [
+    "莫大な力を秘めた未知の物質",
+    "使うと数秒間攻撃力が大幅に上がるが、効果終了時にhpが1になる"
+  ],
+  "rarity": 5,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 10000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "diamond_fragment",
+  "name": "ダイヤモンドの欠片",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 10015,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "diamond_hammer",
+  "name": "ダイヤモンドのハンマー",
+  "category": "weapon",
+  "lore": [
+    "ダイヤモンドで作られた巨大なハンマー",
+    "圧倒的な攻撃力を持つが、非常に重い"
+  ],
+  "rarity": 4,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": -3,
+    "sell": 1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 20,
+    "max_modification": 5,
+    "durability": 1500,
+    "base": {
+      "attributes": {
+        "attack_damage": 40,
+        "attack_range": 1.5,
+        "attack_speed": 1,
+        "movement_speed": -50
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "diamond_ingot",
+  "name": "ダイヤモンド",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10016,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "diamond_spear",
+  "name": "ダイヤの槍",
+  "category": "weapon",
+  "lore": [
+    "リーチと攻撃速度が速く攻撃力が低い"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 10,
+        "attack_range": 4,
+        "attack_speed": 3,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "dice",
+  "name": "サイコロ",
+  "category": "tool",
+  "lore": [
+    "出た目によってバフかデバフを受けれる。奇数はデバフ、偶数はバフ。数字が上がるごとに効果は強くなる"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "tool_type": "pickaxe",
+    "max_damage": 250,
+    "rules": {},
+    "upgrades": []
+  }
+}
+
+{
+  "id": "double_cheeseburger",
+  "name": "ダブルチーズバーガー",
+  "category": "food",
+  "lore": [
+    "パンとステーキ2枚とチーズ2枚でクラフトできる。最上級においしい"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 10,
+    "saturation": 1.4,
+    "can_always_eat": false,
+    "eat_seconds": 2.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "emerald_fragment",
+  "name": "エメラルドの欠片",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 10010,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "emerald_ingot",
+  "name": "エメラルド",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10011,
+  "price": {
+    "buy": 0,
+    "sell": 2500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "emerald_sword",
+  "name": "エメラルドソード",
+  "category": "weapon",
+  "lore": [
+    "エメラルドを埋め込んだ美しい剣",
+    "自然の力を宿している"
+  ],
+  "rarity": 3,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 2000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 12,
+    "max_modification": 8,
+    "durability": 800,
+    "base": {
+      "attributes": {
+        "attack_damage": 12,
+        "attack_speed": 4,
+        "hpr": 20,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "fireball",
+  "name": "火の玉",
+  "category": "material",
+  "lore": [
+    "ブレイズから盗んだ火の玉"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "firewood",
+  "name": "薪",
+  "category": "food",
+  "lore": [
+    "木材として使えなくもないかも。"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 20,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 4,
+    "saturation": 0.6,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "fishing_hook",
+  "name": "釣り針",
+  "category": "material",
+  "lore": [
+    "食べれば釣り上げられる。リリースされた後はどこにテレポートするかわからない"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 50,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "flower",
+  "name": "花",
+  "category": "material",
+  "lore": [
+    "どこからどう見ても普通の花、嗅ぐと少し眩暈がする"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "frozen_swordfish",
+  "name": "冷凍カジキマグロ",
+  "category": "weapon",
+  "lore": [
+    "カジキマグロをカチカチに凍らせたもの。その角はあらゆるものを貫通するが凍らせたため折れやすくなっている"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 20,
+        "attack_range": 3,
+        "attack_speed": 1.5,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "frying_pan",
+  "name": "フライパン",
+  "category": "weapon",
+  "lore": [
+    "歯向かう敵は料理してしまえばいい。敵を倒せば食糧が落ちる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 20,
+        "attack_range": -1,
+        "attack_speed": 1.5,
+        "crt": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "glass_shade",
+  "name": "ガラスの破片",
+  "category": "material",
+  "lore": [
+    "ガラスの破片。とても鋭いが脆いしガラスのくせになかなか出てこない"
+  ],
+  "rarity": 5,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "glass_sword",
+  "name": "ガラスの剣",
+  "category": "weapon",
+  "lore": [
+    "一撃必殺の剣。脆い"
+  ],
+  "rarity": 3,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 1,
+    "max_modification": 8,
+    "durability": 1,
+    "base": {
+      "attributes": {
+        "attack_damage": 100,
+        "attack_range": 4,
+        "attack_speed": 1
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "gold_chunk",
+  "name": "金の塊",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10009,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "gold_fragment",
+  "name": "金の欠片",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 10007,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [
+    {
+      "label": "鉱石",
+      "color": "#ffffff"
+    }
+  ],
+  "data": {}
+}
+
+{
+  "id": "gold_ingot",
+  "name": "金",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 10008,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "golden_rapier",
+  "name": "黄金のレイピア",
+  "category": "weapon",
+  "lore": [
+    "黄金で作られた優雅なレイピア",
+    "高い攻撃速度とクリティカル率を持つ"
+  ],
+  "rarity": 3,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 20,
+    "max_modification": 8,
+    "durability": 800,
+    "base": {
+      "attributes": {
+        "attack_damage": 22,
+        "attack_range": -2,
+        "attack_speed": 4,
+        "crd": 100,
+        "crt": 15,
+        "movement_speed": 20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "great_spirit_core",
+  "name": "大精霊の核",
+  "category": "material",
+  "lore": [
+    "強い魔力を秘めた魔核",
+    "使うと5分間大精霊の加護を得られる"
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 5000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "grinding_wheel_increment_5",
+  "name": "固定研磨剤",
+  "category": "material",
+  "lore": [
+    "好きなステータスの研磨値を5固定で上げる(max100%)"
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 2000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "grinding_wheel_roll_all",
+  "name": "通常研磨剤",
+  "category": "material",
+  "lore": [
+    "全てのステータスをロールする"
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "grinding_wheel_roll_specific",
+  "name": "指定研磨剤",
+  "category": "material",
+  "lore": [
+    "好きなステータスをロールできる研磨剤。"
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 700,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "grinding_wheel_roll_specific_high",
+  "name": "改良研磨剤",
+  "category": "material",
+  "lore": [
+    "好きなステータス1つをロールして、高い方を採用する",
+    "かなりレアな研磨剤！"
+  ],
+  "rarity": 4,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 5000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "hamburger",
+  "name": "ハンバーガー",
+  "category": "food",
+  "lore": [
+    "パンとステーキで作れるおいしいハンバーガー"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 6,
+    "saturation": 1,
+    "can_always_eat": false,
+    "eat_seconds": 2,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "happy_powder",
+  "name": "幸せの粉",
+  "category": "food",
+  "lore": [
+    "どこかのお菓子から取った幸せの粉"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 50,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 4,
+    "saturation": 0.6,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "healthy_hamburger",
+  "name": "ヘルシーハンバーガー",
+  "category": "food",
+  "lore": [
+    "パンとキャベツとステーキで作れる。健康食で手軽に作れる"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 4,
+    "saturation": 0.2,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "heavy_chestplate",
+  "name": "ヘビーアーマー",
+  "category": "armor",
+  "lore": [
+    "着ると高い防御力が得られる鎧"
+  ],
+  "rarity": 3,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 5000,
+    "sell": 2500,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "chest",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 1000,
+    "enchantable": true,
+    "armor_type": "chest",
+    "base": {
+      "attributes": {
+        "def": 120,
+        "hp": 80
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 15,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "heavy_hummer",
+  "name": "重量ハンマー",
+  "category": "weapon",
+  "lore": [
+    "攻撃速度が遅いが、攻撃力が大きい"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 25,
+        "attack_range": 3,
+        "attack_speed": 0.6,
+        "movement_speed": -40
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "highters_harness",
+  "name": "闘士の締め具",
+  "category": "weapon",
+  "lore": [
+    "かつてはマイクラダンジョンズの人気アイテム",
+    "高速で殴ることができるがリーチが弱め",
+    "爽快感パネぇ",
+    "連打するので指死にます()"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 5,
+        "attack_range": -1,
+        "attack_speed": 20,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "hinoki_stick",
+  "name": "ひのきのぼう",
+  "category": "weapon",
+  "lore": [
+    "弱い"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 1,
+    "max_modification": 8,
+    "durability": 9999999,
+    "base": {
+      "attributes": {
+        "attack_damage": 1,
+        "attack_range": 4,
+        "attack_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "honey_bottle",
+  "name": "ハチミツ",
+  "category": "food",
+  "lore": [
+    "ハチミツ入りの瓶。そのまま飲むと甘すぎるかも。"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 50,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 2,
+    "saturation": 0.8,
+    "can_always_eat": false,
+    "eat_seconds": 1,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "honey_bread",
+  "name": "はちみつパン",
+  "category": "food",
+  "lore": [
+    "しっとりふわふわのパンにはちみつ",
+    "をたっぷり染み込ませた一品。"
+  ],
+  "rarity": 2,
+  "max_stack": 16,
+  "custom_model_data": -1,
+  "price": {
+    "buy": 0,
+    "sell": 200,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 5,
+    "saturation": 3.5,
+    "can_always_eat": false,
+    "eat_seconds": 1.6,
+    "effects": [],
+    "attributes": [],
+    "buffs": [],
+    "buff": []
+  }
+}
+
+{
+  "id": "ice_cream",
+  "name": "アイスクリーム",
+  "category": "food",
+  "lore": [
+    "夏の定番！１人で食べても仲間と食べてもやっぱりうまい！"
+  ],
+  "rarity": 1,
+  "max_stack": 8,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 10,
+    "saturation": 2,
+    "can_always_eat": false,
+    "eat_seconds": 1,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "insecticide",
+  "name": "殺虫剤",
+  "category": "weapon",
+  "lore": [
+    "虫に絶大な効果を発揮する。人に向けて発射してはいけない"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 247,
+    "base": {
+      "attributes": {
+        "attack_damage": 5,
+        "attack_range": 6,
+        "attack_speed": 4,
+        "drop_rate_bonus": 0,
+        "experience_bonus": 0,
+        "movement_speed": 0
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "iron_battle_axe",
+  "name": "鉄の戦斧",
+  "category": "weapon",
+  "lore": [
+    "重厚な鉄で作られた戦斧",
+    "高い攻撃力を持つが、攻撃速度は遅い"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 7,
+    "max_modification": 9,
+    "durability": 800,
+    "base": {
+      "attributes": {
+        "attack_damage": 22,
+        "attack_speed": 0.7,
+        "movement_speed": -30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "iron_chunk",
+  "name": "鉄の塊",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10006,
+  "price": {
+    "buy": 0,
+    "sell": 299,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "iron_fragment",
+  "name": "鉄の欠片",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 10004,
+  "price": {
+    "buy": 0,
+    "sell": 50,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+
+{
+  "id": "iron_ingot",
+  "name": "鉄",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 10005,
+  "price": {
+    "buy": 0,
+    "sell": 150,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "iron_spear",
+  "name": "鉄の槍",
+  "category": "weapon",
+  "lore": [
+    "リーチと攻撃速度が速く攻撃力が低い"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 7,
+        "attack_range": 4,
+        "attack_speed": 3,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "just_shield",
+  "name": "ジャストガード",
+  "category": "tool",
+  "lore": [
+    "敵の攻撃と同時にガードをすればカウンターを発動することができる。この時耐久値は消費しない"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "tool_type": "pickaxe",
+    "max_damage": 250,
+    "rules": {},
+    "upgrades": []
+  }
+}
+
+{
+  "id": "knowledge",
+  "name": "知識",
+  "category": "food",
+  "lore": [
+    "常に知識に貪欲であれ"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 4,
+    "saturation": 0.6,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "lead_ingot",
+  "name": "鉛",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10019,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "leaf_helmet",
+  "name": "リーフハット",
+  "category": "armor",
+  "lore": [
+    "葉っぱで作られた帽子",
+    "回復力と移動速度が少しだけ上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 200,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "slot": "chest",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 250,
+    "enchantable": true,
+    "armor_type": "chestplate",
+    "base": {
+      "attributes": {
+        "def": 10,
+        "hp": 10,
+        "hpr": 30,
+        "speed": 15
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 25
+  }
+}
+
+{
+  "id": "leather_scrap",
+  "name": "皮の欠片",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 20,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "light_hammer",
+  "name": "軽量ハンマー",
+  "category": "weapon",
+  "lore": [
+    "攻撃速度が速いが、攻撃力が低め"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 12,
+        "attack_range": 2,
+        "attack_speed": 1.5,
+        "movement_speed": -20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "long_sword",
+  "name": "ロングソード",
+  "category": "weapon",
+  "lore": [
+    "攻撃可能距離が長く、ダメージが大きい"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 1,
+    "max_modification": 8,
+    "durability": 200,
+    "base": {
+      "attributes": {
+        "attack_damage": 12,
+        "attack_range": 4,
+        "attack_speed": 1
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "magical_paper",
+  "name": "魔法の紙",
+  "category": "material",
+  "lore": [
+    "特殊な材質で作られた魔力が宿っている紙",
+    "魔導書を作るのに使えるかも?"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 200,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "magical_space_food",
+  "name": "魔法の宇宙食",
+  "category": "food",
+  "lore": [
+    "シャトルランから輸入された宇宙食！",
+    "一瞬で食べれるよ！"
+  ],
+  "rarity": 3,
+  "max_stack": 16,
+  "custom_model_data": -1,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 6,
+    "saturation": 6,
+    "can_always_eat": false,
+    "eat_seconds": 0,
+    "effects": [],
+    "attributes": [],
+    "buffs": [],
+    "buff": []
+  }
+}
+
+{
+  "id": "money_1000",
+  "name": "小切手(1000円分)",
+  "category": "material",
+  "lore": [
+    "小切手(1000円分)"
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "mythril_sword",
+  "name": "ミスリルソード",
+  "category": "weapon",
+  "lore": [
+    "伝説の金属ミスリルで作られた剣",
+    "軽量で強靭な性能を持つ"
+  ],
+  "rarity": 4,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 999,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 22,
+    "max_modification": 12,
+    "durability": 1200,
+    "base": {
+      "attributes": {
+        "attack_damage": 25,
+        "attack_speed": 3,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "netherite_ingot",
+  "name": "ネザライト",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10017,
+  "price": {
+    "buy": 0,
+    "sell": 1500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "nickel_ingot",
+  "name": "ニッケル",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10021,
+  "price": {
+    "buy": 0,
+    "sell": 200,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "obsidian_dagger",
+  "name": "黒曜石の短剣",
+  "category": "weapon",
+  "lore": [
+    "黒曜石で作られた短剣",
+    "耐久力が高く、高威力のクリティカルがまれに出る"
+  ],
+  "rarity": 4,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 15,
+    "max_modification": 5,
+    "durability": 1500,
+    "base": {
+      "attributes": {
+        "attack_damage": 10,
+        "attack_range": -1,
+        "attack_speed": 5,
+        "crd": 300,
+        "movement_speed": 20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "pebbles",
+  "name": "小石",
+  "category": "material",
+  "lore": [
+    "シルバーフィッシュが飲み込んでいたただの小石"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 1,
+  "price": {
+    "buy": 0,
+    "sell": 20,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "permanent_ice_crystal",
+  "name": "永久氷晶",
+  "category": "material",
+  "lore": [
+    "熱を加えない限り、永遠に溶けないと言われている不思議な氷"
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "piece_leather",
+  "name": "革の破片",
+  "category": "material",
+  "lore": [
+    "多分牛の革"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 30,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "platinum_sword",
+  "name": "プラチナソード",
+  "category": "weapon",
+  "lore": [
+    "高級なプラチナで作られた剣",
+    "美しい輝きと優れた性能を兼ね備える"
+  ],
+  "rarity": 3,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 18,
+    "max_modification": 7,
+    "durability": 1500,
+    "base": {
+      "attributes": {
+        "attack_damage": 22,
+        "attack_speed": 4
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "poisonous_leaves",
+  "name": "毒付きの葉",
+  "category": "material",
+  "lore": [
+    "強力な毒が付いている葉だ。",
+    "これを武器にすれば相手を苦しめることが出来るだろう。"
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 49,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "regeneration_helmet",
+  "name": "リジェネヘルメット",
+  "category": "armor",
+  "lore": [
+    "着ると高い回復量が得られる装備"
+  ],
+  "rarity": 3,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 5000,
+    "sell": 2500,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 1000,
+    "enchantable": true,
+    "armor_type": "head",
+    "base": {
+      "attributes": {
+        "hp": 70,
+        "hpr": 100,
+        "mpr": 20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 10,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "rock_salt",
+  "name": "岩塩",
+  "category": "material",
+  "lore": [
+    "調味料の１つ。料理で肉や魚の味付けになどに使う。"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "rotten_blood",
+  "name": "腐った血",
+  "category": "food",
+  "lore": [
+    "アンデット状態を強化する。(飲む勇気はあるか?)"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 4,
+    "saturation": 0.6,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "rotten_scrap",
+  "name": "腐った肉の破片",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 10,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "rusty_iron",
+  "name": "錆びた鉄",
+  "category": "material",
+  "lore": [
+    "錆びていて今の状態では使えない。　",
+    "錆を取れば役に立つかも。"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 60,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "sand_bag",
+  "name": "砂袋",
+  "category": "material",
+  "lore": [
+    "敵に投げつけることで一定時間敵の視界を奪い動けなくする"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 50,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "seed_machine_gun",
+  "name": "種マシンガン",
+  "category": "weapon",
+  "lore": [
+    "得体のしれない種を発射する。敵に発射することで敵に種を埋め込み持続ダメージを与える"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 5,
+        "attack_range": 10,
+        "attack_speed": 3,
+        "movement_speed": -30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "sharp_arrow",
+  "name": "鋭い矢",
+  "category": "material",
+  "lore": [
+    "とても鋭い矢だ。　他の矢より攻撃力が高そうだ。"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 30,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "sharp_claws",
+  "name": "鋭い爪",
+  "category": "weapon",
+  "lore": [
+    "とても鋭い爪だ。　これで引っ搔かれたらひとたまりもなさそうだ。",
+    "かなり軽量なので移動がしやすそうだ。",
+    ""
+  ],
+  "rarity": 3,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 8,
+    "durability": 150,
+    "base": {
+      "attributes": {
+        "attack_damage": 15,
+        "attack_range": -3,
+        "attack_speed": 10,
+        "movement_speed": 40
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "shoddy_string",
+  "name": "粗悪な糸",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 10,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "silver_alloy_ingot",
+  "name": "白銀合金",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10027,
+  "price": {
+    "buy": 0,
+    "sell": 1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "silver_dagger",
+  "name": "銀の短剣",
+  "category": "weapon",
+  "lore": [
+    "銀で作られた短剣",
+    "クリティカルが出た時のダメージがとても高い",
+    "魔除けの効果があると言われているが...? (まだ実装してないよ)"
+  ],
+  "rarity": 3,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 5,
+    "durability": 1000,
+    "base": {
+      "attributes": {
+        "attack_damage": 6,
+        "attack_range": -2,
+        "attack_speed": 4,
+        "crd": 400
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "silver_ingot",
+  "name": "銀",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10020,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "skeleton_ribs",
+  "name": "スケルトンの肋骨",
+  "category": "weapon",
+  "lore": [
+    "スケルトンからとれた肋骨、殴られれば意外と痛い"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 20,
+        "attack_range": 3,
+        "attack_speed": 1.1,
+        "movement_speed": -30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "slash_blade_wood",
+  "name": "木刀",
+  "category": "weapon",
+  "lore": [
+    "重い一撃を繰り出すが、あいにく刃が丸い。要は鈍器"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 1,
+    "max_modification": 8,
+    "durability": 200,
+    "base": {
+      "attributes": {
+        "attack_damage": 10,
+        "attack_speed": 1.5
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "smooke_bomb",
+  "name": "スモークボム",
+  "category": "material",
+  "lore": [
+    "周囲を暗闇に巻き込むボム",
+    "誤爆に注意！！"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "soy_sauce_ramen",
+  "name": "醤油ラーメン",
+  "category": "food",
+  "lore": [
+    "醤油ラーメン。具材が載っていてまだ暖かい"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 12,
+    "saturation": 6,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "spatula",
+  "name": "フライ返し",
+  "category": "weapon",
+  "lore": [
+    "使用することで敵を逆向きに3秒間歩かせる。"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 10,
+        "attack_range": 3,
+        "attack_speed": 1.5
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "spider_silk",
+  "name": "クモの糸",
+  "category": "material",
+  "lore": [
+    "ねばねばしていて気持ち悪い。"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 30,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "stainless_steel_ingot",
+  "name": "ステンレス鋼",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10025,
+  "price": {
+    "buy": 0,
+    "sell": 1002,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "steel_broadsword",
+  "name": "鋼のブロードソード",
+  "category": "weapon",
+  "lore": [
+    "鋼で作られた幅広の剣",
+    "バランスの取れた性能を持つ万能武器"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 15,
+    "max_modification": 7,
+    "durability": 600,
+    "base": {
+      "attributes": {
+        "attack_damage": 14,
+        "attack_range": 1.5,
+        "attack_speed": 2
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "steel_ingot",
+  "name": "鋼鉄",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10024,
+  "price": {
+    "buy": 0,
+    "sell": 400,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "steel_sword",
+  "name": "スチールソード",
+  "category": "weapon",
+  "lore": [
+    "高品質な鋼で作られた剣",
+    "耐久力が高く、バランスの取れた性能を持つ"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 200,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 12,
+    "max_modification": 7,
+    "durability": 800,
+    "base": {
+      "attributes": {
+        "attack_damage": 12,
+        "attack_speed": 2.5
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "stolen_gold",
+  "name": "奪われた金",
+  "category": "material",
+  "lore": [
+    "ゴブリンが森に来た街の人々から奪い取った金だ。"
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "stone_spear",
+  "name": "石の槍",
+  "category": "weapon",
+  "lore": [
+    "リーチと攻撃速度が速く攻撃力が低い"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 50,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 6,
+        "attack_range": 4,
+        "attack_speed": 3,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "sword_of_the_soul",
+  "name": "魂の剣",
+  "category": "weapon",
+  "lore": [
+    "アメジストで作られた神秘的な短剣",
+    "自分の体力を犠牲に強力な一撃を繰り出すことができる"
+  ],
+  "rarity": 4,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 200,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 18,
+    "max_modification": 9,
+    "durability": 1100,
+    "base": {
+      "attributes": {
+        "attack_damage": 50,
+        "attack_range": -1,
+        "attack_speed": 2,
+        "hpr": -500
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "swordfish",
+  "name": "カジキマグロ",
+  "category": "weapon",
+  "lore": [
+    "頑張って釣り上げたカジキマグロ、その角は並大抵の防御を貫通する"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 200,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 15,
+        "attack_range": 3,
+        "attack_speed": 0.5,
+        "movement_speed": 20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "the_mask_of_a_serial_killer",
+  "name": "シリアルキラーの仮面",
+  "category": "armor",
+  "lore": [
+    "かぶるとシリアルキラーになった気がする。攻撃力とクリティカルダメージが上がるがHPが大幅に下がる。"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 200,
+    "enchantable": true,
+    "armor_type": "helmet",
+    "base": {
+      "attributes": {
+        "atk": 30,
+        "hp": -20,
+        "movement_speed": 20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "thorny_shield",
+  "name": "茨の盾",
+  "category": "weapon",
+  "lore": [
+    "攻撃をガードすることによって敵にダメージを与える"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 0,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 7,
+    "durability": 500,
+    "base": {
+      "attributes": {
+        "attack_damage": 10,
+        "attack_speed": 1,
+        "def": 100,
+        "movement_speed": -50
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "tin_ingot",
+  "name": "錫",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 3,
+  "max_stack": 64,
+  "custom_model_data": 10018,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "titanium_sword",
+  "name": "チタンソード",
+  "category": "weapon",
+  "lore": [
+    "軽量で耐久性の高いチタン製の剣",
+    "軽いため攻撃速度が速い",
+    "腐食に強く、長期間使用可能"
+  ],
+  "rarity": 4,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 2000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 15,
+    "max_modification": 12,
+    "durability": 2000,
+    "base": {
+      "attributes": {
+        "attack_damage": 15,
+        "attack_speed": 3,
+        "def": 20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "tree_of_greed",
+  "name": "貪欲の木",
+  "category": "material",
+  "lore": [
+    "この木に触れたものは生命力を奪われていく。"
+  ],
+  "rarity": 2,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 201,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "unfathomable_powder",
+  "name": "得体のしれない粉",
+  "category": "food",
+  "lore": [
+    "なんだかいけない感じがする粉。使ってみるかはよく考えよう。数十秒間幸福感を得る。(副反応ですべてのデバフを受けることになる)"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": -1000,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 4,
+    "saturation": 0.6,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "unknown_flower",
+  "name": "得体の知らない花",
+  "category": "material",
+  "lore": [
+    "どこで摘んできたかわからない花、なんとも表現しがたい匂いを発している"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "unknown_type",
+  "name": "得体のしれない種",
+  "category": "food",
+  "lore": [
+    "得体のしれない花から採取した種。頑張れば食べれるかもしれない"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 4,
+    "saturation": 0.6,
+    "can_always_eat": false,
+    "eat_seconds": 1.8,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
+
+{
+  "id": "vanilla_chainmail_boots",
+  "name": "チェーンのブーツ(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのチェーン装備",
+    "魔法防御力が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "feet",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 700,
+    "enchantable": true,
+    "armor_type": "boots",
+    "base": {
+      "attributes": {
+        "def": 10,
+        "mdf": 20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_chainmail_chestplate",
+  "name": "チェーンのチェストプレート(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのチェーン装備",
+    "魔法防御力が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "chest",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 1000,
+    "enchantable": true,
+    "armor_type": "chestplate",
+    "base": {
+      "attributes": {
+        "def": 20,
+        "mdf": 40
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_chainmail_helmet",
+  "name": "チェーンのヘルメット(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのチェーン装備",
+    "魔法防御力が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 700,
+    "enchantable": true,
+    "armor_type": "helmet",
+    "base": {
+      "attributes": {
+        "def": 10,
+        "mdf": 20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_chainmail_leggings",
+  "name": "チェーンのレギンス(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのチェーン装備",
+    "魔法防御力が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "legs",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 800,
+    "enchantable": true,
+    "armor_type": "leggings",
+    "base": {
+      "attributes": {
+        "def": 15,
+        "mdf": 30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_diamond_boots",
+  "name": "ダイヤのブーツ(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのダイヤ装備",
+    "クリティカル攻撃力と確率が上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "feet",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 2000,
+    "enchantable": true,
+    "armor_type": "boots",
+    "base": {
+      "attributes": {
+        "crd": 30,
+        "crt": 7,
+        "def": 30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_diamond_chestplate",
+  "name": "ダイヤのチェストプレート(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのダイヤ装備",
+    "クリティカル攻撃力と確率が上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "chest",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 3000,
+    "enchantable": true,
+    "armor_type": "chestplate",
+    "base": {
+      "attributes": {
+        "crd": 40,
+        "crt": 10,
+        "def": 40
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_diamond_helmet",
+  "name": "ダイヤのヘルメット(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのダイヤ装備",
+    "クリティカル攻撃力と確率が上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 2000,
+    "enchantable": true,
+    "armor_type": "helmet",
+    "base": {
+      "attributes": {
+        "crd": 20,
+        "crt": 5,
+        "def": 20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_diamond_leggings",
+  "name": "ダイヤのレギンス(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのダイヤ装備",
+    "クリティカル攻撃力と確率が上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "legs",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 2500,
+    "enchantable": true,
+    "armor_type": "leggings",
+    "base": {
+      "attributes": {
+        "crd": 30,
+        "crt": 7,
+        "def": 30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_golden_boots",
+  "name": "金のブーツ(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの金装備",
+    "再生能力が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "feet",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 400,
+    "enchantable": true,
+    "armor_type": "boots",
+    "base": {
+      "attributes": {
+        "def": 10,
+        "hpr": 15
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_golden_chestplate",
+  "name": "金のチェストプレート(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの金装備",
+    "再生能力が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "chest",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 700,
+    "enchantable": true,
+    "armor_type": "chestplate",
+    "base": {
+      "attributes": {
+        "def": 20,
+        "hpr": 30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_golden_helmet",
+  "name": "金のヘルメット(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの金装備",
+    "再生能力が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 400,
+    "enchantable": true,
+    "armor_type": "helmet",
+    "base": {
+      "attributes": {
+        "def": 10,
+        "hpr": 15
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_golden_leggings",
+  "name": "金のレギンス(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの金装備",
+    "再生能力が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "legs",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 600,
+    "enchantable": true,
+    "armor_type": "leggings",
+    "base": {
+      "attributes": {
+        "def": 15,
+        "hpr": 22
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_iron_boots",
+  "name": "鉄のブーツ(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの鉄装備",
+    "防御力がある程度上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "feet",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 1000,
+    "enchantable": true,
+    "armor_type": "boots",
+    "base": {
+      "attributes": {
+        "def": 30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_iron_chestplate",
+  "name": "鉄のチェストプレート(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの鉄装備",
+    "防御力がある程度上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "chest",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 1500,
+    "enchantable": true,
+    "armor_type": "chestplate",
+    "base": {
+      "attributes": {
+        "def": 60
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_iron_helmet",
+  "name": "鉄のヘルメット(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの鉄装備",
+    "防御力がある程度上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 1000,
+    "enchantable": true,
+    "armor_type": "helmet",
+    "base": {
+      "attributes": {
+        "def": 30
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_iron_leggings",
+  "name": "鉄のレギンス(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの鉄装備",
+    "防御力がある程度上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "legs",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 1200,
+    "enchantable": true,
+    "armor_type": "leggings",
+    "base": {
+      "attributes": {
+        "def": 45
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_leather_boots",
+  "name": "皮のブーツ(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの皮装備",
+    "移動速度が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "feet",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 300,
+    "enchantable": true,
+    "armor_type": "boots",
+    "base": {
+      "attributes": {
+        "def": 10,
+        "movement_speed": 5
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_leather_chestplate",
+  "name": "皮の上着(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの皮装備",
+    "移動速度が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "chest",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 500,
+    "enchantable": true,
+    "armor_type": "chestplate",
+    "base": {
+      "attributes": {
+        "def": 10,
+        "movement_speed": 15
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_leather_helmet",
+  "name": "皮の帽子(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの皮装備",
+    "移動速度が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 300,
+    "enchantable": true,
+    "armor_type": "helmet",
+    "base": {
+      "attributes": {
+        "def": 5,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_leather_leggings",
+  "name": "皮のズボン(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラの皮装備",
+    "移動速度が少し上がる"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": false
+  },
+  "tags": [],
+  "data": {
+    "slot": "legs",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 400,
+    "enchantable": true,
+    "armor_type": "leggings",
+    "base": {
+      "attributes": {
+        "def": 8,
+        "movement_speed": 12
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_netherite_boots",
+  "name": "ネザライトのブーツ(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのネザライト装備",
+    "移動速度が下がり、攻撃力が上がる"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "slot": "feet",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 3000,
+    "enchantable": true,
+    "armor_type": "boots",
+    "base": {
+      "attributes": {
+        "atk": 10,
+        "movement_speed": -10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_netherite_chestplate",
+  "name": "ネザライトのチェストプレート(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのネザライト装備",
+    "移動速度が下がり、攻撃力が上がる"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "slot": "chest",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 6000,
+    "enchantable": true,
+    "armor_type": "chestplate",
+    "base": {
+      "attributes": {
+        "atk": 20,
+        "movement_speed": -20
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_netherite_helmet",
+  "name": "ネザライトのヘルメット(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのネザライト装備",
+    "移動速度が下がり、攻撃力が上がる"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "slot": "head",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 3000,
+    "enchantable": true,
+    "armor_type": "helmet",
+    "base": {
+      "attributes": {
+        "atk": 10,
+        "movement_speed": -10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "vanilla_netherite_leggings",
+  "name": "ネザライトのレギンス(バニラ)",
+  "category": "armor",
+  "lore": [
+    "バニラのネザライト装備",
+    "移動速度が下がり、攻撃力が上がる"
+  ],
+  "rarity": 2,
+  "max_stack": 1,
+  "custom_model_data": 1001,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "slot": "legs",
+    "defense": 3,
+    "toughness": 2,
+    "knockback_resistance": 0,
+    "durability": 4500,
+    "enchantable": true,
+    "armor_type": "leggings",
+    "base": {
+      "attributes": {
+        "atk": 15,
+        "movement_speed": -15
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "max_modification": 5,
+    "required_level": 1
+  }
+}
+
+{
+  "id": "warped_stick",
+  "name": "歪んだ棒",
+  "category": "material",
+  "lore": [
+    "説明がないよ..."
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 10,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "whimsical_bow",
+  "name": "気まぐれの弓",
+  "category": "weapon",
+  "lore": [
+    "気まぐれな弓。矢が自分に向かって飛ぶこともあればとんでもない攻撃力で敵に飛ぶこともある"
+  ],
+  "rarity": 1,
+  "max_stack": 1,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 10,
+    "durability": 250,
+    "base": {
+      "attributes": {
+        "attack_damage": 25,
+        "attack_range": 3,
+        "attack_speed": 1.5,
+        "drop_rate_bonus": 5,
+        "experience_bonus": 10,
+        "movement_speed": 10
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "wire",
+  "name": "ワイヤー",
+  "category": "material",
+  "lore": [
+    "鉄製のワイヤー"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 100,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "wooden_stick",
+  "name": "木の棒",
+  "category": "material",
+  "lore": [
+    "綺麗に切られている木の棒",
+    "武器を作るのに使えるかも？"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 10,
+    "sell": 10,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {}
+}
+
+{
+  "id": "world_tree_stick",
+  "name": "世界樹の枝",
+  "category": "weapon",
+  "lore": [
+    "持つと移動速度と自然回復力が上がる"
+  ],
+  "rarity": 3,
+  "max_stack": 1,
+  "custom_model_data": 2001,
+  "price": {
+    "buy": 0,
+    "sell": 500,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "weapon_type": "sword",
+    "required_level": 10,
+    "max_modification": 3,
+    "durability": 500,
+    "base": {
+      "attributes": {
+        "attack_damage": 5,
+        "attack_speed": 4,
+        "hpr": 70,
+        "movement_speed": 30,
+        "mpr": 50
+      },
+      "buffs": [],
+      "effects": []
+    },
+    "upgrades": []
+  }
+}
+
+{
+  "id": "zombies_head",
+  "name": "ゾンビの頭",
+  "category": "food",
+  "lore": [
+    "ゾンビの頭。頑張って食べれば十秒間アンデット化することができる"
+  ],
+  "rarity": 1,
+  "max_stack": 64,
+  "custom_model_data": 0,
+  "price": {
+    "buy": 0,
+    "sell": 300,
+    "can_sell": true
+  },
+  "tags": [],
+  "data": {
+    "nutrition": 4,
+    "saturation": 0.6,
+    "can_always_eat": false,
+    "eat_seconds": 10,
+    "effects": [],
+    "attributes": [],
+    "buffs": []
+  }
+}
